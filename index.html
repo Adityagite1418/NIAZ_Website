@@ -1,32 +1,70 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>NIAZ Pharma</title>
 
     <!-- ================= STYLESHEETS ================= -->
-    <link rel="stylesheet" href="Main_Page.css" />
-    <link rel="stylesheet" href="About_page.css" />
-    <link rel="stylesheet" href="Products_page.css" />
+
+    <link rel="stylesheet" href="Main_Page.css">
+    <link rel="stylesheet" href="About_page.css">
+    <link rel="stylesheet" href="Products_page.css">
 
     <!-- ================= FONT AWESOME ================= -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    >
 
     <!-- ================= GOOGLE FONT ================= -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ================= RESPONSIVE / SMOOTH SCROLL ================= -->
 
     <style>
         html {
             scroll-behavior: smooth;
         }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
     </style>
 </head>
-
 
 <body>
 
@@ -35,55 +73,45 @@
     ========================================================== -->
 
     <header>
-
         <div class="top-line"></div>
 
         <div class="container navbar">
 
-            <!-- ================= NIAZ LOGO ================= -->
+            <!-- ================= PRIMARY LOGO ================= -->
 
             <div class="logo">
-                <img
-                    src="images/Logo/Niaz_Logo.jpeg"
-                    alt="NIAZ Pharma Logo"
-                />
+                <a href="#home" aria-label="NIAZ Pharma Home">
+                    <img
+                        src="Images/Logo/Niaz_Logo.jpeg"
+                        alt="NIAZ Pharma Logo"
+                    >
+                </a>
             </div>
 
-
-            <!-- ================= ZOODICO PARTNER ================= -->
+            <!-- ================= PARTNER LOGO ================= -->
 
             <a
                 href="https://zoodicopharma.com/index.html"
                 class="partner-logo-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Zoodico Pharma India"
             >
-
                 <img
-                    src="images/Logo/Zoodico_Logo.jpeg"
+                    src="Images/Logo/Zoodico_Logo.jpeg"
                     alt="Zoodico Pharma Partner Logo"
                     class="partner-img"
-                />
+                >
 
                 <div class="partner-text">
-
-                    <span class="badge-title">
-                        Zoodico Pharma
-                    </span>
-
-                    <span class="badge-subtitle">
-                        Partner in India
-                    </span>
-
+                    <span class="badge-title">Zoodico Pharma</span>
+                    <span class="badge-subtitle">Partner in India</span>
                 </div>
-
             </a>
-
 
             <!-- ================= NAVIGATION ================= -->
 
-            <nav>
-
+            <nav aria-label="Main Navigation">
                 <ul>
 
                     <li>
@@ -123,29 +151,28 @@
                     </li>
 
                 </ul>
-
             </nav>
-
 
             <!-- ================= MOBILE MENU ================= -->
 
-            <div class="menu">
+            <button
+                type="button"
+                class="menu"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
                 ☰
-            </div>
+            </button>
 
         </div>
-
     </header>
 
 
     <!-- =========================================================
-                            HOME / HERO
+                            HERO SECTION
     ========================================================== -->
 
-    <section
-        class="hero"
-        id="home"
-    >
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
@@ -155,26 +182,16 @@
                     INNOVATION • QUALITY • TRUST
                 </span>
 
-
                 <h1>
-
                     Innovating Healthcare
-
-                    <span>
-                        for a Better Tomorrow
-                    </span>
-
+                    <span>for a Better Tomorrow</span>
                 </h1>
 
-
                 <p>
-
-                    Delivering trusted pharmaceutical solutions
-                    with uncompromising quality, innovation,
-                    and global standards of care.
-
+                    Delivering trusted pharmaceutical solutions with
+                    uncompromising quality, innovation, and global
+                    standards of care.
                 </p>
-
 
                 <div class="hero-buttons">
 
@@ -185,14 +202,12 @@
                         Explore Products
                     </a>
 
-
                     <a
                         href="#services"
                         class="hero-btn secondary-btn"
                     >
                         Our Services
                     </a>
-
 
                     <a
                         href="#regional"
@@ -211,27 +226,18 @@
 
 
     <!-- =========================================================
-                            MISSION
+                            MISSION SECTION
     ========================================================== -->
 
-    <section
-        id="mission"
-        class="mission"
-    >
+    <section id="mission" class="mission">
 
         <div class="section-title">
-
-            <h2>
-                Our Mission
-            </h2>
-
+            <h2>Our Mission</h2>
         </div>
-
 
         <div class="mission-box">
 
-
-            <!-- ================= MISSION 1 ================= -->
+            <!-- Mission Card 1 -->
 
             <div class="mission-card">
 
@@ -244,14 +250,13 @@
                 </h3>
 
                 <p>
-                    Providing high-quality pharmaceutical
-                    products worldwide.
+                    Providing high-quality pharmaceutical products worldwide.
                 </p>
 
             </div>
 
 
-            <!-- ================= MISSION 2 ================= -->
+            <!-- Mission Card 2 -->
 
             <div class="mission-card">
 
@@ -264,14 +269,13 @@
                 </h3>
 
                 <p>
-                    Maintaining the highest safety
-                    and quality standards.
+                    Maintaining the highest safety and quality standards.
                 </p>
 
             </div>
 
 
-            <!-- ================= MISSION 3 ================= -->
+            <!-- Mission Card 3 -->
 
             <div class="mission-card">
 
@@ -284,8 +288,7 @@
                 </h3>
 
                 <p>
-                    Expanding healthcare solutions
-                    across international markets.
+                    Expanding healthcare solutions across international markets.
                 </p>
 
             </div>
@@ -296,13 +299,10 @@
 
 
     <!-- =========================================================
-                            SERVICES
+                            SERVICES SECTION
     ========================================================== -->
 
-    <section
-        id="services"
-        class="services-section"
-    >
+    <section id="services" class="services-section">
 
         <div class="container">
 
@@ -310,32 +310,31 @@
                 Our Services
             </h2>
 
-
             <div class="service-cards">
 
-
-                <!-- ================= SERVICE 1 ================= -->
+                <!-- Service 1 -->
 
                 <div class="service-card">
 
                     <img
                         src="images/BackGrond/Brand Acquisition.png"
-                        alt="Brand Acquisition"
-                    />
+                        alt="Brand Acquisition and Representation"
+                        loading="lazy"
+                    >
 
                     <h3>
                         Brand Acquisition
-                        <br />
-                        & Representation
+                        <br>
+                        &amp; Representation
                     </h3>
 
                     <p>
-                        Helping businesses acquire and represent
-                        leading brands with trusted partnerships.
+                        Helping businesses acquire and represent leading
+                        brands with trusted partnerships.
                     </p>
 
                     <a
-                        href="#"
+                        href="#contact"
                         class="btn-service"
                     >
                         Learn More &gt;
@@ -344,28 +343,29 @@
                 </div>
 
 
-                <!-- ================= SERVICE 2 ================= -->
+                <!-- Service 2 -->
 
                 <div class="service-card">
 
                     <img
                         src="images/BackGrond/Brand Governance.png"
-                        alt="Brand Governance"
-                    />
+                        alt="Brand Governance and Supervision"
+                        loading="lazy"
+                    >
 
                     <h3>
                         Brand Governance
-                        <br />
-                        & Supervision
+                        <br>
+                        &amp; Supervision
                     </h3>
 
                     <p>
-                        Protecting brand value through effective
-                        monitoring and supervision.
+                        Protecting brand value through effective monitoring
+                        and supervision.
                     </p>
 
                     <a
-                        href="#"
+                        href="#contact"
                         class="btn-service"
                     >
                         Learn More &gt;
@@ -374,28 +374,29 @@
                 </div>
 
 
-                <!-- ================= SERVICE 3 ================= -->
+                <!-- Service 3 -->
 
                 <div class="service-card">
 
                     <img
                         src="images/BackGrond/Market Entry.png"
-                        alt="Market Entry"
-                    />
+                        alt="Market Entry and Expansion"
+                        loading="lazy"
+                    >
 
                     <h3>
                         Market Entry
-                        <br />
-                        & Expansion
+                        <br>
+                        &amp; Expansion
                     </h3>
 
                     <p>
-                        Helping companies enter new markets
-                        and expand their business successfully.
+                        Helping companies enter new markets and expand
+                        their business successfully.
                     </p>
 
                     <a
-                        href="#"
+                        href="#contact"
                         class="btn-service"
                     >
                         Learn More &gt;
@@ -404,28 +405,29 @@
                 </div>
 
 
-                <!-- ================= SERVICE 4 ================= -->
+                <!-- Service 4 -->
 
                 <div class="service-card">
 
                     <img
                         src="images/BackGrond/Import & Export.png"
-                        alt="Import & Export"
-                    />
+                        alt="Import and Export Structuring"
+                        loading="lazy"
+                    >
 
                     <h3>
-                        Import & Export
-                        <br />
+                        Import &amp; Export
+                        <br>
                         Structuring
                     </h3>
 
                     <p>
-                        Professional import and export planning
-                        with global business support.
+                        Professional import and export planning with
+                        global business support.
                     </p>
 
                     <a
-                        href="#"
+                        href="#contact"
                         class="btn-service"
                     >
                         Learn More &gt;
@@ -441,13 +443,10 @@
 
 
     <!-- =========================================================
-                            INDUSTRY
+                            INDUSTRY SECTION
     ========================================================== -->
 
-    <section
-        id="industry"
-        class="industry-section"
-    >
+    <section id="industry" class="industry-section">
 
         <div class="container">
 
@@ -455,18 +454,17 @@
                 Industry Focus
             </h2>
 
-
             <div class="industry-items">
 
-
-                <!-- ================= INDUSTRY 1 ================= -->
+                <!-- Industry 1 -->
 
                 <div class="industry-box">
 
                     <img
                         src="images/BackGrond/pharmaceutical.png"
                         alt="Pharmaceuticals"
-                    />
+                        loading="lazy"
+                    >
 
                     <h4>
                         Pharmaceuticals
@@ -475,46 +473,49 @@
                 </div>
 
 
-                <!-- ================= INDUSTRY 2 ================= -->
+                <!-- Industry 2 -->
 
                 <div class="industry-box">
 
                     <img
                         src="images/BackGrond/Sports & Supplements.png"
-                        alt="Sports & Supplements"
-                    />
+                        alt="Sports and Supplements"
+                        loading="lazy"
+                    >
 
                     <h4>
-                        Sports & Supplements
+                        Sports &amp; Supplements
                     </h4>
 
                 </div>
 
 
-                <!-- ================= INDUSTRY 3 ================= -->
+                <!-- Industry 3 -->
 
                 <div class="industry-box">
 
                     <img
                         src="images/BackGrond/Premium Food & Health.png"
-                        alt="Premium Food & Health"
-                    />
+                        alt="Premium Food and Health"
+                        loading="lazy"
+                    >
 
                     <h4>
-                        Premium Food & Health
+                        Premium Food &amp; Health
                     </h4>
 
                 </div>
 
 
-                <!-- ================= INDUSTRY 4 ================= -->
+                <!-- Industry 4 -->
 
                 <div class="industry-box">
 
                     <img
                         src="images/BackGrond/Pet Nutrition.png"
                         alt="Pet Nutrition"
-                    />
+                        loading="lazy"
+                    >
 
                     <h4>
                         Pet Nutrition
@@ -523,14 +524,15 @@
                 </div>
 
 
-                <!-- ================= INDUSTRY 5 ================= -->
+                <!-- Industry 5 -->
 
                 <div class="industry-box">
 
                     <img
                         src="images/BackGrond/Strategic BrandsStrategic Brands.png"
                         alt="Strategic Brands"
-                    />
+                        loading="lazy"
+                    >
 
                     <h4>
                         Strategic Brands
@@ -549,29 +551,26 @@
                         REGIONAL PRESENCE
     ========================================================== -->
 
-    <section
-        id="regional"
-        class="regional-section"
-    >
+    <section id="regional" class="regional-section">
 
         <div class="container">
 
             <div class="regional-content">
 
-
-                <!-- ================= MAP ================= -->
+                <!-- Map -->
 
                 <div class="map-area">
 
                     <img
-                        src="images/BackGrond/Map.png"
-                        alt="World Map"
-                    />
+                        src="Images/BackGrond/Map.png"
+                        alt="NIAZ Pharma Global Presence World Map"
+                        loading="lazy"
+                    >
 
                 </div>
 
 
-                <!-- ================= LOCATIONS ================= -->
+                <!-- Presence -->
 
                 <div class="presence-area">
 
@@ -580,11 +579,14 @@
                     </h2>
 
 
-                    <!-- IRAN -->
+                    <!-- Iran -->
 
                     <div class="location">
 
-                        <div class="flag blue"></div>
+                        <div
+                            class="flag blue"
+                            aria-hidden="true"
+                        ></div>
 
                         <div>
 
@@ -597,11 +599,14 @@
                     </div>
 
 
-                    <!-- ISTANBUL -->
+                    <!-- Istanbul -->
 
                     <div class="location">
 
-                        <div class="flag red"></div>
+                        <div
+                            class="flag red"
+                            aria-hidden="true"
+                        ></div>
 
                         <div>
 
@@ -630,10 +635,7 @@
                             WHY NIAZ
     ========================================================== -->
 
-    <section
-        id="why"
-        class="why-section"
-    >
+    <section id="why" class="why-section">
 
         <div class="container">
 
@@ -641,9 +643,7 @@
                 Why NIAZ?
             </h2>
 
-
             <div class="why-content">
-
 
                 <div class="why-column">
 
@@ -686,13 +686,10 @@
 
 
     <!-- =========================================================
-                        PARTNER WITH NIAZ
+                        PARTNER SECTION
     ========================================================== -->
 
-    <section
-        id="partner"
-        class="partner-section"
-    >
+    <section id="partner" class="partner-section">
 
         <div class="container">
 
@@ -700,20 +697,14 @@
                 Partner with NIAZ
             </h2>
 
-
             <div class="partner-buttons">
-
 
                 <a
                     href="#contact"
                     class="partner-btn"
                 >
                     For International Brands
-
-                    <span>
-                        &#8250;
-                    </span>
-
+                    <span>&#8250;</span>
                 </a>
 
 
@@ -722,11 +713,7 @@
                     class="partner-btn"
                 >
                     For Iranian Manufacturers
-
-                    <span>
-                        &#8250;
-                    </span>
-
+                    <span>&#8250;</span>
                 </a>
 
             </div>
@@ -737,7 +724,7 @@
 
 
     <!-- =========================================================
-                            ABOUT
+                            ABOUT HERO
     ========================================================== -->
 
     <section
@@ -752,9 +739,8 @@
             </h1>
 
             <p>
-                Committed to delivering innovative
-                pharmaceutical solutions that improve
-                lives worldwide.
+                Committed to delivering innovative pharmaceutical
+                solutions that improve lives worldwide.
             </p>
 
         </div>
@@ -762,19 +748,21 @@
     </section>
 
 
-    <!-- ================= COMPANY ================= -->
+    <!-- =========================================================
+                            COMPANY SECTION
+    ========================================================== -->
 
     <section class="company">
 
         <div class="container company-content">
 
-
             <div class="company-image">
 
                 <img
-                    src="images/BackGrond/AboutHero.png"
-                    alt="Company Facility"
-                />
+                    src="Images/BackGrond/AboutHero.png"
+                    alt="NIAZ Pharma Company Facility"
+                    loading="lazy"
+                >
 
             </div>
 
@@ -785,19 +773,17 @@
                     Who We Are
                 </h2>
 
-
                 <p>
-                    NIAZ Pharma is a trusted pharmaceutical
-                    company dedicated to manufacturing and
-                    supplying quality healthcare products
-                    across domestic and international markets.
+                    NIAZ Pharma is a trusted pharmaceutical company
+                    dedicated to manufacturing and supplying quality
+                    healthcare products across domestic and
+                    international markets.
                 </p>
 
-
                 <p>
-                    Our focus is innovation, quality assurance
-                    and patient well-being through advanced
-                    pharmaceutical research and development.
+                    Our focus is innovation, quality assurance and
+                    patient well-being through advanced pharmaceutical
+                    research and development.
                 </p>
 
             </div>
@@ -807,12 +793,15 @@
     </section>
 
 
-    <!-- ================= VISION ================= -->
+    <!-- =========================================================
+                            VISION SECTION
+    ========================================================== -->
 
     <section class="vision">
 
         <div class="container cards">
 
+            <!-- Vision -->
 
             <div class="card">
 
@@ -821,13 +810,14 @@
                 </h3>
 
                 <p>
-                    To become a globally recognized
-                    pharmaceutical company delivering
-                    innovative healthcare products.
+                    To become a globally recognized pharmaceutical
+                    company delivering innovative healthcare products.
                 </p>
 
             </div>
 
+
+            <!-- Mission -->
 
             <div class="card">
 
@@ -836,8 +826,8 @@
                 </h3>
 
                 <p>
-                    Provide affordable, high-quality medicines
-                    while maintaining international quality standards.
+                    Provide affordable, high-quality medicines while
+                    maintaining international quality standards.
                 </p>
 
             </div>
@@ -847,7 +837,9 @@
     </section>
 
 
-    <!-- ================= CORE VALUES ================= -->
+    <!-- =========================================================
+                            VALUES SECTION
+    ========================================================== -->
 
     <section class="values">
 
@@ -857,9 +849,9 @@
                 Our Core Values
             </h2>
 
-
             <div class="value-box">
 
+                <!-- Quality -->
 
                 <div class="value">
 
@@ -874,6 +866,8 @@
                 </div>
 
 
+                <!-- Integrity -->
+
                 <div class="value">
 
                     <h3>
@@ -887,6 +881,8 @@
                 </div>
 
 
+                <!-- Innovation -->
+
                 <div class="value">
 
                     <h3>
@@ -899,6 +895,8 @@
 
                 </div>
 
+
+                <!-- Customer Care -->
 
                 <div class="value">
 
@@ -919,7 +917,9 @@
     </section>
 
 
-    <!-- ================= WHY CHOOSE US ================= -->
+    <!-- =========================================================
+                            WHY CHOOSE US
+    ========================================================== -->
 
     <section class="why">
 
@@ -928,7 +928,6 @@
             <h2 class="title">
                 Why Choose Us?
             </h2>
-
 
             <ul>
 
@@ -960,7 +959,7 @@
 
 
     <!-- =========================================================
-                            PRODUCTS
+                        PRODUCTS HERO SECTION
     ========================================================== -->
 
     <section
@@ -996,18 +995,17 @@
                 Product Categories
             </h2>
 
-
             <div class="category-box">
 
-
-                <!-- ================= PRODUCT 1 ================= -->
+                <!-- Category 1 -->
 
                 <div class="category-card">
 
                     <img
-                        src="images/BackGrond/Whey_Protein.jpeg"
-                        alt="Sports Nutrition"
-                    />
+                        src="Images/BackGrond/Whey_Protein.jpeg"
+                        alt="Sports Nutrition and Supplements"
+                        loading="lazy"
+                    >
 
                     <h3>
                         Sports Nutrition &amp; Supplements
@@ -1020,14 +1018,15 @@
                 </div>
 
 
-                <!-- ================= PRODUCT 2 ================= -->
+                <!-- Category 2 -->
 
                 <div class="category-card">
 
                     <img
-                        src="images/BackGrond/Infant.jpeg"
-                        alt="Infant Formula"
-                    />
+                        src="Images/BackGrond/Infant.jpeg"
+                        alt="Infant Formula Production Line"
+                        loading="lazy"
+                    >
 
                     <h3>
                         Infant Formula Production Line
@@ -1040,14 +1039,15 @@
                 </div>
 
 
-                <!-- ================= PRODUCT 3 ================= -->
+                <!-- Category 3 -->
 
                 <div class="category-card">
 
                     <img
-                        src="images/BackGrond/Medical_Device.jpeg"
+                        src="Images/BackGrond/Medical_Device.jpeg"
                         alt="Medical Devices and Cosmetics"
-                    />
+                        loading="lazy"
+                    >
 
                     <h3>
                         Medical Devices &amp; Cosmetics
@@ -1060,22 +1060,22 @@
                 </div>
 
 
-                <!-- ================= PRODUCT 4 ================= -->
+                <!-- Category 4 -->
 
                 <div class="category-card">
 
                     <img
-                        src="images/BackGrond/CBD.jpeg"
+                        src="Images/BackGrond/CBD.jpeg"
                         alt="CBD Business"
-                    />
+                        loading="lazy"
+                    >
 
                     <h3>
                         CBD Business
                     </h3>
 
                     <p>
-                        Import &amp; Local Production
-                        THC-Free CBD Products.
+                        Import &amp; Local Production THC-Free CBD Products.
                     </p>
 
                 </div>
@@ -1099,16 +1099,17 @@
                 Featured Products
             </h2>
 
-
             <div class="product-grid">
 
+                <!-- Product 1 -->
 
                 <div class="product-card">
 
                     <img
-                        src="images/Products/product1.jpg"
+                        src="Images/Products/product1.jpg"
                         alt="Paracetamol 500mg"
-                    />
+                        loading="lazy"
+                    >
 
                     <h3>
                         Paracetamol 500mg
@@ -1125,12 +1126,15 @@
                 </div>
 
 
+                <!-- Product 2 -->
+
                 <div class="product-card">
 
                     <img
-                        src="images/Products/product2.jpg"
+                        src="Images/Products/product2.jpg"
                         alt="Vitamin C Tablets"
-                    />
+                        loading="lazy"
+                    >
 
                     <h3>
                         Vitamin C Tablets
@@ -1147,12 +1151,15 @@
                 </div>
 
 
+                <!-- Product 3 -->
+
                 <div class="product-card">
 
                     <img
-                        src="images/Products/product3.jpg"
+                        src="Images/Products/product3.jpg"
                         alt="Antibiotic Capsules"
-                    />
+                        loading="lazy"
+                    >
 
                     <h3>
                         Antibiotic Capsules
@@ -1187,13 +1194,10 @@
                 Quality Assurance
             </h2>
 
-
             <p>
-                Every product is manufactured under WHO-GMP
-                guidelines, ensuring safety, effectiveness,
-                and superior quality.
+                Every product is manufactured under WHO-GMP guidelines,
+                ensuring safety, effectiveness, and superior quality.
             </p>
-
 
             <div class="quality-list">
 
@@ -1221,7 +1225,7 @@
 
 
     <!-- =========================================================
-                            CTA
+                            CTA SECTION
     ========================================================== -->
 
     <section class="cta">
@@ -1238,7 +1242,7 @@
 
 
     <!-- =========================================================
-                            CONTACT
+                            CONTACT SECTION
     ========================================================== -->
 
     <section
@@ -1248,7 +1252,19 @@
 
         <div class="container">
 
-            <!-- Contact information can be added here -->
+            <!--
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                📞 +98 9355 99999
+            </p>
+
+            <p>
+                ✉ info@niiaz.com
+            </p>
+            -->
 
         </div>
 
@@ -1264,7 +1280,6 @@
         <div class="container">
 
             <div class="footer-content">
-
 
                 <!-- ================= NIAZ CONTACT ================= -->
 
@@ -1353,7 +1368,7 @@
                 </div>
 
 
-                <!-- ================= SOCIAL ================= -->
+                <!-- ================= SOCIAL MEDIA ================= -->
 
                 <div class="footer-box">
 
@@ -1361,18 +1376,26 @@
                         Follow Us
                     </h3>
 
-
                     <div class="social-icons">
 
-                        <a href="#">
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
                             <i class="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="#">
+                        <a
+                            href="#"
+                            aria-label="Twitter"
+                        >
                             <i class="fab fa-twitter"></i>
                         </a>
 
-                        <a href="#">
+                        <a
+                            href="#"
+                            aria-label="LinkedIn"
+                        >
                             <i class="fab fa-linkedin-in"></i>
                         </a>
 
@@ -1388,7 +1411,6 @@
                     <h3>
                         Legal
                     </h3>
-
 
                     <ul>
 
@@ -1408,17 +1430,19 @@
 
                 </div>
 
-
             </div>
 
 
-            <hr />
+            <!-- ================= FOOTER LINE ================= -->
 
+            <hr>
+
+
+            <!-- ================= COPYRIGHT ================= -->
 
             <div class="copyright">
 
-                © 2026 NIAZ Pharma.
-                All Rights Reserved.
+                © 2026 NIAZ Pharma. All Rights Reserved.
 
             </div>
 
@@ -1430,3 +1454,4 @@
 </body>
 
 </html>
+```
