@@ -257,7 +257,7 @@ nav ul li a.active::after {
     width: 100%;
     min-height: 680px;
 
-    background-image: url("Images/BackGrond/Home_BackGround.png");
+    background-image: url("images/BackGrond/Home_BackGround.png");
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -629,7 +629,7 @@ nav ul li a.active::after {
     padding: 70px 0 90px;
 
     background-image: url(
-        "Images/BackGrond/wide_clean_professional_photoreal_graphic_com.png"
+        "images/BackGrond/wide_clean_professional_photoreal_graphic_com.png"
     );
 
     background-size: cover;
@@ -795,7 +795,7 @@ nav ul li a.active::after {
             rgba(245, 248, 252, 0.35),
             rgba(245, 248, 252, 0.35)
         ),
-        url("Images/BackGrond/Services.png");
+        url("images/BackGrond/Services.png");
 
     background-size: cover;
 
@@ -1165,7 +1165,7 @@ nav ul li a.active::after {
         The image remains clearly visible.
     */
 
-    background-image: url("Images/BackGrond/Industry.png");
+    background-image: url("images/BackGrond/Industry.png");
 
     background-repeat: no-repeat;
 
@@ -1417,7 +1417,7 @@ nav ul li a.active::after {
 
     padding: 70px 0 80px;
 
-    background-image: url("Images/BackGrond/WhyNiaz.png");
+    background-image: url("images/BackGrond/WhyNiaz.png");
 
     background-repeat: no-repeat;
 
