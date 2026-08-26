@@ -1,117 +1,72 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- IMPORTANT: Makes the website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="NIAZ Pharma - Trusted pharmaceutical solutions, products, services and global healthcare partnerships.">
 
     <title>NIAZ Pharma</title>
 
-    <!-- ================= STYLESHEETS ================= -->
+    <!-- Main responsive stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="Main_Page.css">
-    <link rel="stylesheet" href="About_page.css">
-    <link rel="stylesheet" href="Products_page.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- ================= FONT AWESOME ================= -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    >
-
-    <!-- ================= GOOGLE FONT ================= -->
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- ================= RESPONSIVE / SMOOTH SCROLL ================= -->
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            width: 100%;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        button,
-        input,
-        textarea,
-        select {
-            font: inherit;
-        }
-    </style>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- =========================================================
-                            HEADER
-    ========================================================== -->
+    <!-- =====================================================
+                         HEADER
+    ====================================================== -->
 
-    <header>
+    <header class="site-header">
+
         <div class="top-line"></div>
 
         <div class="container navbar">
 
-            <!-- ================= PRIMARY LOGO ================= -->
-
-            <div class="logo">
-                <a href="#home" aria-label="NIAZ Pharma Home">
-                    <img
-                        src="Images/Logo/Niaz_Logo.jpeg"
-                        alt="NIAZ Pharma Logo"
-                    >
-                </a>
-            </div>
-
-            <!-- ================= PARTNER LOGO ================= -->
-
-            <a
-                href="https://zoodicopharma.com/index.html"
-                class="partner-logo-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Zoodico Pharma India"
-            >
-                <img
-                    src="Images/Logo/Zoodico_Logo.jpeg"
-                    alt="Zoodico Pharma Partner Logo"
-                    class="partner-img"
-                >
-
-                <div class="partner-text">
-                    <span class="badge-title">Zoodico Pharma</span>
-                    <span class="badge-subtitle">Partner in India</span>
-                </div>
+            <!-- MAIN LOGO -->
+            <a href="#home" class="logo">
+                <img src="Images/Logo/Niaz_Logo.jpeg"
+                    alt="NIAZ Pharma Logo">
             </a>
 
-            <!-- ================= NAVIGATION ================= -->
+            <!-- PARTNER LOGO -->
+            <a href="https://zoodicopharma.com/index.html"
+                class="partner-logo-link"
+                target="_blank"
+                rel="noopener noreferrer">
 
-            <nav aria-label="Main Navigation">
+                <img src="Images/Logo/Zoodico_Logo.jpeg"
+                    alt="Zoodico Pharma Partner Logo"
+                    class="partner-img">
+
+                <div class="partner-text">
+                    <span class="badge-title">
+                        Zoodico Pharma
+                    </span>
+
+                    <span class="badge-subtitle">
+                        Partner in India
+                    </span>
+                </div>
+
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav id="main-navigation">
+
                 <ul>
 
                     <li>
@@ -151,26 +106,30 @@
                     </li>
 
                 </ul>
+
             </nav>
 
-            <!-- ================= MOBILE MENU ================= -->
-
+            <!-- MOBILE MENU BUTTON -->
             <button
-                type="button"
                 class="menu"
+                id="menuButton"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
-            >
-                ☰
+                aria-controls="main-navigation">
+
+                <span>☰</span>
+
             </button>
 
         </div>
+
     </header>
 
 
-    <!-- =========================================================
-                            HERO SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         HERO SECTION
+    ====================================================== -->
 
     <section class="hero" id="home">
 
@@ -184,7 +143,9 @@
 
                 <h1>
                     Innovating Healthcare
-                    <span>for a Better Tomorrow</span>
+                    <span>
+                        for a Better Tomorrow
+                    </span>
                 </h1>
 
                 <p>
@@ -195,24 +156,18 @@
 
                 <div class="hero-buttons">
 
-                    <a
-                        href="#products"
-                        class="hero-btn primary-btn"
-                    >
+                    <a href="#products"
+                        class="hero-btn primary-btn">
                         Explore Products
                     </a>
 
-                    <a
-                        href="#services"
-                        class="hero-btn secondary-btn"
-                    >
+                    <a href="#services"
+                        class="hero-btn secondary-btn">
                         Our Services
                     </a>
 
-                    <a
-                        href="#regional"
-                        class="hero-btn outline-btn"
-                    >
+                    <a href="#regional"
+                        class="hero-btn outline-btn">
                         Global Presence
                     </a>
 
@@ -225,71 +180,72 @@
     </section>
 
 
-    <!-- =========================================================
-                            MISSION SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         MISSION
+    ====================================================== -->
 
     <section id="mission" class="mission">
 
-        <div class="section-title">
-            <h2>Our Mission</h2>
-        </div>
+        <div class="container">
 
-        <div class="mission-box">
-
-            <!-- Mission Card 1 -->
-
-            <div class="mission-card">
-
-                <div class="icon">
-                    🏥
-                </div>
-
-                <h3>
-                    Quality Medicines
-                </h3>
-
-                <p>
-                    Providing high-quality pharmaceutical products worldwide.
-                </p>
-
+            <div class="section-title">
+                <h2>Our Mission</h2>
             </div>
 
+            <div class="mission-box">
 
-            <!-- Mission Card 2 -->
+                <div class="mission-card">
 
-            <div class="mission-card">
+                    <div class="icon">
+                        🏥
+                    </div>
 
-                <div class="icon">
-                    🛡
+                    <h3>
+                        Quality Medicines
+                    </h3>
+
+                    <p>
+                        Providing high-quality pharmaceutical
+                        products worldwide.
+                    </p>
+
                 </div>
 
-                <h3>
-                    Patient Safety
-                </h3>
 
-                <p>
-                    Maintaining the highest safety and quality standards.
-                </p>
+                <div class="mission-card">
 
-            </div>
+                    <div class="icon">
+                        🛡
+                    </div>
 
+                    <h3>
+                        Patient Safety
+                    </h3>
 
-            <!-- Mission Card 3 -->
+                    <p>
+                        Maintaining the highest safety and
+                        quality standards.
+                    </p>
 
-            <div class="mission-card">
-
-                <div class="icon">
-                    🌍
                 </div>
 
-                <h3>
-                    Global Reach
-                </h3>
 
-                <p>
-                    Expanding healthcare solutions across international markets.
-                </p>
+                <div class="mission-card">
+
+                    <div class="icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Global Reach
+                    </h3>
+
+                    <p>
+                        Expanding healthcare solutions across
+                        international markets.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -298,11 +254,12 @@
     </section>
 
 
-    <!-- =========================================================
-                            SERVICES SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         SERVICES
+    ====================================================== -->
 
-    <section id="services" class="services-section">
+    <section id="services"
+        class="services-section">
 
         <div class="container">
 
@@ -312,125 +269,90 @@
 
             <div class="service-cards">
 
-                <!-- Service 1 -->
-
                 <div class="service-card">
 
                     <img
-                        src="images/BackGrond/Brand Acquisition.png"
-                        alt="Brand Acquisition and Representation"
-                        loading="lazy"
-                    >
+                        src="Images/BackGrond/Brand Acquisition.png"
+                        alt="Brand Acquisition">
 
                     <h3>
                         Brand Acquisition
-                        <br>
-                        &amp; Representation
                     </h3>
 
                     <p>
-                        Helping businesses acquire and represent leading
-                        brands with trusted partnerships.
+                        Strategic pharmaceutical brand
+                        acquisition and market development.
                     </p>
 
-                    <a
-                        href="#contact"
-                        class="btn-service"
-                    >
-                        Learn More &gt;
+                    <a href="#contact">
+                        Learn More
                     </a>
 
                 </div>
 
 
-                <!-- Service 2 -->
-
                 <div class="service-card">
 
                     <img
-                        src="images/BackGrond/Brand Governance.png"
-                        alt="Brand Governance and Supervision"
-                        loading="lazy"
-                    >
+                        src="Images/BackGrond/Market Access.png"
+                        alt="Market Access">
 
                     <h3>
-                        Brand Governance
-                        <br>
-                        &amp; Supervision
+                        Market Access
                     </h3>
 
                     <p>
-                        Protecting brand value through effective monitoring
-                        and supervision.
+                        Supporting pharmaceutical products
+                        entering and growing in international
+                        markets.
                     </p>
 
-                    <a
-                        href="#contact"
-                        class="btn-service"
-                    >
-                        Learn More &gt;
+                    <a href="#contact">
+                        Learn More
                     </a>
 
                 </div>
 
 
-                <!-- Service 3 -->
-
                 <div class="service-card">
 
                     <img
-                        src="images/BackGrond/Market Entry.png"
-                        alt="Market Entry and Expansion"
-                        loading="lazy"
-                    >
+                        src="Images/BackGrond/Distribution.png"
+                        alt="Distribution">
 
                     <h3>
-                        Market Entry
-                        <br>
-                        &amp; Expansion
+                        Distribution
                     </h3>
 
                     <p>
-                        Helping companies enter new markets and expand
-                        their business successfully.
+                        Reliable and structured pharmaceutical
+                        distribution solutions.
                     </p>
 
-                    <a
-                        href="#contact"
-                        class="btn-service"
-                    >
-                        Learn More &gt;
+                    <a href="#contact">
+                        Learn More
                     </a>
 
                 </div>
 
 
-                <!-- Service 4 -->
-
                 <div class="service-card">
 
                     <img
-                        src="images/BackGrond/Import & Export.png"
-                        alt="Import and Export Structuring"
-                        loading="lazy"
-                    >
+                        src="Images/BackGrond/Regulatory.png"
+                        alt="Regulatory Support">
 
                     <h3>
-                        Import &amp; Export
-                        <br>
-                        Structuring
+                        Regulatory Support
                     </h3>
 
                     <p>
-                        Professional import and export planning with
-                        global business support.
+                        Regulatory and compliance support for
+                        pharmaceutical products.
                     </p>
 
-                    <a
-                        href="#contact"
-                        class="btn-service"
-                    >
-                        Learn More &gt;
+                    <a href="#contact">
+                        Learn More
                     </a>
 
                 </div>
@@ -442,101 +364,73 @@
     </section>
 
 
-    <!-- =========================================================
-                            INDUSTRY SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         INDUSTRY
+    ====================================================== -->
 
-    <section id="industry" class="industry-section">
+    <section id="industry"
+        class="industry-section">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Industry Focus
-            </h2>
+            <div class="section-title">
+                <h2>
+                    Industries We Serve
+                </h2>
+            </div>
 
             <div class="industry-items">
 
-                <!-- Industry 1 -->
-
                 <div class="industry-box">
 
                     <img
-                        src="images/BackGrond/pharmaceutical.png"
-                        alt="Pharmaceuticals"
-                        loading="lazy"
-                    >
+                        src="Images/Industry/Pharma.png"
+                        alt="Pharmaceutical">
 
-                    <h4>
-                        Pharmaceuticals
-                    </h4>
+                    <h3>
+                        Pharmaceutical
+                    </h3>
+
+                    <p>
+                        Innovative pharmaceutical
+                        healthcare solutions.
+                    </p>
 
                 </div>
 
 
-                <!-- Industry 2 -->
-
                 <div class="industry-box">
 
                     <img
-                        src="images/BackGrond/Sports & Supplements.png"
-                        alt="Sports and Supplements"
-                        loading="lazy"
-                    >
+                        src="Images/Industry/Sports.png"
+                        alt="Sports Nutrition">
 
-                    <h4>
-                        Sports &amp; Supplements
-                    </h4>
+                    <h3>
+                        Sports Nutrition
+                    </h3>
+
+                    <p>
+                        Sports nutrition and supplement
+                        solutions.
+                    </p>
 
                 </div>
 
 
-                <!-- Industry 3 -->
-
                 <div class="industry-box">
 
                     <img
-                        src="images/BackGrond/Premium Food & Health.png"
-                        alt="Premium Food and Health"
-                        loading="lazy"
-                    >
+                        src="Images/Industry/Healthcare.png"
+                        alt="Healthcare">
 
-                    <h4>
-                        Premium Food &amp; Health
-                    </h4>
+                    <h3>
+                        Healthcare
+                    </h3>
 
-                </div>
-
-
-                <!-- Industry 4 -->
-
-                <div class="industry-box">
-
-                    <img
-                        src="images/BackGrond/Pet Nutrition.png"
-                        alt="Pet Nutrition"
-                        loading="lazy"
-                    >
-
-                    <h4>
-                        Pet Nutrition
-                    </h4>
-
-                </div>
-
-
-                <!-- Industry 5 -->
-
-                <div class="industry-box">
-
-                    <img
-                        src="images/BackGrond/Strategic BrandsStrategic Brands.png"
-                        alt="Strategic Brands"
-                        loading="lazy"
-                    >
-
-                    <h4>
-                        Strategic Brands
-                    </h4>
+                    <p>
+                        Quality-focused healthcare
+                        products and services.
+                    </p>
 
                 </div>
 
@@ -547,75 +441,52 @@
     </section>
 
 
-    <!-- =========================================================
-                        REGIONAL PRESENCE
-    ========================================================== -->
+    <!-- =====================================================
+                         REGIONAL PRESENCE
+    ====================================================== -->
 
-    <section id="regional" class="regional-section">
+    <section id="regional"
+        class="regional-section">
 
         <div class="container">
 
             <div class="regional-content">
 
-                <!-- Map -->
-
                 <div class="map-area">
 
                     <img
-                        src="Images/BackGrond/Map.png"
-                        alt="NIAZ Pharma Global Presence World Map"
-                        loading="lazy"
-                    >
+                        src="Images/BackGrond/Iran_Map.png"
+                        alt="NIAZ Pharma presence in Iran">
 
                 </div>
 
 
-                <!-- Presence -->
-
                 <div class="presence-area">
 
                     <h2>
-                        Regional Presence
+                        Our Regional Presence
                     </h2>
 
+                    <p>
+                        Building trusted pharmaceutical
+                        partnerships across regional markets.
+                    </p>
 
-                    <!-- Iran -->
 
                     <div class="location">
 
-                        <div
-                            class="flag blue"
-                            aria-hidden="true"
-                        ></div>
-
-                        <div>
-
-                            <h4>
-                                Iran Headquarters
-                            </h4>
-
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
 
-                    </div>
-
-
-                    <!-- Istanbul -->
-
-                    <div class="location">
-
-                        <div
-                            class="flag red"
-                            aria-hidden="true"
-                        ></div>
-
                         <div>
 
                             <h4>
-                                Istanbul Office
+                                Iran
                             </h4>
 
                             <span>
-                                Since 2008
+                                Pharmaceutical Market
                             </span>
 
                         </div>
@@ -631,32 +502,38 @@
     </section>
 
 
-    <!-- =========================================================
-                            WHY NIAZ
-    ========================================================== -->
+    <!-- =====================================================
+                         WHY NIAZ
+    ====================================================== -->
 
-    <section id="why" class="why-section">
+    <section id="why"
+        class="why-section">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Why NIAZ?
-            </h2>
+            <div class="section-title">
+
+                <h2>
+                    Why NIAZ?
+                </h2>
+
+            </div>
+
 
             <div class="why-content">
 
                 <div class="why-column">
 
                     <p>
-                        ✔ 25+ Years of International Expertise
+                        25+ Years of International Expertise
                     </p>
 
                     <p>
-                        ✔ Governance-Driven Representation
+                        Governance-Driven Representation
                     </p>
 
                     <p>
-                        ✔ Structured Distribution Network
+                        Structured Distribution Network
                     </p>
 
                 </div>
@@ -665,15 +542,15 @@
                 <div class="why-column">
 
                     <p>
-                        ✔ Governance-Driven Representation
+                        Governance-Driven Representation
                     </p>
 
                     <p>
-                        ✔ Structured Distribution Network
+                        Structured Distribution Network
                     </p>
 
                     <p>
-                        ✔ Trusted by Global Brands
+                        Trusted by Global Brands
                     </p>
 
                 </div>
@@ -685,35 +562,51 @@
     </section>
 
 
-    <!-- =========================================================
-                        PARTNER SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         PARTNER
+    ====================================================== -->
 
-    <section id="partner" class="partner-section">
+    <section id="partner"
+        class="partner-section">
 
         <div class="container">
 
-            <h2 class="section-title">
-                Partner with NIAZ
-            </h2>
+            <div class="section-title">
+
+                <h2>
+                    Partner with NIAZ
+                </h2>
+
+            </div>
+
 
             <div class="partner-buttons">
 
-                <a
-                    href="#contact"
-                    class="partner-btn"
-                >
-                    For International Brands
-                    <span>&#8250;</span>
+                <a href="#contact"
+                    class="partner-btn">
+
+                    <span>
+                        For International Brands
+                    </span>
+
+                    <span>
+                        &#8250;
+                    </span>
+
                 </a>
 
 
-                <a
-                    href="#contact"
-                    class="partner-btn"
-                >
-                    For Iranian Manufacturers
-                    <span>&#8250;</span>
+                <a href="#contact"
+                    class="partner-btn">
+
+                    <span>
+                        For Iranian Manufacturers
+                    </span>
+
+                    <span>
+                        &#8250;
+                    </span>
+
                 </a>
 
             </div>
@@ -723,14 +616,12 @@
     </section>
 
 
-    <!-- =========================================================
-                            ABOUT HERO
-    ========================================================== -->
+    <!-- =====================================================
+                         ABOUT
+    ====================================================== -->
 
-    <section
-        id="about"
-        class="about-hero"
-    >
+    <section id="about"
+        class="about-hero">
 
         <div class="overlay">
 
@@ -739,18 +630,15 @@
             </h1>
 
             <p>
-                Committed to delivering innovative pharmaceutical
-                solutions that improve lives worldwide.
+                Committed to delivering innovative
+                pharmaceutical solutions that improve
+                lives worldwide.
             </p>
 
         </div>
 
     </section>
 
-
-    <!-- =========================================================
-                            COMPANY SECTION
-    ========================================================== -->
 
     <section class="company">
 
@@ -760,9 +648,7 @@
 
                 <img
                     src="Images/BackGrond/AboutHero.png"
-                    alt="NIAZ Pharma Company Facility"
-                    loading="lazy"
-                >
+                    alt="NIAZ Pharma Company Facility">
 
             </div>
 
@@ -774,16 +660,16 @@
                 </h2>
 
                 <p>
-                    NIAZ Pharma is a trusted pharmaceutical company
-                    dedicated to manufacturing and supplying quality
-                    healthcare products across domestic and
-                    international markets.
+                    NIAZ Pharma is a trusted pharmaceutical
+                    company dedicated to manufacturing and
+                    supplying quality healthcare products
+                    across domestic and international markets.
                 </p>
 
                 <p>
-                    Our focus is innovation, quality assurance and
-                    patient well-being through advanced pharmaceutical
-                    research and development.
+                    Our focus is innovation, quality assurance
+                    and patient well-being through advanced
+                    pharmaceutical research and development.
                 </p>
 
             </div>
@@ -793,330 +679,38 @@
     </section>
 
 
-    <!-- =========================================================
-                            VISION SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         PRODUCTS
+    ====================================================== -->
 
-    <section class="vision">
-
-        <div class="container cards">
-
-            <!-- Vision -->
-
-            <div class="card">
-
-                <h3>
-                    Our Vision
-                </h3>
-
-                <p>
-                    To become a globally recognized pharmaceutical
-                    company delivering innovative healthcare products.
-                </p>
-
-            </div>
-
-
-            <!-- Mission -->
-
-            <div class="card">
-
-                <h3>
-                    Our Mission
-                </h3>
-
-                <p>
-                    Provide affordable, high-quality medicines while
-                    maintaining international quality standards.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-                            VALUES SECTION
-    ========================================================== -->
-
-    <section class="values">
+    <section id="products"
+        class="products-section">
 
         <div class="container">
 
-            <h2 class="title">
-                Our Core Values
-            </h2>
+            <div class="section-title">
 
-            <div class="value-box">
-
-                <!-- Quality -->
-
-                <div class="value">
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        We never compromise on quality.
-                    </p>
-
-                </div>
-
-
-                <!-- Integrity -->
-
-                <div class="value">
-
-                    <h3>
-                        Integrity
-                    </h3>
-
-                    <p>
-                        Building trust through transparency.
-                    </p>
-
-                </div>
-
-
-                <!-- Innovation -->
-
-                <div class="value">
-
-                    <h3>
-                        Innovation
-                    </h3>
-
-                    <p>
-                        Continuous research for better healthcare.
-                    </p>
-
-                </div>
-
-
-                <!-- Customer Care -->
-
-                <div class="value">
-
-                    <h3>
-                        Customer Care
-                    </h3>
-
-                    <p>
-                        Ensuring complete customer satisfaction.
-                    </p>
-
-                </div>
+                <h2>
+                    Our Products
+                </h2>
 
             </div>
 
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-                            WHY CHOOSE US
-    ========================================================== -->
-
-    <section class="why">
-
-        <div class="container">
-
-            <h2 class="title">
-                Why Choose Us?
-            </h2>
-
-            <ul>
-
-                <li>
-                    ✔ WHO-GMP Quality Standards
-                </li>
-
-                <li>
-                    ✔ Experienced Research Team
-                </li>
-
-                <li>
-                    ✔ Global Distribution Network
-                </li>
-
-                <li>
-                    ✔ Customer Focused Approach
-                </li>
-
-                <li>
-                    ✔ Affordable Healthcare Solutions
-                </li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-                        PRODUCTS HERO SECTION
-    ========================================================== -->
-
-    <section
-        id="products"
-        class="product-hero"
-    >
-
-        <div class="overlay">
-
-            <h1>
-                Our Products
-            </h1>
-
-            <p>
-                Delivering innovative pharmaceutical solutions
-                for better healthcare worldwide.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-                        PRODUCT CATEGORIES
-    ========================================================== -->
-
-    <section class="categories">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Product Categories
-            </h2>
-
-            <div class="category-box">
-
-                <!-- Category 1 -->
-
-                <div class="category-card">
-
-                    <img
-                        src="Images/BackGrond/Whey_Protein.jpeg"
-                        alt="Sports Nutrition and Supplements"
-                        loading="lazy"
-                    >
-
-                    <h3>
-                        Sports Nutrition &amp; Supplements
-                    </h3>
-
-                    <p>
-                        Musclelabs - Premium Nutrition Brand
-                    </p>
-
-                </div>
-
-
-                <!-- Category 2 -->
-
-                <div class="category-card">
-
-                    <img
-                        src="Images/BackGrond/Infant.jpeg"
-                        alt="Infant Formula Production Line"
-                        loading="lazy"
-                    >
-
-                    <h3>
-                        Infant Formula Production Line
-                    </h3>
-
-                    <p>
-                        Nutrition for a healthy start
-                    </p>
-
-                </div>
-
-
-                <!-- Category 3 -->
-
-                <div class="category-card">
-
-                    <img
-                        src="Images/BackGrond/Medical_Device.jpeg"
-                        alt="Medical Devices and Cosmetics"
-                        loading="lazy"
-                    >
-
-                    <h3>
-                        Medical Devices &amp; Cosmetics
-                    </h3>
-
-                    <p>
-                        Beauty &amp; Health Solutions
-                    </p>
-
-                </div>
-
-
-                <!-- Category 4 -->
-
-                <div class="category-card">
-
-                    <img
-                        src="Images/BackGrond/CBD.jpeg"
-                        alt="CBD Business"
-                        loading="lazy"
-                    >
-
-                    <h3>
-                        CBD Business
-                    </h3>
-
-                    <p>
-                        Import &amp; Local Production THC-Free CBD Products.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-                        FEATURED PRODUCTS
-    ========================================================== -->
-
-    <section class="featured">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Featured Products
-            </h2>
 
             <div class="product-grid">
-
-                <!-- Product 1 -->
 
                 <div class="product-card">
 
                     <img
                         src="Images/Products/product1.jpg"
-                        alt="Paracetamol 500mg"
-                        loading="lazy"
-                    >
+                        alt="Pharmaceutical Product">
 
                     <h3>
-                        Paracetamol 500mg
+                        Pharmaceutical Tablets
                     </h3>
 
                     <p>
-                        Pain Relief &amp; Fever Reducer
+                        Quality healthcare solutions.
                     </p>
 
                     <a href="#contact">
@@ -1126,15 +720,11 @@
                 </div>
 
 
-                <!-- Product 2 -->
-
                 <div class="product-card">
 
                     <img
                         src="Images/Products/product2.jpg"
-                        alt="Vitamin C Tablets"
-                        loading="lazy"
-                    >
+                        alt="Vitamin C Tablets">
 
                     <h3>
                         Vitamin C Tablets
@@ -1151,15 +741,11 @@
                 </div>
 
 
-                <!-- Product 3 -->
-
                 <div class="product-card">
 
                     <img
                         src="Images/Products/product3.jpg"
-                        alt="Antibiotic Capsules"
-                        loading="lazy"
-                    >
+                        alt="Antibiotic Capsules">
 
                     <h3>
                         Antibiotic Capsules
@@ -1182,9 +768,9 @@
     </section>
 
 
-    <!-- =========================================================
-                        QUALITY ASSURANCE
-    ========================================================== -->
+    <!-- =====================================================
+                         QUALITY
+    ====================================================== -->
 
     <section class="quality">
 
@@ -1195,9 +781,11 @@
             </h2>
 
             <p>
-                Every product is manufactured under WHO-GMP guidelines,
-                ensuring safety, effectiveness, and superior quality.
+                Every product is manufactured under
+                WHO-GMP guidelines, ensuring safety,
+                effectiveness, and superior quality.
             </p>
+
 
             <div class="quality-list">
 
@@ -1224,9 +812,9 @@
     </section>
 
 
-    <!-- =========================================================
-                            CTA SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         CTA
+    ====================================================== -->
 
     <section class="cta">
 
@@ -1241,39 +829,31 @@
     </section>
 
 
-    <!-- =========================================================
-                            CONTACT SECTION
-    ========================================================== -->
+    <!-- =====================================================
+                         CONTACT
+    ====================================================== -->
 
-    <section
-        id="contact"
-        class="contact-section"
-    >
+    <section id="contact"
+        class="contact-section">
 
         <div class="container">
 
-            <!--
-            <h2>
-                Contact Us
-            </h2>
+            <div class="section-title">
 
-            <p>
-                📞 +98 9355 99999
-            </p>
+                <h2>
+                    Contact Us
+                </h2>
 
-            <p>
-                ✉ info@niiaz.com
-            </p>
-            -->
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================================================
-                            FOOTER
-    ========================================================== -->
+    <!-- =====================================================
+                         FOOTER
+    ====================================================== -->
 
     <footer class="footer">
 
@@ -1281,7 +861,8 @@
 
             <div class="footer-content">
 
-                <!-- ================= NIAZ CONTACT ================= -->
+
+                <!-- NIAZ CONTACT -->
 
                 <div class="footer-box">
 
@@ -1304,7 +885,7 @@
                 </div>
 
 
-                <!-- ================= ZOODICO CONTACT ================= -->
+                <!-- ZOODICO CONTACT -->
 
                 <div class="footer-box">
 
@@ -1323,7 +904,7 @@
                 </div>
 
 
-                <!-- ================= QUICK LINKS ================= -->
+                <!-- QUICK LINKS -->
 
                 <div class="footer-box">
 
@@ -1353,7 +934,7 @@
 
                         <li>
                             <a href="#industry">
-                                Industries
+                                Industry
                             </a>
                         </li>
 
@@ -1368,7 +949,7 @@
                 </div>
 
 
-                <!-- ================= SOCIAL MEDIA ================= -->
+                <!-- SOCIAL -->
 
                 <div class="footer-box">
 
@@ -1378,71 +959,35 @@
 
                     <div class="social-icons">
 
-                        <a
-                            href="#"
-                            aria-label="Facebook"
-                        >
+                        <a href="#"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
 
-                        <a
-                            href="#"
-                            aria-label="Twitter"
-                        >
-                            <i class="fab fa-twitter"></i>
-                        </a>
-
-                        <a
-                            href="#"
-                            aria-label="LinkedIn"
-                        >
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="#"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
                         </a>
 
                     </div>
 
                 </div>
 
-
-                <!-- ================= LEGAL ================= -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Legal
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Privacy Policy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Terms &amp; Conditions
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
             </div>
 
-
-            <!-- ================= FOOTER LINE ================= -->
 
             <hr>
 
 
-            <!-- ================= COPYRIGHT ================= -->
-
             <div class="copyright">
 
-                © 2026 NIAZ Pharma. All Rights Reserved.
+                © 2026 NIAZ Pharma.
+                All Rights Reserved.
 
             </div>
 
@@ -1451,7 +996,112 @@
     </footer>
 
 
+    <!-- =====================================================
+                    MOBILE MENU JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const menuButton =
+                    document.getElementById("menuButton");
+
+                const navigation =
+                    document.getElementById("main-navigation");
+
+
+                if (!menuButton || !navigation) {
+                    return;
+                }
+
+
+                /* OPEN / CLOSE MOBILE MENU */
+
+                menuButton.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            navigation.classList.toggle(
+                                "mobile-open"
+                            );
+
+                        menuButton.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+
+                        menuButton.setAttribute(
+                            "aria-label",
+                            isOpen
+                                ? "Close navigation menu"
+                                : "Open navigation menu"
+                        );
+
+                    }
+                );
+
+
+                /* CLOSE MENU AFTER CLICKING LINK */
+
+                navigation
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                navigation.classList.remove(
+                                    "mobile-open"
+                                );
+
+                                menuButton.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                                menuButton.setAttribute(
+                                    "aria-label",
+                                    "Open navigation menu"
+                                );
+
+                            }
+                        );
+
+                    });
+
+
+                /* RESET MOBILE MENU ON DESKTOP */
+
+                window.addEventListener(
+                    "resize",
+                    function () {
+
+                        if (window.innerWidth > 768) {
+
+                            navigation.classList.remove(
+                                "mobile-open"
+                            );
+
+                            menuButton.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
 </body>
 
 </html>
-```
