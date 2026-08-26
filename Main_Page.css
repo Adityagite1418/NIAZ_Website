@@ -175,9 +175,7 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
-
     gap: 28px;
-
     list-style: none;
 }
 
@@ -204,9 +202,6 @@ nav ul li a:hover,
 nav ul li a.active {
     color: #0d6efd;
 }
-
-
-/* Navigation underline */
 
 nav ul li a::after {
     content: "";
@@ -270,22 +265,11 @@ nav ul li a.active::after {
     overflow: hidden;
 }
 
-
-/* =========================================================
-                HERO BACKGROUND OVERLAY
-========================================================= */
-
 .hero::before {
     content: "";
 
     position: absolute;
-
     inset: 0;
-
-    /*
-        Very light overlay.
-        The background image remains clearly visible.
-    */
 
     background: linear-gradient(
         90deg,
@@ -296,11 +280,6 @@ nav ul li a.active::after {
 
     z-index: 1;
 }
-
-
-/* =========================================================
-                     HERO CONTENT
-========================================================= */
 
 .hero-content {
     position: relative;
@@ -315,15 +294,9 @@ nav ul li a.active::after {
     padding: 70px 30px;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 }
-
-
-/* =========================================================
-              PROFESSIONAL TRANSPARENT BOX
-========================================================= */
 
 .hero-text-box {
     width: 850px;
@@ -349,11 +322,6 @@ nav ul li a.active::after {
     animation: heroBoxAnimation 0.8s ease-out;
 }
 
-
-/* =========================================================
-                       HERO TAG
-========================================================= */
-
 .hero-tag {
     display: inline-block;
 
@@ -377,11 +345,6 @@ nav ul li a.active::after {
     text-transform: uppercase;
 }
 
-
-/* =========================================================
-                     HERO HEADING
-========================================================= */
-
 .hero-text-box h1 {
     margin: 0 0 22px;
 
@@ -402,11 +365,6 @@ nav ul li a.active::after {
 
     color: #008c95;
 }
-
-
-/* =========================================================
-                   HERO DESCRIPTION
-========================================================= */
 
 .hero-text-box p {
     max-width: 700px;
@@ -457,11 +415,6 @@ nav ul li a.active::after {
     cursor: pointer;
 }
 
-
-/* =========================================================
-                  PRIMARY HERO BUTTON
-========================================================= */
-
 .primary-btn {
     color: #ffffff;
 
@@ -489,11 +442,6 @@ nav ul li a.active::after {
     transform: translateY(-3px);
 }
 
-
-/* =========================================================
-                  OUR SERVICES BUTTON
-========================================================= */
-
 .secondary-btn {
     color: #ffffff;
 
@@ -520,11 +468,6 @@ nav ul li a.active::after {
 
     transform: translateY(-3px);
 }
-
-
-/* =========================================================
-                  GLOBAL PRESENCE BUTTON
-========================================================= */
 
 .outline-btn {
     color: #ffffff;
@@ -641,36 +584,21 @@ nav ul li a.active::after {
     overflow: hidden;
 }
 
-
-/* Mission overlay */
-
 .mission::before {
     content: "";
 
     position: absolute;
-
     inset: 0;
-
-    /*
-        Reduced from 0.58.
-        Background image is now much more visible.
-    */
 
     background: rgba(255, 255, 255, 0.28);
 
     z-index: 0;
 }
 
-
-/* Mission title */
-
 .mission .section-title {
     position: relative;
     z-index: 2;
 }
-
-
-/* Mission cards */
 
 .mission-box {
     position: relative;
@@ -682,7 +610,6 @@ nav ul li a.active::after {
     margin: 0 auto;
 
     display: flex;
-
     justify-content: space-between;
     align-items: stretch;
 
@@ -726,9 +653,6 @@ nav ul li a.active::after {
     box-shadow:
         0 18px 40px rgba(0, 40, 80, 0.18);
 }
-
-
-/* Mission icon */
 
 .icon {
     width: 90px;
@@ -786,10 +710,6 @@ nav ul li a.active::after {
 
     padding: 70px 0 80px;
 
-    /*
-        Stronger background visibility.
-    */
-
     background-image:
         linear-gradient(
             rgba(245, 248, 252, 0.35),
@@ -807,11 +727,6 @@ nav ul li a.active::after {
 
     overflow: hidden;
 }
-
-
-/* =========================================================
-              SERVICES SECTION TITLE
-========================================================= */
 
 .services-section .section-title {
     position: relative;
@@ -832,6 +747,8 @@ nav ul li a.active::after {
 
     line-height: 1.3;
 }
+
+
 /* =========================================================
                     SERVICE CARDS
 ========================================================= */
@@ -841,9 +758,12 @@ nav ul li a.active::after {
     z-index: 2;
 
     display: flex;
+
     justify-content: space-between;
     align-items: stretch;
+
     flex-wrap: wrap;
+
     gap: 20px;
 }
 
@@ -856,12 +776,15 @@ nav ul li a.active::after {
     position: relative;
 
     width: calc(25% - 15px);
+
     min-height: 360px;
 
     padding: 30px 20px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
@@ -871,12 +794,14 @@ nav ul li a.active::after {
 
     background: #ffffff;
 
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.70);
 
     border-radius: 10px;
 
     box-shadow:
         0 5px 20px rgba(0, 0, 0, 0.08);
+
+    isolation: isolate;
 
     transition:
         transform 0.3s ease,
@@ -885,10 +810,10 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                FULL BACKGROUND IMAGE
+                SERVICE BACKGROUND IMAGE
 ========================================================= */
 
-.service-card img {
+.service-card > img {
     position: absolute;
 
     top: 0;
@@ -899,10 +824,12 @@ nav ul li a.active::after {
 
     margin: 0;
 
+    max-width: none;
+
     object-fit: cover;
     object-position: center;
 
-    z-index: 0;
+    z-index: -2;
 
     opacity: 1;
 
@@ -913,7 +840,7 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                IMAGE DARKENING LAYER
+                    SERVICE IMAGE OVERLAY
 ========================================================= */
 
 .service-card::before {
@@ -923,9 +850,9 @@ nav ul li a.active::after {
 
     inset: 0;
 
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.12);
 
-    z-index: 1;
+    z-index: -1;
 
     pointer-events: none;
 }
@@ -960,7 +887,7 @@ nav ul li a.active::after {
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.08);
 
-    z-index: 1;
+    z-index: -1;
 
     pointer-events: none;
 
@@ -999,7 +926,7 @@ nav ul li a.active::after {
     line-height: 1.4;
 
     text-shadow:
-        0 1px 2px rgba(255, 255, 255, 0.9);
+        0 1px 2px rgba(255, 255, 255, 0.90);
 }
 
 
@@ -1010,16 +937,16 @@ nav ul li a.active::after {
 .service-card p {
     margin: 0 0 20px;
 
+    max-width: 300px;
+
     color: #222222;
 
     font-size: 15px;
 
     line-height: 24px;
 
-    max-width: 300px;
-
     text-shadow:
-        0 1px 2px rgba(255, 255, 255, 0.9);
+        0 1px 2px rgba(255, 255, 255, 0.90);
 }
 
 
@@ -1054,7 +981,7 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                    CARD HOVER
+                    SERVICE HOVER
 ========================================================= */
 
 .service-card:hover {
@@ -1064,21 +991,11 @@ nav ul li a.active::after {
         0 12px 30px rgba(0, 0, 0, 0.16);
 }
 
-
-/* =========================================================
-                IMAGE HOVER EFFECT
-========================================================= */
-
-.service-card:hover img {
+.service-card:hover > img {
     transform: scale(1.08);
 
     filter: brightness(1.05);
 }
-
-
-/* =========================================================
-                BLUR AREA HOVER
-========================================================= */
 
 .service-card:hover::after {
     background: rgba(255, 255, 255, 0.55);
@@ -1086,11 +1003,6 @@ nav ul li a.active::after {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
-
-
-/* =========================================================
-                    BUTTON HOVER
-========================================================= */
 
 .btn-service:hover {
     color: #ffffff;
@@ -1105,53 +1017,6 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                    TABLET
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .service-card {
-        width: calc(50% - 10px);
-
-        min-height: 350px;
-    }
-}
-
-
-/* =========================================================
-                    MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .service-cards {
-        gap: 20px;
-    }
-
-    .service-card {
-        width: 100%;
-
-        min-height: 340px;
-
-        padding: 30px 20px;
-    }
-
-    .service-card h3 {
-        font-size: 20px;
-    }
-
-    .service-card p {
-        font-size: 14px;
-
-        line-height: 22px;
-    }
-
-    .service-card::after {
-        width: 90%;
-        height: 84%;
-    }
-}
-/* =========================================================
                     INDUSTRY SECTION
 ========================================================= */
 
@@ -1160,12 +1025,8 @@ nav ul li a.active::after {
 
     padding: 70px 0;
 
-    /*
-        Industry background image.
-        The image remains clearly visible.
-    */
-
-    background-image: url("images/BackGrond/Industry.png");
+    background-image:
+        url("images/BackGrond/Industry.png");
 
     background-repeat: no-repeat;
 
@@ -1178,11 +1039,6 @@ nav ul li a.active::after {
     overflow: hidden;
 }
 
-
-/* =========================================================
-              INDUSTRY BACKGROUND OVERLAY
-========================================================= */
-
 .industry-section::before {
     content: "";
 
@@ -1190,47 +1046,26 @@ nav ul li a.active::after {
 
     inset: 0;
 
-    /*
-        Reduced from 0.70.
-    */
-
     background: rgba(255, 255, 255, 0.28);
 
     z-index: 0;
 }
 
-
-/* =========================================================
-                    INDUSTRY CONTAINER
-========================================================= */
-
 .industry-section .container {
     position: relative;
-
     z-index: 1;
 }
-
-
-/* =========================================================
-                    INDUSTRY ITEMS
-========================================================= */
 
 .industry-items {
     display: flex;
 
     justify-content: space-between;
-
     align-items: stretch;
 
     flex-wrap: wrap;
 
     gap: 20px;
 }
-
-
-/* =========================================================
-                    INDUSTRY BOX
-========================================================= */
 
 .industry-box {
     width: calc(20% - 16px);
@@ -1266,11 +1101,6 @@ nav ul li a.active::after {
         0 14px 30px rgba(0, 40, 80, 0.16);
 }
 
-
-/* =========================================================
-                    INDUSTRY IMAGE
-========================================================= */
-
 .industry-box img {
     width: 90px;
     height: 90px;
@@ -1302,11 +1132,6 @@ nav ul li a.active::after {
         0 8px 20px rgba(13, 77, 155, 0.15);
 }
 
-
-/* =========================================================
-                    INDUSTRY HEADING
-========================================================= */
-
 .industry-box h4 {
     margin-top: 5px;
 
@@ -1321,7 +1146,7 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                 REGIONAL PRESENCE
+                    REGIONAL PRESENCE
 ========================================================= */
 
 .regional-section {
@@ -1408,6 +1233,7 @@ nav ul li a.active::after {
     font-size: 16px;
 }
 
+
 /* =========================================================
                     WHY NIAZ SECTION
 ========================================================= */
@@ -1417,7 +1243,8 @@ nav ul li a.active::after {
 
     padding: 70px 0 80px;
 
-    background-image: url("images/BackGrond/WhyNiaz.png");
+    background-image:
+        url("images/BackGrond/WhyNiaz.png");
 
     background-repeat: no-repeat;
 
@@ -1430,11 +1257,6 @@ nav ul li a.active::after {
     overflow: hidden;
 }
 
-
-/* =========================================================
-                WHY BACKGROUND OVERLAY
-========================================================= */
-
 .why-section::before {
     content: "";
 
@@ -1442,16 +1264,10 @@ nav ul li a.active::after {
 
     inset: 0;
 
-    /* Keep background image clearly visible */
     background: rgba(255, 255, 255, 0.20);
 
     z-index: 0;
 }
-
-
-/* =========================================================
-                    WHY CONTAINER
-========================================================= */
 
 .why-section .container {
     position: relative;
@@ -1461,7 +1277,7 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                WHY NIAZ SECTION TITLE
+                    WHY SECTION TITLE
 ========================================================= */
 
 .why-section .section-title {
@@ -1475,35 +1291,19 @@ nav ul li a.active::after {
 
     width: fit-content;
 
-    margin: 0 auto 45px auto;
+    margin: 0 auto 45px;
 
     padding: 14px 35px;
 
-    /*
-        White background with slight transparency
-        gives a clean professional appearance.
-    */
     background: rgba(255, 255, 255, 0.94);
 
-    /*
-        Blue border
-    */
     border: 2px solid #0d6efd;
 
-    /*
-        Rounded corners
-    */
     border-radius: 12px;
 
-    /*
-        Professional shadow
-    */
     box-shadow:
         0 8px 25px rgba(13, 77, 155, 0.18);
 
-    /*
-        Small glass effect
-    */
     backdrop-filter: blur(5px);
 
     -webkit-backdrop-filter: blur(5px);
@@ -1512,11 +1312,6 @@ nav ul li a.active::after {
 
     z-index: 2;
 }
-
-
-/* =========================================================
-                    WHY NIAZ TITLE TEXT
-========================================================= */
 
 .why-section .section-title h2 {
     position: relative;
@@ -1536,10 +1331,9 @@ nav ul li a.active::after {
     letter-spacing: 0.3px;
 }
 
-
-/* =========================================================
-                BLUE ACCENT UNDER TITLE
-========================================================= */
+.why-section .section-title h2::before {
+    display: none;
+}
 
 .why-section .section-title h2::after {
     content: "";
@@ -1562,12 +1356,6 @@ nav ul li a.active::after {
 }
 
 
-/* Remove default title side lines */
-.why-section .section-title h2::before {
-    display: none;
-}
-
-
 /* =========================================================
                     WHY CONTENT
 ========================================================= */
@@ -1586,11 +1374,6 @@ nav ul li a.active::after {
     margin-top: 10px;
 }
 
-
-/* =========================================================
-                    WHY COLUMN
-========================================================= */
-
 .why-column {
     width: 40%;
 
@@ -1599,7 +1382,6 @@ nav ul li a.active::after {
     background: rgba(255, 255, 255, 0.88);
 
     backdrop-filter: blur(4px);
-
     -webkit-backdrop-filter: blur(4px);
 
     border: 1px solid rgba(255, 255, 255, 0.95);
@@ -1615,11 +1397,6 @@ nav ul li a.active::after {
         background 0.3s ease;
 }
 
-
-/* =========================================================
-                    WHY COLUMN HOVER
-========================================================= */
-
 .why-column:hover {
     transform: translateY(-6px);
 
@@ -1628,11 +1405,6 @@ nav ul li a.active::after {
     box-shadow:
         0 15px 35px rgba(0, 40, 80, 0.18);
 }
-
-
-/* =========================================================
-                    WHY TEXT
-========================================================= */
 
 .why-column p {
     position: relative;
@@ -1650,216 +1422,25 @@ nav ul li a.active::after {
     line-height: 30px;
 }
 
-
-/* Last paragraph */
 .why-column p:last-child {
     margin-bottom: 0;
 }
 
-
-/* =========================================================
-                    CHECK ICON
-========================================================= */
-
 .why-column p::before {
     content: "✓";
 
     position: absolute;
 
     left: 0;
-
     top: 3px;
 
     width: 23px;
-
     height: 23px;
 
     display: flex;
 
     justify-content: center;
-
     align-items: center;
-
-    color: #ffffff;
-
-    background: #0d6efd;
-
-    border-radius: 50%;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    line-height: 23px;
-
-    box-shadow:
-        0 3px 8px rgba(13, 111, 199, 0.25);
-}
-
-
-/* =========================================================
-                    TABLET
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .why-section {
-        padding: 60px 0 70px;
-
-        background-position: center center;
-    }
-
-    .why-section .section-title {
-        margin-bottom: 40px;
-
-        padding: 13px 30px;
-    }
-
-    .why-section .section-title h2 {
-        font-size: 34px;
-    }
-
-    .why-content {
-        gap: 25px;
-    }
-
-    .why-column {
-        width: 46%;
-
-        padding: 28px 25px;
-    }
-
-    .why-column p {
-        font-size: 17px;
-
-        line-height: 28px;
-    }
-}
-
-
-/* =========================================================
-                    MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .why-section {
-        padding: 55px 0 65px;
-
-        background-position: center center;
-    }
-
-    .why-section::before {
-        background: rgba(255, 255, 255, 0.25);
-    }
-
-    .why-section .section-title {
-        margin-bottom: 35px;
-
-        padding: 12px 25px;
-
-        border-radius: 10px;
-
-        border-width: 2px;
-    }
-
-    .why-section .section-title h2 {
-        font-size: 30px;
-    }
-
-    .why-content {
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 20px;
-    }
-
-    .why-column {
-        width: 92%;
-
-        padding: 28px 25px;
-
-        border-radius: 12px;
-    }
-
-    .why-column p {
-        padding-left: 31px;
-
-        font-size: 16px;
-
-        line-height: 27px;
-    }
-}
-
-
-/* =========================================================
-                    SMALL MOBILE
-========================================================= */
-
-@media (max-width: 500px) {
-
-    .why-section {
-        padding: 50px 0 60px;
-    }
-
-    .why-section .section-title {
-        padding: 11px 22px;
-
-        margin-bottom: 30px;
-
-        border-radius: 9px;
-    }
-
-    .why-section .section-title h2 {
-        font-size: 27px;
-    }
-
-    .why-column {
-        width: 100%;
-
-        padding: 25px 20px;
-
-        border-radius: 11px;
-    }
-
-    .why-column p {
-        padding-left: 30px;
-
-        font-size: 15px;
-
-        line-height: 26px;
-    }
-
-    .why-column p::before {
-        width: 22px;
-
-        height: 22px;
-
-        font-size: 12px;
-
-        line-height: 22px;
-    }
-}
-/* =========================================================
-                    CHECK ICON
-========================================================= */
-
-.why-column p::before {
-    content: "✓";
-
-    position: absolute;
-
-    left: 0;
-    top: 1px;
-
-    width: 23px;
-    height: 23px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
 
     color: #ffffff;
 
@@ -1965,7 +1546,7 @@ nav ul li a.active::after {
 .footer-content {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     gap: 40px;
 }
@@ -2080,7 +1661,368 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                     TABLET 1100px
+                    PRODUCT CATEGORIES
+========================================================= */
+
+.categories {
+    position: relative;
+
+    width: 100%;
+
+    padding: 70px 0 80px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+.categories .container {
+    position: relative;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.categories .section-title {
+    position: relative;
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 45px;
+
+    padding: 12px 32px;
+
+    color: #0b4ea2;
+
+    background: #ffffff;
+
+    border: 2px solid #0d6efd;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.2px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 18px rgba(13, 77, 155, 0.10);
+
+    z-index: 20;
+}
+
+.categories .section-title::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 55px;
+    height: 3px;
+
+    background: #40b9d8;
+
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+}
+
+.category-box {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #b9cde3;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 40, 80, 0.10);
+}
+
+.category-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 330px;
+
+    margin: 0;
+    padding: 30px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    border: none;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+
+    isolation: isolate;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.category-card:last-child {
+    border-right: none;
+}
+
+.category-card > img {
+    position: absolute !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    z-index: -2;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    filter: brightness(0.94);
+
+    transition:
+        transform 0.60s ease,
+        filter 0.60s ease;
+}
+
+.category-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 40, 80, 0.02) 0%,
+            rgba(0, 40, 80, 0.04) 30%,
+            rgba(0, 30, 70, 0.10) 55%,
+            rgba(0, 25, 60, 0.35) 100%
+        );
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 0;
+    height: 4px;
+
+    background: #40b9d8;
+
+    border-radius: 0 0 10px 10px;
+
+    transform: translateX(-50%);
+
+    z-index: 15;
+
+    transition: width 0.35s ease;
+}
+
+.category-card h3 {
+    position: relative;
+
+    z-index: 10;
+
+    width: fit-content;
+
+    max-width: 270px;
+
+    margin: 0 auto 10px;
+
+    padding: 9px 16px;
+
+    color: #0b4ea2;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.96);
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.3px;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 5px 18px rgba(0, 40, 80, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.category-card p {
+    position: relative;
+
+    z-index: 10;
+
+    width: fit-content;
+
+    max-width: 260px;
+
+    margin: 0 auto;
+
+    padding: 7px 14px;
+
+    color: #3d4f63;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.94);
+
+    border-radius: 7px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 40, 80, 0.12);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    z-index: 12;
+
+    box-shadow:
+        0 15px 35px rgba(0, 40, 80, 0.28);
+}
+
+.category-card:hover > img {
+    transform: scale(1.06) !important;
+
+    filter:
+        brightness(1.03)
+        saturate(1.05) !important;
+}
+
+.category-card:hover::after {
+    width: 70px;
+}
+
+.category-card:hover h3 {
+    background: rgba(255, 255, 255, 0.96);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 40, 80, 0.20);
+}
+
+.category-card:hover p {
+    background: rgba(255, 255, 255, 0.92);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 40, 80, 0.16);
+}
+
+
+/* =========================================================
+                    TABLET 1100px
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -2106,6 +2048,32 @@ nav ul li a.active::after {
     .hero-text-box h1 {
         font-size: 46px;
     }
+
+    .categories {
+        padding: 65px 0 75px;
+    }
+
+    .categories .container {
+        width: 92%;
+    }
+
+    .category-card {
+        min-height: 310px;
+
+        padding: 28px 18px;
+    }
+
+    .category-card h3 {
+        font-size: 18px;
+
+        max-width: 235px;
+    }
+
+    .category-card p {
+        font-size: 12.5px;
+
+        max-width: 220px;
+    }
 }
 
 
@@ -2129,22 +2097,13 @@ nav ul li a.active::after {
         font-size: 14px;
     }
 
-
-    /* Services */
-
     .service-card {
         width: calc(50% - 10px);
     }
 
-
-    /* Industry */
-
     .industry-box {
         width: calc(33.333% - 14px);
     }
-
-
-    /* Regional */
 
     .map-area {
         width: 100%;
@@ -2160,9 +2119,6 @@ nav ul li a.active::after {
         justify-content: center;
     }
 
-
-    /* Why */
-
     .why-content {
         gap: 25px;
     }
@@ -2171,20 +2127,59 @@ nav ul li a.active::after {
         width: 46%;
     }
 
-
-    /* Footer */
-
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
-    /* Partner */
 
     .partner-btn {
         width: 100%;
 
         max-width: 420px;
+    }
+
+    .categories {
+        padding: 60px 0 70px;
+    }
+
+    .categories .section-title {
+        margin-bottom: 40px;
+
+        padding: 11px 28px;
+
+        font-size: 33px;
+    }
+
+    .category-box {
+        grid-template-columns: repeat(2, 1fr);
+
+        border-radius: 12px;
+    }
+
+    .category-card {
+        min-height: 300px;
+
+        padding: 28px 20px;
+    }
+
+    .category-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .category-card:nth-child(1),
+    .category-card:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    }
+
+    .category-card h3 {
+        font-size: 19px;
+
+        max-width: 250px;
+    }
+
+    .category-card p {
+        font-size: 13px;
+
+        max-width: 230px;
     }
 }
 
@@ -2194,8 +2189,6 @@ nav ul li a.active::after {
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    /* Header */
 
     .navbar {
         min-height: 75px;
@@ -2348,6 +2341,8 @@ nav ul li a.active::after {
 
     .service-card {
         width: 100%;
+
+        min-height: 340px;
     }
 
 
@@ -2440,6 +2435,69 @@ nav ul li a.active::after {
     .social-icons {
         justify-content: center;
     }
+
+
+    /* Categories */
+
+    .categories {
+        padding: 55px 0 65px;
+    }
+
+    .categories .container {
+        width: 92%;
+    }
+
+    .categories .section-title {
+        margin-bottom: 35px;
+
+        padding: 11px 23px;
+
+        border-radius: 9px;
+
+        font-size: 30px;
+    }
+
+    .category-box {
+        grid-template-columns: 1fr;
+
+        border-radius: 11px;
+    }
+
+    .category-card {
+        width: 100%;
+
+        min-height: 300px;
+
+        padding: 30px 25px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    }
+
+    .category-card:last-child {
+        border-bottom: none;
+    }
+
+    .category-card:hover {
+        transform: none;
+    }
+
+    .category-card:hover > img {
+        transform: none !important;
+    }
+
+    .category-card h3 {
+        font-size: 20px;
+
+        max-width: 300px;
+    }
+
+    .category-card p {
+        max-width: 300px;
+
+        font-size: 14px;
+    }
 }
 
 
@@ -2452,9 +2510,6 @@ nav ul li a.active::after {
     .container {
         width: 92%;
     }
-
-
-    /* Header */
 
     .logo img {
         height: 52px;
@@ -2535,6 +2590,8 @@ nav ul li a.active::after {
 
     .service-card {
         width: 100%;
+
+        min-height: 340px;
 
         padding: 28px 18px;
     }
@@ -2622,614 +2679,9 @@ nav ul li a.active::after {
     .footer-box h3 {
         font-size: 20px;
     }
-}
 
-/* =========================================================
-                    Adiyta Gite
-========================================================= */
 
-/* =========================================================
-                    PRODUCT CATEGORIES
-========================================================= */
-
-.categories {
-    position: relative;
-    width: 100%;
-    padding: 70px 0 80px;
-    background: #ffffff;
-    overflow: hidden;
-}
-
-
-/* =========================================================
-                CATEGORIES CONTAINER
-========================================================= */
-
-.categories .container {
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-                    SECTION TITLE
-========================================================= */
-
-.categories .section-title {
-    position: relative;
-
-    display: block;
-    width: fit-content;
-
-    margin: 0 auto 45px;
-    padding: 12px 32px;
-
-    color: #0b4ea2;
-
-    background: #ffffff;
-
-    border: 2px solid #0d6efd;
-    border-radius: 10px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 36px;
-    font-weight: 700;
-
-    line-height: 1.2;
-
-    letter-spacing: 0.2px;
-
-    text-align: center;
-
-    box-shadow:
-        0 6px 18px rgba(13, 77, 155, 0.10);
-
-    z-index: 20;
-}
-
-
-/* =========================================================
-                TITLE BLUE ACCENT
-========================================================= */
-
-.categories .section-title::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -8px;
-
-    width: 55px;
-    height: 3px;
-
-    background: #40b9d8;
-
-    border-radius: 10px;
-
-    transform: translateX(-50%);
-}
-
-
-/* =========================================================
-                    CATEGORY BOX
-========================================================= */
-
-.category-box {
-    position: relative;
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 0;
-
-    padding: 0;
-    margin: 0;
-
-    background: #ffffff;
-
-    border: 1px solid #b9cde3;
-
-    border-radius: 14px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 30px rgba(0, 40, 80, 0.10);
-}
-
-
-/* =========================================================
-                    CATEGORY CARD
-========================================================= */
-
-.category-card {
-    position: relative;
-
-    width: 100%;
-    min-width: 0;
-
-    min-height: 330px;
-
-    margin: 0;
-    padding: 30px 22px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-end;
-
-    text-align: center;
-
-    box-sizing: border-box;
-
-    overflow: hidden;
-
-    background: transparent;
-
-    border: none;
-
-    border-right: 1px solid rgba(255, 255, 255, 0.45);
-
-    isolation: isolate;
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-
-/* =========================================================
-                LAST CARD BORDER
-========================================================= */
-
-.category-card:last-child {
-    border-right: none;
-}
-
-
-/* =========================================================
-            FULL BACKGROUND IMAGE
-========================================================= */
-
-.category-card > img {
-    position: absolute !important;
-
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    min-width: 100% !important;
-    min-height: 100% !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    display: block !important;
-
-    object-fit: cover !important;
-    object-position: center center !important;
-
-    border: none !important;
-    border-radius: 0 !important;
-
-    z-index: -10;
-
-    opacity: 1;
-
-    transform: scale(1);
-
-    filter: brightness(0.94);
-
-    transition:
-        transform 0.60s ease,
-        filter 0.60s ease;
-}
-
-
-/* =========================================================
-                IMAGE OVERLAY
-========================================================= */
-
-.category-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 40, 80, 0.02) 0%,
-            rgba(0, 40, 80, 0.04) 30%,
-            rgba(0, 30, 70, 0.10) 55%,
-            rgba(0, 25, 60, 0.35) 100%
-        );
-
-    z-index: -5;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-                TOP BLUE ACCENT LINE
-========================================================= */
-
-.category-card::after {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    width: 0;
-    height: 4px;
-
-    background: #40b9d8;
-
-    border-radius: 0 0 10px 10px;
-
-    transform: translateX(-50%);
-
-    z-index: 15;
-
-    transition:
-        width 0.35s ease;
-}
-
-
-/* =========================================================
-                    CATEGORY HEADING
-========================================================= */
-
-.category-card h3 {
-    position: relative;
-
-    z-index: 10;
-
-    width: fit-content;
-
-    max-width: 270px;
-
-    margin: 0 auto 10px;
-
-    padding: 9px 16px;
-
-    color: #0b4ea2;
-
-    background: rgba(255, 255, 255, 0.88);
-
-    border: 1px solid rgba(255, 255, 255, 0.96);
-
-    border-radius: 8px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 20px;
-
-    font-weight: 700;
-
-    line-height: 1.35;
-
-    letter-spacing: 0.3px;
-
-    text-align: center;
-
-    text-transform: uppercase;
-
-    text-shadow: none;
-
-    box-shadow:
-        0 5px 18px rgba(0, 40, 80, 0.15);
-
-    backdrop-filter: blur(8px);
-
-    -webkit-backdrop-filter: blur(8px);
-
-    transition:
-        background 0.35s ease,
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-
-/* =========================================================
-                CATEGORY DESCRIPTION
-========================================================= */
-
-.category-card p {
-    position: relative;
-
-    z-index: 10;
-
-    width: fit-content;
-
-    max-width: 260px;
-
-    margin: 0 auto;
-
-    padding: 7px 14px;
-
-    color: #3d4f63;
-
-    background: rgba(255, 255, 255, 0.82);
-
-    border: 1px solid rgba(255, 255, 255, 0.94);
-
-    border-radius: 7px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    line-height: 1.6;
-
-    text-align: center;
-
-    text-shadow: none;
-
-    box-shadow:
-        0 4px 15px rgba(0, 40, 80, 0.12);
-
-    backdrop-filter: blur(8px);
-
-    -webkit-backdrop-filter: blur(8px);
-
-    transition:
-        background 0.35s ease,
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-
-/* =========================================================
-                    CARD HOVER
-========================================================= */
-
-.category-card:hover {
-    transform: translateY(-5px);
-
-    z-index: 12;
-
-    box-shadow:
-        0 15px 35px rgba(0, 40, 80, 0.28);
-}
-
-
-/* =========================================================
-                BACKGROUND IMAGE HOVER
-========================================================= */
-
-.category-card:hover > img {
-    transform: scale(1.06) !important;
-
-    filter:
-        brightness(1.03)
-        saturate(1.05) !important;
-}
-
-
-/* =========================================================
-                TOP LINE HOVER
-========================================================= */
-
-.category-card:hover::after {
-    width: 70px;
-}
-
-
-/* =========================================================
-                HEADING HOVER
-========================================================= */
-
-.category-card:hover h3 {
-    background: rgba(255, 255, 255, 0.96);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(0, 40, 80, 0.20);
-}
-
-
-/* =========================================================
-                DESCRIPTION HOVER
-========================================================= */
-
-.category-card:hover p {
-    background: rgba(255, 255, 255, 0.92);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 6px 18px rgba(0, 40, 80, 0.16);
-}
-
-
-/* =========================================================
-                    TABLET 1100px
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .categories {
-        padding: 65px 0 75px;
-    }
-
-    .categories .container {
-        width: 92%;
-    }
-
-    .category-card {
-        min-height: 310px;
-
-        padding: 28px 18px;
-    }
-
-    .category-card h3 {
-        font-size: 18px;
-
-        max-width: 235px;
-    }
-
-    .category-card p {
-        font-size: 12.5px;
-
-        max-width: 220px;
-    }
-}
-
-
-/* =========================================================
-                    TABLET 992px
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .categories {
-        padding: 60px 0 70px;
-    }
-
-    .categories .section-title {
-        margin-bottom: 40px;
-
-        padding: 11px 28px;
-
-        font-size: 33px;
-    }
-
-    .category-box {
-        grid-template-columns: repeat(2, 1fr);
-
-        border-radius: 12px;
-    }
-
-    .category-card {
-        min-height: 300px;
-
-        padding: 28px 20px;
-    }
-
-    .category-card:nth-child(2) {
-        border-right: none;
-    }
-
-    .category-card:nth-child(1),
-    .category-card:nth-child(2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
-    }
-
-    .category-card h3 {
-        font-size: 19px;
-
-        max-width: 250px;
-    }
-
-    .category-card p {
-        font-size: 13px;
-
-        max-width: 230px;
-    }
-}
-
-
-/* =========================================================
-                    MOBILE 768px
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .categories {
-        padding: 55px 0 65px;
-    }
-
-    .categories .container {
-        width: 92%;
-    }
-
-    .categories .section-title {
-        margin-bottom: 35px;
-
-        padding: 11px 23px;
-
-        border-radius: 9px;
-
-        font-size: 30px;
-    }
-
-    .category-box {
-        grid-template-columns: 1fr;
-
-        border-radius: 11px;
-    }
-
-    .category-card {
-        width: 100%;
-
-        min-height: 300px;
-
-        padding: 30px 25px;
-
-        border-right: none;
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
-    }
-
-    .category-card:last-child {
-        border-bottom: none;
-    }
-
-    .category-card:hover {
-        transform: none;
-    }
-
-    .category-card:hover > img {
-        transform: none !important;
-    }
-
-    .category-card h3 {
-        font-size: 20px;
-
-        max-width: 300px;
-    }
-
-    .category-card p {
-        max-width: 300px;
-
-        font-size: 14px;
-    }
-}
-
-
-/* =========================================================
-                    SMALL MOBILE 500px
-========================================================= */
-
-@media (max-width: 500px) {
+    /* Categories */
 
     .categories {
         padding: 50px 0 60px;
@@ -3280,7 +2732,7 @@ nav ul li a.active::after {
 
 
 /* =========================================================
-                    VERY SMALL MOBILE 380px
+                  VERY SMALL MOBILE 380px
 ========================================================= */
 
 @media (max-width: 380px) {
@@ -3325,10 +2777,12 @@ nav ul li a.active::after {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .category-card,
-    .category-card > img,
-    .category-card h3,
-    .category-card p {
-        transition: none !important;
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
