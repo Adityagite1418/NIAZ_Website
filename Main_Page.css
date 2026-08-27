@@ -219,7 +219,7 @@ nav ul li a.active::after {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url("Images/BackGrond/Home_BackGround.png");
+    background-image: url("images/BackGrond/Home_BackGround.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -413,7 +413,7 @@ nav ul li a.active::after {
     position: relative;
     padding: 70px 0 90px;
     overflow: hidden;
-    background-image: url("Images/BackGrond/wide_clean_professional_photoreal_graphic_com.png");
+    background-image: url("images/BackGrond/wide_clean_professional_photoreal_graphic_com.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -503,7 +503,7 @@ nav ul li a.active::after {
     overflow: hidden;
     background-image:
         linear-gradient(rgba(245,248,252,.35), rgba(245,248,252,.35)),
-        url("Images/BackGrond/Services.png");
+        url("images/BackGrond/Services.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -654,7 +654,7 @@ nav ul li a.active::after {
     position: relative;
     padding: 70px 0;
     overflow: hidden;
-    background-image: url("Images/BackGrond/Industry.png");
+    background-image: url("images/BackGrond/Industry.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -796,7 +796,7 @@ nav ul li a.active::after {
     position: relative;
     padding: 70px 0 80px;
     overflow: hidden;
-    background-image: url("Images/BackGrond/WhyNiaz.png");
+    background-image: url("images/BackGrond/WhyNiaz.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -965,7 +965,7 @@ nav ul li a.active::after {
     justify-content: center;
     padding: 60px 20px;
     overflow: hidden;
-    background-image: url("Images/BackGrond/AboutHero.png");
+    background-image: url("images/BackGrond/AboutHero.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1151,7 +1151,7 @@ nav ul li a.active::after {
     justify-content: center;
     padding: 60px 20px;
     overflow: hidden;
-    background-image: url("Images/BackGrond/Products.png");
+    background-image: url("images/BackGrond/Products.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
