@@ -832,6 +832,305 @@ ul {
 
 
 /* =========================================================
+                     PRODUCT CATEGORIES
+========================================================= */
+
+.categories {
+    position: relative;
+
+    padding: 70px 0 90px;
+
+    background:
+        #ffffff;
+
+    overflow: hidden;
+}
+
+
+.categories .section-title {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 0 0 45px;
+
+    text-align: center;
+}
+
+
+.categories .section-title h2 {
+    color: #0b4ea2;
+
+    font-size: 40px;
+
+    font-weight: 600;
+}
+
+
+.category-box {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+.category-card {
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 40, 80, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.category-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 40, 80, 0.18);
+}
+
+
+.category-card img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+.category-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 35, 75, 0.86),
+            rgba(0, 35, 75, 0.30),
+            rgba(255, 255, 255, 0.03)
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+.category-card:hover img {
+    transform:
+        scale(1.08);
+
+    filter:
+        brightness(1.05);
+}
+
+
+.category-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 25px 22px 24px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 46, 91, 0.95),
+            rgba(3, 46, 91, 0.70),
+            rgba(3, 46, 91, 0)
+        );
+}
+
+
+.category-card h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.category-card p {
+    margin: 0 auto 18px;
+
+    max-width: 300px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.category-btn {
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 125px;
+
+    padding: 9px 20px;
+
+    color: #ffffff;
+
+    background:
+        #0d6fc7;
+
+    border:
+        1px solid #0d6fc7;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.category-btn:hover {
+    color: #ffffff;
+
+    background:
+        #07529b;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(13, 111, 199, 0.30);
+}
+
+
+/*
+    If your category HTML does NOT use .category-content
+    and instead has h3/p/button directly inside
+    .category-card, these rules keep those elements visible.
+*/
+
+.category-card > h3,
+.category-card > p,
+.category-card > .category-btn {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.category-card > h3 {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 22px 20px 8px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 46, 91, 0.95),
+            rgba(3, 46, 91, 0.72),
+            rgba(3, 46, 91, 0)
+        );
+}
+
+
+.category-card > p {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 20px 18px;
+
+    color: #ffffff;
+
+    background:
+        rgba(3, 46, 91, 0.90);
+}
+
+
+.category-card > .category-btn {
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
                        MISSION
 ========================================================= */
 
@@ -2001,7 +2300,15 @@ ul {
 
     .service-card {
         width:
-            calc(50% - 10px);
+            calc(50% - 15px);
+    }
+
+
+    /* PRODUCT CATEGORIES */
+
+    .category-box {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
@@ -2067,6 +2374,13 @@ ul {
         width: 100%;
 
         max-width: 420px;
+    }
+
+
+    /* PRODUCT CATEGORIES */
+
+    .category-card {
+        min-height: 340px;
     }
 
 }
@@ -2337,6 +2651,70 @@ ul {
     .section-title h2::before,
     .section-title h2::after {
         display: none;
+    }
+
+
+    /* =====================================================
+                    PRODUCT CATEGORIES
+    ====================================================== */
+
+    .categories {
+        padding: 55px 0 65px;
+    }
+
+
+    .categories .section-title {
+        padding: 0 0 35px;
+    }
+
+
+    .categories .section-title h2 {
+        font-size: 31px;
+    }
+
+
+    .category-box {
+        width: 92%;
+
+        margin: 0 auto;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+    }
+
+
+    .category-card {
+        width: 100%;
+
+        min-height: 340px;
+
+        border-radius: 13px;
+    }
+
+
+    .category-card h3 {
+        font-size: 21px;
+    }
+
+
+    .category-card p {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+
+    .category-content {
+        padding: 23px 20px 22px;
+    }
+
+
+    .category-btn {
+        padding: 9px 20px;
+
+        font-size: 14px;
     }
 
 
@@ -2626,6 +3004,69 @@ ul {
 
 
     /* =====================================================
+                    PRODUCT CATEGORIES
+    ====================================================== */
+
+    .categories {
+        padding: 50px 0 60px;
+    }
+
+
+    .categories .section-title {
+        padding-bottom: 30px;
+    }
+
+
+    .categories .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    .category-box {
+        width: 92%;
+
+        gap: 18px;
+    }
+
+
+    .category-card {
+        min-height: 330px;
+
+        border-radius: 12px;
+    }
+
+
+    .category-content {
+        padding: 22px 17px 20px;
+    }
+
+
+    .category-card h3 {
+        font-size: 20px;
+    }
+
+
+    .category-card p {
+        font-size: 13px;
+
+        line-height: 1.55;
+
+        margin-bottom: 15px;
+    }
+
+
+    .category-btn {
+        width: auto;
+
+        min-width: 115px;
+
+        padding: 8px 17px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
                          MISSION
     ====================================================== */
 
@@ -2852,6 +3293,61 @@ ul {
     }
 
 
+    /* =====================================================
+                    PRODUCT CATEGORIES
+    ====================================================== */
+
+    .categories {
+        padding: 45px 0 55px;
+    }
+
+
+    .categories .section-title {
+        padding-bottom: 28px;
+    }
+
+
+    .categories .section-title h2 {
+        font-size: 26px;
+    }
+
+
+    .category-box {
+        width: 94%;
+
+        gap: 16px;
+    }
+
+
+    .category-card {
+        min-height: 320px;
+    }
+
+
+    .category-content {
+        padding: 20px 15px 18px;
+    }
+
+
+    .category-card h3 {
+        font-size: 19px;
+    }
+
+
+    .category-card p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    .category-btn {
+        font-size: 12px;
+
+        padding: 8px 15px;
+    }
+
+
     .mobile-menu ul li a {
         padding: 14px 20px;
 
@@ -2869,7 +3365,8 @@ ul {
 .mobile-menu a:focus-visible,
 .desktop-nav a:focus-visible,
 .hero-btn:focus-visible,
-.partner-btn:focus-visible {
+.partner-btn:focus-visible,
+.category-btn:focus-visible {
     outline:
         3px solid rgba(13, 110, 253, 0.35);
 
