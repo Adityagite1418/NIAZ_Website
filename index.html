@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zoodico Pharma</title>
+    <title>Zoodico</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,39 +13,25 @@
 <body>
 
     <!-- =========================================================
-                         HEADER / NAVBAR
+                         HEADER
     ========================================================== -->
 
     <header class="site-header">
 
-        <div class="navbar">
+        <div class="header-container">
 
             <!-- LOGO -->
-            <a href="index.html" class="logo-link" aria-label="Zoodico Pharma Home">
-
-                <!--
-                    IMPORTANT:
-                    Keep your logo image in the same folder as this HTML file
-                    OR change the src path according to your folder structure.
-                -->
-
+            <a href="index.html" class="logo-link">
                 <img
-                    src="images/zoodico-logo.png"
-                    alt="Zoodico Pharma"
-                    class="zoodico-logo"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                <!-- Fallback if logo image is not found -->
-                <span class="logo-fallback">
-                    ZOODICO
-                </span>
-
+                    src="images/Zoodico_Logo.png"
+                    alt="Zoodico Logo"
+                    class="zoodico-logo">
             </a>
 
 
-            <!-- =====================================================
-                              DESKTOP NAVIGATION
-            ====================================================== -->
+            <!-- =================================================
+                         DESKTOP NAVIGATION
+            ================================================== -->
 
             <nav class="desktop-nav" aria-label="Main navigation">
 
@@ -62,9 +48,9 @@
             </nav>
 
 
-            <!-- =====================================================
-                              MOBILE MENU BUTTON
-            ====================================================== -->
+            <!-- =================================================
+                         MOBILE MENU BUTTON
+            ================================================== -->
 
             <button
                 class="menu"
@@ -74,41 +60,31 @@
                 aria-expanded="false"
                 aria-controls="mobileMenu">
 
-                <span class="menu-icon" aria-hidden="true">☰</span>
+                <span class="menu-icon">☰</span>
 
             </button>
 
         </div>
 
 
-        <!-- =========================================================
-                              MOBILE MENU
-        ========================================================== -->
+        <!-- =====================================================
+                         MOBILE MENU
+        ====================================================== -->
 
         <nav
             class="mobile-menu"
             id="mobileMenu"
             aria-label="Mobile navigation">
 
-            <a href="#home" class="mobile-menu-link">
-                Home
-            </a>
+            <a href="#home">Home</a>
 
-            <a href="#about" class="mobile-menu-link">
-                About
-            </a>
+            <a href="#about">About</a>
 
-            <a href="#products" class="mobile-menu-link">
-                Products
-            </a>
+            <a href="#products">Products</a>
 
-            <a href="#services" class="mobile-menu-link">
-                Services
-            </a>
+            <a href="#services">Services</a>
 
-            <a href="#contact" class="mobile-menu-link">
-                Contact
-            </a>
+            <a href="#contact">Contact</a>
 
         </nav>
 
@@ -116,129 +92,83 @@
 
 
     <!-- =========================================================
-                              HERO SECTION
+                              HOME
     ========================================================== -->
 
     <main>
 
-        <section class="hero" id="home">
-
-            <div class="hero-overlay"></div>
+        <section id="home" class="hero-section">
 
             <div class="hero-content">
 
-                <p class="hero-small-title">
-                    ZOODICO PHARMA
+                <h1>Welcome to Zoodico</h1>
+
+                <p>
+                    Building trusted brands and delivering quality
+                    products and services.
                 </p>
 
-                <h1>
-                    Advancing Healthcare<br>
-                    Through Innovation
-                </h1>
+                <a href="#about" class="primary-button">
+                    Explore More
+                </a>
 
-                <p class="hero-description">
-                    Delivering innovative pharmaceutical solutions
-                    with quality, reliability and a commitment to
-                    better healthcare.
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+                              ABOUT
+        ====================================================== -->
+
+        <section id="about" class="content-section">
+
+            <div class="content-container">
+
+                <h2>About Us</h2>
+
+                <p>
+                    Zoodico is committed to building strong brands,
+                    creating quality products and providing reliable
+                    solutions.
                 </p>
 
-                <div class="hero-buttons">
-
-                    <a href="#products" class="primary-button">
-                        Explore Products
-                    </a>
-
-                    <a href="#about" class="secondary-button">
-                        Learn More
-                    </a>
-
-                </div>
-
             </div>
 
         </section>
 
 
-        <!-- =========================================================
-                              ABOUT SECTION
-        ========================================================== -->
+        <!-- =====================================================
+                            PRODUCTS
+        ====================================================== -->
 
-        <section class="section about-section" id="about">
+        <section id="products" class="content-section light-section">
 
-            <div class="container">
+            <div class="content-container">
 
-                <div class="section-heading">
+                <h2>Products</h2>
 
-                    <p class="section-label">
-                        ABOUT US
-                    </p>
+                <div class="card-grid">
 
-                    <h2>
-                        Committed to Better Healthcare
-                    </h2>
-
-                    <p>
-                        Zoodico Pharma is committed to delivering
-                        high-quality pharmaceutical solutions while
-                        continuously focusing on innovation,
-                        reliability and customer satisfaction.
-                    </p>
-
-                </div>
-
-                <div class="about-grid">
-
-                    <div class="about-card">
-
-                        <div class="card-icon">
-                            ✓
-                        </div>
-
-                        <h3>
-                            Quality
-                        </h3>
-
+                    <div class="card">
+                        <h3>Sports Nutrition</h3>
                         <p>
-                            Maintaining high standards of quality
-                            throughout our products and services.
+                            Quality nutrition and supplement solutions.
                         </p>
-
                     </div>
 
-
-                    <div class="about-card">
-
-                        <div class="card-icon">
-                            +
-                        </div>
-
-                        <h3>
-                            Innovation
-                        </h3>
-
+                    <div class="card">
+                        <h3>Healthcare</h3>
                         <p>
-                            Exploring innovative solutions to meet
-                            evolving healthcare requirements.
+                            Trusted healthcare products and solutions.
                         </p>
-
                     </div>
 
-
-                    <div class="about-card">
-
-                        <div class="card-icon">
-                            ♡
-                        </div>
-
-                        <h3>
-                            Healthcare
-                        </h3>
-
+                    <div class="card">
+                        <h3>Wellness</h3>
                         <p>
-                            Putting better healthcare outcomes at
-                            the heart of everything we do.
+                            Products designed to support everyday wellness.
                         </p>
-
                     </div>
 
                 </div>
@@ -248,218 +178,37 @@
         </section>
 
 
-        <!-- =========================================================
-                            PRODUCTS SECTION
-        ========================================================== -->
+        <!-- =====================================================
+                             SERVICES
+        ====================================================== -->
 
-        <section class="section products-section" id="products">
+        <section id="services" class="content-section">
 
-            <div class="container">
+            <div class="content-container">
 
-                <div class="section-heading">
+                <h2>Services</h2>
 
-                    <p class="section-label">
-                        OUR PRODUCTS
-                    </p>
+                <div class="card-grid">
 
-                    <h2>
-                        Pharmaceutical Solutions
-                    </h2>
-
-                    <p>
-                        Explore our range of healthcare and
-                        pharmaceutical solutions.
-                    </p>
-
-                </div>
-
-
-                <div class="products-grid">
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/CBD.jpeg"
-                                alt="Pharmaceutical product"
-                                onerror="this.style.display='none';">
-
-                        </div>
-
-                        <div class="product-content">
-
-                            <h3>
-                                Pharmaceutical Products
-                            </h3>
-
-                            <p>
-                                Quality-focused pharmaceutical
-                                solutions designed for healthcare needs.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/Brand Acquisition.png"
-                                alt="Brand acquisition"
-                                onerror="this.style.display='none';">
-
-                        </div>
-
-                        <div class="product-content">
-
-                            <h3>
-                                Brand Solutions
-                            </h3>
-
-                            <p>
-                                Innovative solutions supporting
-                                pharmaceutical brands and healthcare.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/Brand Governance.png"
-                                alt="Brand governance"
-                                onerror="this.style.display='none';">
-
-                        </div>
-
-                        <div class="product-content">
-
-                            <h3>
-                                Healthcare Solutions
-                            </h3>
-
-                            <p>
-                                Reliable solutions developed with
-                                quality and healthcare in mind.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================================
-                              SERVICES SECTION
-        ========================================================== -->
-
-        <section class="section services-section" id="services">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="section-label">
-                        OUR SERVICES
-                    </p>
-
-                    <h2>
-                        What We Offer
-                    </h2>
-
-                    <p>
-                        We provide a range of services focused on
-                        pharmaceutical and healthcare requirements.
-                    </p>
-
-                </div>
-
-
-                <div class="services-grid">
-
-                    <div class="service-card">
-
-                        <div class="service-number">
-                            01
-                        </div>
-
-                        <h3>
-                            Pharmaceutical Solutions
-                        </h3>
-
+                    <div class="card">
+                        <h3>Brand Acquisition</h3>
                         <p>
-                            Reliable pharmaceutical solutions
-                            designed around quality and performance.
+                            Helping brands grow through strategic solutions.
                         </p>
-
                     </div>
 
-
-                    <div class="service-card">
-
-                        <div class="service-number">
-                            02
-                        </div>
-
-                        <h3>
-                            Brand Acquisition
-                        </h3>
-
+                    <div class="card">
+                        <h3>Brand Governance</h3>
                         <p>
-                            Supporting pharmaceutical brands with
-                            strategic opportunities and solutions.
+                            Maintaining consistent and trusted brand identity.
                         </p>
-
                     </div>
 
-
-                    <div class="service-card">
-
-                        <div class="service-number">
-                            03
-                        </div>
-
-                        <h3>
-                            Brand Governance
-                        </h3>
-
+                    <div class="card">
+                        <h3>Business Solutions</h3>
                         <p>
-                            Building consistent and sustainable
-                            approaches for pharmaceutical brands.
+                            Reliable solutions for growing businesses.
                         </p>
-
-                    </div>
-
-
-                    <div class="service-card">
-
-                        <div class="service-number">
-                            04
-                        </div>
-
-                        <h3>
-                            Healthcare Support
-                        </h3>
-
-                        <p>
-                            Supporting healthcare requirements through
-                            dependable products and services.
-                        </p>
-
                     </div>
 
                 </div>
@@ -469,41 +218,19 @@
         </section>
 
 
-        <!-- =========================================================
-                              CONTACT SECTION
-        ========================================================== -->
+        <!-- =====================================================
+                              CONTACT
+        ====================================================== -->
 
-        <section class="section contact-section" id="contact">
+        <section id="contact" class="content-section light-section">
 
-            <div class="container">
+            <div class="content-container">
 
-                <div class="contact-box">
+                <h2>Contact Us</h2>
 
-                    <div>
-
-                        <p class="section-label">
-                            CONTACT US
-                        </p>
-
-                        <h2>
-                            Let's Build Better Healthcare Together
-                        </h2>
-
-                        <p>
-                            Get in touch with us to learn more about
-                            our products and services.
-                        </p>
-
-                    </div>
-
-                    <a href="mailto:info@zoodicopharma.com"
-                       class="primary-button">
-
-                        Contact Us
-
-                    </a>
-
-                </div>
+                <p>
+                    Get in touch with Zoodico for more information.
+                </p>
 
             </div>
 
@@ -513,75 +240,180 @@
 
 
     <!-- =========================================================
-                              FOOTER
+                           JAVASCRIPT
     ========================================================== -->
 
-    <footer class="footer">
+    <script>
 
-        <div class="container footer-content">
+        document.addEventListener("DOMContentLoaded", function () {
 
-            <div class="footer-logo">
+            const menuButton = document.getElementById("menuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const menuIcon = menuButton.querySelector(".menu-icon");
 
-                <a href="#home">
-
-                    <img
-                        src="images/zoodico-logo.png"
-                        alt="Zoodico Pharma"
-                        class="footer-zoodico-logo"
-                        onerror="this.style.display='none';">
-
-                </a>
-
-                <p>
-                    Quality. Innovation. Healthcare.
-                </p>
-
-            </div>
+            /*
+             * Check that the required elements exist.
+             */
+            if (!menuButton || !mobileMenu) {
+                return;
+            }
 
 
-            <div class="footer-links">
+            /*
+             * OPEN / CLOSE MOBILE MENU
+             */
+            menuButton.addEventListener("click", function (event) {
 
-                <a href="#home">
-                    Home
-                </a>
+                event.preventDefault();
+                event.stopPropagation();
 
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#products">
-                    Products
-                </a>
-
-                <a href="#services">
-                    Services
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </div>
-
-        </div>
+                const isOpen =
+                    mobileMenu.classList.contains("active");
 
 
-        <div class="footer-bottom">
+                if (isOpen) {
 
-            <p>
-                © 2026 Zoodico Pharma. All Rights Reserved.
-            </p>
+                    closeMobileMenu();
 
-        </div>
+                } else {
 
-    </footer>
+                    openMobileMenu();
+
+                }
+
+            });
 
 
-    <!-- =========================================================
-                              JAVASCRIPT
-    ========================================================== -->
+            /*
+             * OPEN MENU
+             */
+            function openMobileMenu() {
 
-    <script src="script.js"></script>
+                mobileMenu.classList.add("active");
+
+                menuButton.classList.add("active");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Close navigation menu"
+                );
+
+                menuIcon.textContent = "✕";
+
+                document.body.classList.add("menu-open");
+
+            }
+
+
+            /*
+             * CLOSE MENU
+             */
+            function closeMobileMenu() {
+
+                mobileMenu.classList.remove("active");
+
+                menuButton.classList.remove("active");
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+                menuIcon.textContent = "☰";
+
+                document.body.classList.remove("menu-open");
+
+            }
+
+
+            /*
+             * CLOSE MENU AFTER CLICKING A LINK
+             */
+            const mobileLinks =
+                mobileMenu.querySelectorAll("a");
+
+
+            mobileLinks.forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    closeMobileMenu();
+
+                });
+
+            });
+
+
+            /*
+             * CLOSE MENU WHEN CLICKING OUTSIDE
+             */
+            document.addEventListener("click", function (event) {
+
+                const clickedInsideMenu =
+                    mobileMenu.contains(event.target);
+
+                const clickedButton =
+                    menuButton.contains(event.target);
+
+
+                if (
+                    mobileMenu.classList.contains("active") &&
+                    !clickedInsideMenu &&
+                    !clickedButton
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            });
+
+
+            /*
+             * CLOSE MENU WITH ESCAPE KEY
+             */
+            document.addEventListener("keydown", function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    mobileMenu.classList.contains("active")
+                ) {
+
+                    closeMobileMenu();
+
+                    menuButton.focus();
+
+                }
+
+            });
+
+
+            /*
+             * RESET MOBILE MENU WHEN RESIZING TO DESKTOP
+             */
+            window.addEventListener("resize", function () {
+
+                if (window.innerWidth > 768) {
+
+                    closeMobileMenu();
+
+                }
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
