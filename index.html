@@ -5,94 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NIAZ Pharma</title>
+    <title>Zoodico Pharma</title>
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="Main_Page.css">
-    <link rel="stylesheet" href="About_page.css">
-    <link rel="stylesheet" href="Products_page.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =====================================================
-                         HEADER
-    ====================================================== -->
+    <!-- =========================================================
+                         HEADER / NAVBAR
+    ========================================================== -->
 
     <header class="site-header">
 
-        <div class="top-line"></div>
+        <div class="navbar">
 
-        <div class="container navbar">
+            <!-- LOGO -->
+            <a href="index.html" class="logo-link" aria-label="Zoodico Pharma Home">
 
-            <!-- NIAZ LOGO -->
-            <a href="#home" class="logo">
-                <img src="images/Logo/Niaz_Logo.jpeg" alt="NIAZ Pharma Logo">
-            </a>
+                <!--
+                    IMPORTANT:
+                    Keep your logo image in the same folder as this HTML file
+                    OR change the src path according to your folder structure.
+                -->
 
-            <!-- ZOODICO PARTNER -->
-            <a href="https://zoodicopharma.com/index.html"
-                class="partner-logo-link"
-                target="_blank"
-                rel="noopener noreferrer">
+                <img
+                    src="images/zoodico-logo.png"
+                    alt="Zoodico Pharma"
+                    class="zoodico-logo"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
 
-                <img src="images/Logo/Zoodico_Logo.jpeg"
-                    alt="Zoodico Pharma Partner Logo"
-                    class="partner-img">
-
-                <div class="partner-text">
-                    <span class="badge-title">Zoodico Pharma</span>
-                    <span class="badge-subtitle">Partner in India</span>
-                </div>
+                <!-- Fallback if logo image is not found -->
+                <span class="logo-fallback">
+                    ZOODICO
+                </span>
 
             </a>
 
-            <!-- DESKTOP NAVIGATION -->
-            <nav class="desktop-nav" aria-label="Main Navigation">
 
-                <ul>
+            <!-- =====================================================
+                              DESKTOP NAVIGATION
+            ====================================================== -->
 
-                    <li>
-                        <a class="active" href="#home">Home</a>
-                    </li>
+            <nav class="desktop-nav" aria-label="Main navigation">
 
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
+                <a href="#home">Home</a>
 
-                    <li>
-                        <a href="#products">Products</a>
-                    </li>
+                <a href="#about">About</a>
 
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
+                <a href="#products">Products</a>
 
-                    <li>
-                        <a href="#industry">Industry</a>
-                    </li>
+                <a href="#services">Services</a>
 
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
-                </ul>
+                <a href="#contact">Contact</a>
 
             </nav>
 
-            <!-- MOBILE MENU BUTTON -->
+
+            <!-- =====================================================
+                              MOBILE MENU BUTTON
+            ====================================================== -->
+
             <button
                 class="menu"
                 id="menuButton"
@@ -101,415 +74,170 @@
                 aria-expanded="false"
                 aria-controls="mobileMenu">
 
-                <span class="menu-icon">☰</span>
+                <span class="menu-icon" aria-hidden="true">☰</span>
 
             </button>
 
         </div>
 
-        <!-- =================================================
-                        MOBILE NAVIGATION
-        ================================================== -->
 
-        <div class="mobile-menu" id="mobileMenu">
+        <!-- =========================================================
+                              MOBILE MENU
+        ========================================================== -->
 
-            <nav aria-label="Mobile Navigation">
+        <nav
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Mobile navigation">
 
-                <ul>
+            <a href="#home" class="mobile-menu-link">
+                Home
+            </a>
 
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
+            <a href="#about" class="mobile-menu-link">
+                About
+            </a>
 
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
+            <a href="#products" class="mobile-menu-link">
+                Products
+            </a>
 
-                    <li>
-                        <a href="#products">Products</a>
-                    </li>
+            <a href="#services" class="mobile-menu-link">
+                Services
+            </a>
 
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
+            <a href="#contact" class="mobile-menu-link">
+                Contact
+            </a>
 
-                    <li>
-                        <a href="#industry">Industry</a>
-                    </li>
-
-                    <li>
-                        <a href="#regional">Global Presence</a>
-                    </li>
-
-                    <li>
-                        <a href="#why">Why NIAZ?</a>
-                    </li>
-
-                    <li>
-                        <a href="#partner">Partner With NIAZ</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
+        </nav>
 
     </header>
 
 
-    <!-- =====================================================
-                         HERO SECTION
-    ====================================================== -->
+    <!-- =========================================================
+                              HERO SECTION
+    ========================================================== -->
 
-    <section class="hero" id="home">
+    <main>
 
-        <div class="hero-content">
+        <section class="hero" id="home">
 
-            <div class="hero-text-box">
+            <div class="hero-overlay"></div>
 
-                <span class="hero-tag">
-                    INNOVATION • QUALITY • TRUST
-                </span>
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    ZOODICO PHARMA
+                </p>
 
                 <h1>
-                    Innovating Healthcare
-                    <span>for a Better Tomorrow</span>
+                    Advancing Healthcare<br>
+                    Through Innovation
                 </h1>
 
-                <p>
-                    Delivering trusted pharmaceutical solutions with
-                    uncompromising quality, innovation, and global
-                    standards of care.
+                <p class="hero-description">
+                    Delivering innovative pharmaceutical solutions
+                    with quality, reliability and a commitment to
+                    better healthcare.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#products" class="hero-btn primary-btn">
+                    <a href="#products" class="primary-button">
                         Explore Products
                     </a>
 
-                    <a href="#services" class="hero-btn secondary-btn">
-                        Our Services
-                    </a>
-
-                    <a href="#regional" class="hero-btn outline-btn">
-                        Global Presence
+                    <a href="#about" class="secondary-button">
+                        Learn More
                     </a>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-                         MISSION SECTION
-    ====================================================== -->
+        <!-- =========================================================
+                              ABOUT SECTION
+        ========================================================== -->
 
-    <section id="mission" class="mission">
+        <section class="section about-section" id="about">
 
-        <div class="section-title">
-            <h2>Our Mission</h2>
-        </div>
+            <div class="container">
 
-        <div class="mission-box">
+                <div class="section-heading">
 
-            <div class="mission-card">
-
-                <div class="icon">🏥</div>
-
-                <h3>Quality Medicines</h3>
-
-                <p>
-                    Providing high-quality pharmaceutical products worldwide.
-                </p>
-
-            </div>
-
-            <div class="mission-card">
-
-                <div class="icon">🛡</div>
-
-                <h3>Patient Safety</h3>
-
-                <p>
-                    Maintaining the highest safety and quality standards.
-                </p>
-
-            </div>
-
-            <div class="mission-card">
-
-                <div class="icon">🌍</div>
-
-                <h3>Global Reach</h3>
-
-                <p>
-                    Expanding healthcare solutions across international markets.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         SERVICES SECTION
-    ====================================================== -->
-
-    <section id="services" class="services-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Our Services
-            </h2>
-
-            <div class="service-cards">
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Brand Acquisition.png"
-                        alt="Brand Acquisition">
-
-                    <h3>
-                        Brand Acquisition
-                        <br>
-                        & Representation
-                    </h3>
-
-                    <p>
-                        Helping businesses acquire and represent leading brands
-                        with trusted partnerships.
+                    <p class="section-label">
+                        ABOUT US
                     </p>
-
-                    <a href="#contact" class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Brand Governance.png"
-                        alt="Brand Governance">
-
-                    <h3>
-                        Brand Governance
-                        <br>
-                        & Supervision
-                    </h3>
-
-                    <p>
-                        Protecting brand value through effective monitoring
-                        and supervision.
-                    </p>
-
-                    <a href="#contact" class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Market Entry.png"
-                        alt="Market Entry">
-
-                    <h3>
-                        Market Entry
-                        <br>
-                        & Expansion
-                    </h3>
-
-                    <p>
-                        Helping companies enter new markets and expand
-                        their business successfully.
-                    </p>
-
-                    <a href="#contact" class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Import & Export.png"
-                        alt="Import & Export">
-
-                    <h3>
-                        Import & Export
-                        <br>
-                        Structuring
-                    </h3>
-
-                    <p>
-                        Professional import and export planning with global
-                        business support.
-                    </p>
-
-                    <a href="#contact" class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         INDUSTRY SECTION
-    ====================================================== -->
-
-    <section id="industry" class="industry-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Industry Focus
-            </h2>
-
-            <div class="industry-items">
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/pharmaceutical.png"
-                        alt="Pharmaceuticals">
-
-                    <h4>
-                        Pharmaceuticals
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Sports & Supplements.png"
-                        alt="Sports & Supplements">
-
-                    <h4>
-                        Sports & Supplements
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Premium Food & Health.png"
-                        alt="Premium Food & Health">
-
-                    <h4>
-                        Premium Food & Health
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Pet Nutrition.png"
-                        alt="Pet Nutrition">
-
-                    <h4>
-                        Pet Nutrition
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Strategic BrandsStrategic Brands.png"
-                        alt="Strategic Brands">
-
-                    <h4>
-                        Strategic Brands
-                    </h4>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                    REGIONAL PRESENCE
-    ====================================================== -->
-
-    <section id="regional" class="regional-section">
-
-        <div class="container">
-
-            <div class="regional-content">
-
-                <div class="map-area">
-
-                    <img src="images/BackGrond/Map.png"
-                        alt="World Map">
-
-                </div>
-
-
-                <div class="presence-area">
 
                     <h2>
-                        Regional Presence
+                        Committed to Better Healthcare
                     </h2>
 
+                    <p>
+                        Zoodico Pharma is committed to delivering
+                        high-quality pharmaceutical solutions while
+                        continuously focusing on innovation,
+                        reliability and customer satisfaction.
+                    </p>
 
-                    <div class="location">
+                </div>
 
-                        <div class="flag blue"></div>
+                <div class="about-grid">
 
-                        <div>
+                    <div class="about-card">
 
-                            <h4>
-                                Iran Headquarters
-                            </h4>
-
+                        <div class="card-icon">
+                            ✓
                         </div>
+
+                        <h3>
+                            Quality
+                        </h3>
+
+                        <p>
+                            Maintaining high standards of quality
+                            throughout our products and services.
+                        </p>
 
                     </div>
 
 
-                    <div class="location">
+                    <div class="about-card">
 
-                        <div class="flag red"></div>
-
-                        <div>
-
-                            <h4>
-                                Istanbul Office
-                            </h4>
-
-                            <span>
-                                Since 2008
-                            </span>
-
+                        <div class="card-icon">
+                            +
                         </div>
+
+                        <h3>
+                            Innovation
+                        </h3>
+
+                        <p>
+                            Exploring innovative solutions to meet
+                            evolving healthcare requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <div class="card-icon">
+                            ♡
+                        </div>
+
+                        <h3>
+                            Healthcare
+                        </h3>
+
+                        <p>
+                            Putting better healthcare outcomes at
+                            the heart of everything we do.
+                        </p>
 
                     </div>
 
@@ -517,872 +245,343 @@
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-                         WHY NIAZ
-    ====================================================== -->
+        <!-- =========================================================
+                            PRODUCTS SECTION
+        ========================================================== -->
 
-    <section id="why" class="why-section">
+        <section class="section products-section" id="products">
 
-        <div class="container">
+            <div class="container">
 
-            <h2 class="section-title">
-                <span>Why NIAZ?</span>
-            </h2>
+                <div class="section-heading">
 
-            <div class="why-content">
-
-                <div class="why-column">
-
-                    <p>
-                        25+ Years of International Expertise
+                    <p class="section-label">
+                        OUR PRODUCTS
                     </p>
 
-                    <p>
-                        Governance-Driven Representation
-                    </p>
+                    <h2>
+                        Pharmaceutical Solutions
+                    </h2>
 
                     <p>
-                        Structured Distribution Network
+                        Explore our range of healthcare and
+                        pharmaceutical solutions.
                     </p>
 
                 </div>
 
 
-                <div class="why-column">
+                <div class="products-grid">
 
-                    <p>
-                        Governance-Driven Representation
-                    </p>
+                    <article class="product-card">
 
-                    <p>
-                        Structured Distribution Network
-                    </p>
+                        <div class="product-image">
 
-                    <p>
-                        Trusted by Global Brands
-                    </p>
+                            <img
+                                src="images/CBD.jpeg"
+                                alt="Pharmaceutical product"
+                                onerror="this.style.display='none';">
 
-                </div>
+                        </div>
 
-            </div>
+                        <div class="product-content">
 
-        </div>
+                            <h3>
+                                Pharmaceutical Products
+                            </h3>
 
-    </section>
+                            <p>
+                                Quality-focused pharmaceutical
+                                solutions designed for healthcare needs.
+                            </p>
 
+                        </div>
 
-    <!-- =====================================================
-                         PARTNER SECTION
-    ====================================================== -->
+                    </article>
 
-    <section id="partner" class="partner-section">
 
-        <div class="container">
+                    <article class="product-card">
 
-            <h2 class="section-title">
-                Partner with NIAZ
-            </h2>
+                        <div class="product-image">
 
-            <div class="partner-buttons">
+                            <img
+                                src="images/Brand Acquisition.png"
+                                alt="Brand acquisition"
+                                onerror="this.style.display='none';">
 
-                <a href="#contact" class="partner-btn">
+                        </div>
 
-                    <span>
-                        For International Brands
-                    </span>
+                        <div class="product-content">
 
-                    <span>
-                        &#8250;
-                    </span>
+                            <h3>
+                                Brand Solutions
+                            </h3>
 
-                </a>
+                            <p>
+                                Innovative solutions supporting
+                                pharmaceutical brands and healthcare.
+                            </p>
 
+                        </div>
 
-                <a href="#contact" class="partner-btn">
+                    </article>
 
-                    <span>
-                        For Iranian Manufacturers
-                    </span>
 
-                    <span>
-                        &#8250;
-                    </span>
+                    <article class="product-card">
 
-                </a>
+                        <div class="product-image">
 
-            </div>
+                            <img
+                                src="images/Brand Governance.png"
+                                alt="Brand governance"
+                                onerror="this.style.display='none';">
 
-        </div>
+                        </div>
 
-    </section>
+                        <div class="product-content">
 
+                            <h3>
+                                Healthcare Solutions
+                            </h3>
 
-    <!-- =====================================================
-                         ABOUT SECTION
-    ====================================================== -->
+                            <p>
+                                Reliable solutions developed with
+                                quality and healthcare in mind.
+                            </p>
 
-    <section id="about" class="about-hero">
+                        </div>
 
-        <div class="overlay">
-
-            <h1>
-                About NIAZ Pharma
-            </h1>
-
-            <p>
-                Committed to delivering innovative pharmaceutical solutions
-                that improve lives worldwide.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="company">
-
-        <div class="container company-content">
-
-            <div class="company-image">
-
-                <img src="images/BackGrond/AboutHero.png"
-                    alt="Company Facility">
-
-            </div>
-
-
-            <div class="company-text">
-
-                <h2>
-                    Who We Are
-                </h2>
-
-                <p>
-                    NIAZ Pharma is a trusted pharmaceutical company dedicated
-                    to manufacturing and supplying quality healthcare products
-                    across domestic and international markets.
-                </p>
-
-                <p>
-                    Our focus is innovation, quality assurance and patient
-                    well-being through advanced pharmaceutical research
-                    and development.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         VISION SECTION
-    ====================================================== -->
-
-    <section class="vision">
-
-        <div class="container cards">
-
-            <div class="card">
-
-                <h3>
-                    Our Vision
-                </h3>
-
-                <p>
-                    To become a globally recognized pharmaceutical company
-                    delivering innovative healthcare products.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Our Mission
-                </h3>
-
-                <p>
-                    Provide affordable, high-quality medicines while
-                    maintaining international quality standards.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         VALUES SECTION
-    ====================================================== -->
-
-    <section class="values">
-
-        <div class="container">
-
-            <h2 class="title">
-                Our Core Values
-            </h2>
-
-            <div class="value-box">
-
-                <div class="value">
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        We never compromise on quality.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Integrity
-                    </h3>
-
-                    <p>
-                        Building trust through transparency.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Innovation
-                    </h3>
-
-                    <p>
-                        Continuous research for better healthcare.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Customer Care
-                    </h3>
-
-                    <p>
-                        Ensuring complete customer satisfaction.
-                    </p>
+                    </article>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-                         WHY CHOOSE US
-    ====================================================== -->
+        <!-- =========================================================
+                              SERVICES SECTION
+        ========================================================== -->
 
-    <section class="why">
+        <section class="section services-section" id="services">
 
-        <div class="container">
+            <div class="container">
 
-            <h2 class="title">
-                Why Choose Us?
-            </h2>
+                <div class="section-heading">
 
-            <ul>
+                    <p class="section-label">
+                        OUR SERVICES
+                    </p>
 
-                <li>
-                    ✔ WHO-GMP Quality Standards
-                </li>
-
-                <li>
-                    ✔ Experienced Research Team
-                </li>
-
-                <li>
-                    ✔ Global Distribution Network
-                </li>
-
-                <li>
-                    ✔ Customer Focused Approach
-                </li>
-
-                <li>
-                    ✔ Affordable Healthcare Solutions
-                </li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         PRODUCTS HERO
-    ====================================================== -->
-
-    <section id="products" class="product-hero">
-
-        <div class="overlay">
-
-            <h1>
-                Our Products
-            </h1>
-
-            <p>
-                Delivering innovative pharmaceutical solutions
-                for better healthcare worldwide.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                         PRODUCT CATEGORIES
-    ====================================================== -->
-
-    <section class="categories">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Product Categories
-            </h2>
-
-
-            <div class="category-box">
-
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/Whey_Protein.jpeg"
-                        alt="Sports Nutrition">
-
-                    <h3>
-                        Sports Nutrition &amp; Supplements
-                    </h3>
+                    <h2>
+                        What We Offer
+                    </h2>
 
                     <p>
-                        Musclelabs - Premium Nutrition Brand
+                        We provide a range of services focused on
+                        pharmaceutical and healthcare requirements.
                     </p>
 
                 </div>
 
 
-                <div class="category-card">
+                <div class="services-grid">
 
-                    <img src="images/BackGrond/Infant.jpeg"
-                        alt="Infant Formula">
+                    <div class="service-card">
 
-                    <h3>
-                        Infant Formula Production Line
-                    </h3>
+                        <div class="service-number">
+                            01
+                        </div>
 
-                    <p>
-                        Nutrition for a healthy start
-                    </p>
+                        <h3>
+                            Pharmaceutical Solutions
+                        </h3>
 
-                </div>
+                        <p>
+                            Reliable pharmaceutical solutions
+                            designed around quality and performance.
+                        </p>
 
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/Medical_Device.jpeg"
-                        alt="Medical Devices and Cosmetics">
-
-                    <h3>
-                        Medical Devices &amp; Cosmetics
-                    </h3>
-
-                    <p>
-                        Beauty &amp; Health Solutions
-                    </p>
-
-                </div>
+                    </div>
 
 
-                <div class="category-card">
+                    <div class="service-card">
 
-                    <img src="images/BackGrond/CBD.jpeg"
-                        alt="CBD Business">
+                        <div class="service-number">
+                            02
+                        </div>
 
-                    <h3>
-                        CBD Business
-                    </h3>
+                        <h3>
+                            Brand Acquisition
+                        </h3>
 
-                    <p>
-                        Import &amp; Local Production THC-Free CBD Products.
-                    </p>
+                        <p>
+                            Supporting pharmaceutical brands with
+                            strategic opportunities and solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Brand Governance
+                        </h3>
+
+                        <p>
+                            Building consistent and sustainable
+                            approaches for pharmaceutical brands.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Healthcare Support
+                        </h3>
+
+                        <p>
+                            Supporting healthcare requirements through
+                            dependable products and services.
+                        </p>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-                         FEATURED PRODUCTS
-    ====================================================== -->
+        <!-- =========================================================
+                              CONTACT SECTION
+        ========================================================== -->
 
-    <section class="featured">
+        <section class="section contact-section" id="contact">
 
-        <div class="container">
+            <div class="container">
 
-            <h2 class="section-title">
-                Featured Products
-            </h2>
+                <div class="contact-box">
 
+                    <div>
 
-            <div class="product-grid">
+                        <p class="section-label">
+                            CONTACT US
+                        </p>
 
+                        <h2>
+                            Let's Build Better Healthcare Together
+                        </h2>
 
-                <div class="product-card">
+                        <p>
+                            Get in touch with us to learn more about
+                            our products and services.
+                        </p>
 
-                    <img src="images/Products/product1.jpg"
-                        alt="Paracetamol 500mg">
+                    </div>
 
-                    <h3>
-                        Paracetamol 500mg
-                    </h3>
+                    <a href="mailto:info@zoodicopharma.com"
+                       class="primary-button">
 
-                    <p>
-                        Pain Relief &amp; Fever Reducer
-                    </p>
+                        Contact Us
 
-                    <a href="#contact">
-                        View Details
                     </a>
 
                 </div>
 
-
-                <div class="product-card">
-
-                    <img src="images/Products/product2.jpg"
-                        alt="Vitamin C Tablets">
-
-                    <h3>
-                        Vitamin C Tablets
-                    </h3>
-
-                    <p>
-                        Daily Immunity Booster
-                    </p>
-
-                    <a href="#contact">
-                        View Details
-                    </a>
-
-                </div>
-
-
-                <div class="product-card">
-
-                    <img src="images/Products/product3.jpg"
-                        alt="Antibiotic Capsules">
-
-                    <h3>
-                        Antibiotic Capsules
-                    </h3>
-
-                    <p>
-                        Broad Spectrum Antibiotics
-                    </p>
-
-                    <a href="#contact">
-                        View Details
-                    </a>
-
-                </div>
-
-
             </div>
 
-        </div>
+        </section>
 
-    </section>
-
-
-    <!-- =====================================================
-                         QUALITY ASSURANCE
-    ====================================================== -->
-
-    <section class="quality">
-
-        <div class="container">
-
-            <h2>
-                Quality Assurance
-            </h2>
-
-            <p>
-                Every product is manufactured under WHO-GMP guidelines,
-                ensuring safety, effectiveness, and superior quality.
-            </p>
+    </main>
 
 
-            <div class="quality-list">
-
-                <div>
-                    ✔ WHO-GMP Certified
-                </div>
-
-                <div>
-                    ✔ ISO Standards
-                </div>
-
-                <div>
-                    ✔ Advanced Manufacturing
-                </div>
-
-                <div>
-                    ✔ Global Distribution
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-                              CTA
-    ====================================================== -->
-
-    <section class="cta">
-
-        <h2>
-            Looking for Our Complete Product Catalogue?
-        </h2>
-
-        <a href="#contact">
-            Contact Us
-        </a>
-
-    </section>
-
-
-    <!-- =====================================================
-                         CONTACT SECTION
-    ====================================================== -->
-
-    <section id="contact" class="contact-section">
-
-        <div class="container">
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
+    <!-- =========================================================
                               FOOTER
-    ====================================================== -->
+    ========================================================== -->
 
     <footer class="footer">
 
-        <div class="container">
+        <div class="container footer-content">
 
-            <div class="footer-content">
+            <div class="footer-logo">
 
+                <a href="#home">
 
-                <!-- NIAZ CONTACT -->
+                    <img
+                        src="images/zoodico-logo.png"
+                        alt="Zoodico Pharma"
+                        class="footer-zoodico-logo"
+                        onerror="this.style.display='none';">
 
-                <div class="footer-box">
+                </a>
 
-                    <h3>
-                        Contact Us NIAZ
-                    </h3>
-
-                    <p>
-                        📞 +90 5340143473
-                    </p>
-
-                    <p>
-                        📞 +98 9123216604
-                    </p>
-
-                    <p>
-                        ✉ bd@niaznet.in
-                    </p>
-
-                </div>
-
-
-                <!-- ZOODICO CONTACT -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Contact Us Zoodico India
-                    </h3>
-
-                    <p>
-                        📞 +91 8530867634
-                    </p>
-
-                    <p>
-                        ✉ bd@zoodicopharma.com
-                    </p>
-
-                </div>
-
-
-                <!-- QUICK LINKS -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Quick Links
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#about">
-                                About NIAZ
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#products">
-                                Products
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#services">
-                                Services
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#industry">
-                                Industries
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#contact">
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- SOCIAL -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Follow Us
-                    </h3>
-
-                    <div class="social-icons">
-
-                        <a href="#"
-                            aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#"
-                            aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-
-                        <a href="#"
-                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- LEGAL -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Legal
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Privacy Policy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Terms &amp; Conditions
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
+                <p>
+                    Quality. Innovation. Healthcare.
+                </p>
 
             </div>
 
 
-            <hr>
+            <div class="footer-links">
 
+                <a href="#home">
+                    Home
+                </a>
 
-            <div class="copyright">
+                <a href="#about">
+                    About
+                </a>
 
-                © 2026 NIAZ Pharma. All Rights Reserved.
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Zoodico Pharma. All Rights Reserved.
+            </p>
 
         </div>
 
     </footer>
 
 
-    <!-- =====================================================
-                         MOBILE MENU SCRIPT
-    ====================================================== -->
+    <!-- =========================================================
+                              JAVASCRIPT
+    ========================================================== -->
 
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const menuButton = document.getElementById("menuButton");
-            const mobileMenu = document.getElementById("mobileMenu");
-            const mobileLinks = document.querySelectorAll(
-                "#mobileMenu a"
-            );
-
-            if (!menuButton || !mobileMenu) {
-                return;
-            }
-
-
-            /* =================================================
-                           OPEN / CLOSE MENU
-            ================================================= */
-
-            menuButton.addEventListener("click", function () {
-
-                const isOpen =
-                    mobileMenu.classList.toggle("show");
-
-                menuButton.classList.toggle(
-                    "active",
-                    isOpen
-                );
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    isOpen ? "true" : "false"
-                );
-
-            });
-
-
-            /* =================================================
-                        CLOSE AFTER LINK CLICK
-            ================================================= */
-
-            mobileLinks.forEach(function (link) {
-
-                link.addEventListener("click", function () {
-
-                    mobileMenu.classList.remove("show");
-
-                    menuButton.classList.remove("active");
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                });
-
-            });
-
-
-            /* =================================================
-                     CLOSE WHEN CLICKING OUTSIDE
-            ================================================= */
-
-            document.addEventListener("click", function (event) {
-
-                if (
-                    mobileMenu.classList.contains("show") &&
-                    !mobileMenu.contains(event.target) &&
-                    !menuButton.contains(event.target)
-                ) {
-
-                    mobileMenu.classList.remove("show");
-
-                    menuButton.classList.remove("active");
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-            });
-
-
-            /* =================================================
-                     CLOSE MENU ON DESKTOP RESIZE
-            ================================================= */
-
-            window.addEventListener("resize", function () {
-
-                if (window.innerWidth > 768) {
-
-                    mobileMenu.classList.remove("show");
-
-                    menuButton.classList.remove("active");
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-            });
-
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
