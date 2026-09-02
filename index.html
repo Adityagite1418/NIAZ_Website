@@ -1103,6 +1103,346 @@
 
                 </div>
 
+                <!-- =========================================================
+                    CBD BUSINESS CARD
+========================================================= -->
+
+<div class="category-card">
+
+    <img src="Images/BackGrond/CBD.jpeg"
+         alt="CBD Business">
+
+    <div class="cbd-content">
+
+        <button class="cbd-button"
+                onclick="openCBD()">
+
+            CBD Business
+
+            <span>⌄</span>
+
+        </button>
+
+        <p>
+            Import &amp; Local Production THC-Free CBD Products.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+                    CBD BUSINESS POPUP
+========================================================= -->
+
+<div class="cbd-overlay"
+     id="cbdOverlay">
+
+    <div class="cbd-popup">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="cbd-header">
+
+            <div>
+
+                <h2>
+                    CBD Business
+                </h2>
+
+                <p>
+                    Import &amp; Local Production THC-Free CBD Products
+                </p>
+
+            </div>
+
+
+            <button class="close-cbd"
+                    onclick="closeCBD()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="cbd-search">
+
+            <span class="cbd-search-icon">
+                ⌕
+            </span>
+
+            <input
+                type="text"
+                id="cbdSearch"
+                placeholder="Search CBD product..."
+                onkeyup="searchCBD()"
+            />
+
+            <button
+                class="cbd-clear-search"
+                onclick="clearCBDSearch()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= PRODUCT COUNT ================= -->
+
+        <div class="cbd-product-count">
+
+            <span id="cbdProductCount">
+                10
+            </span>
+
+            Products
+
+        </div>
+
+
+        <!-- ================= PRODUCT LIST ================= -->
+
+        <div class="cbd-products"
+             id="cbdProducts">
+
+
+            <div class="cbd-product">
+                CBD Oil
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Isolate
+            </div>
+
+
+            <div class="cbd-product">
+                Broad Spectrum CBD
+            </div>
+
+
+            <div class="cbd-product">
+                Full Spectrum CBD
+            </div>
+
+
+            <div class="cbd-product">
+                THC-Free CBD Products
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Capsules
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Gummies
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Powder
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Softgels
+            </div>
+
+
+            <div class="cbd-product">
+                CBD Topical Products
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= NO RESULT ================= -->
+
+        <div class="cbd-no-result"
+             id="cbdNoResult">
+
+            <div class="cbd-no-result-icon">
+                ⌕
+            </div>
+
+            <h3>
+                No product found
+            </h3>
+
+            <p>
+                Try searching with a different product name.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+                    CBD JAVASCRIPT
+========================================================= -->
+
+<script>
+
+function openCBD() {
+
+    document
+        .getElementById("cbdOverlay")
+        .classList.add("active");
+
+    document.body.classList.add("popup-open");
+
+    setTimeout(function() {
+
+        document
+            .getElementById("cbdSearch")
+            .focus();
+
+    }, 200);
+
+}
+
+
+function closeCBD() {
+
+    document
+        .getElementById("cbdOverlay")
+        .classList.remove("active");
+
+    document.body.classList.remove("popup-open");
+
+    clearCBDSearch();
+
+}
+
+
+function searchCBD() {
+
+    const searchInput =
+        document.getElementById("cbdSearch");
+
+
+    const searchValue =
+        searchInput.value
+        .toLowerCase()
+        .trim();
+
+
+    const products =
+        document.querySelectorAll(".cbd-product");
+
+
+    let visibleProducts = 0;
+
+
+    products.forEach(function(product) {
+
+        const productName =
+            product.textContent
+            .toLowerCase();
+
+
+        if (productName.includes(searchValue)) {
+
+            product.style.display = "flex";
+
+            visibleProducts++;
+
+        }
+
+        else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+
+    document
+        .getElementById("cbdProductCount")
+        .textContent = visibleProducts;
+
+
+    if (visibleProducts === 0) {
+
+        document
+            .getElementById("cbdNoResult")
+            .style.display = "block";
+
+    }
+
+    else {
+
+        document
+            .getElementById("cbdNoResult")
+            .style.display = "none";
+
+    }
+
+}
+
+
+function clearCBDSearch() {
+
+    const searchInput =
+        document.getElementById("cbdSearch");
+
+
+    searchInput.value = "";
+
+
+    searchCBD();
+
+}
+
+
+/* =========================================================
+                CLICK OUTSIDE TO CLOSE
+========================================================= */
+
+document
+    .getElementById("cbdOverlay")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            closeCBD();
+
+        }
+
+    });
+
+
+/* =========================================================
+                    ESC TO CLOSE
+========================================================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeCBD();
+
+    }
+
+});
+
+</script>
+
             </div>
 
         </div>
