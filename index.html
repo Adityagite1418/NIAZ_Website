@@ -21,6 +21,20 @@
 
     <!-- =====================================================
                             CSS FILES
+
+        NOTE: Main_Page.css (the corrected version) now contains
+        the complete styling for every section on this page --
+        hero, mission, services, industry, regional, why-NIAZ,
+        partner, about-hero, company, vision, values, why-choose,
+        product-hero, categories, excipients, quality, cta,
+        footer. If About_page.css and/or Products_page.css also
+        define rules for these same classes (e.g. .about-hero,
+        .category-card), loading them after Main_Page.css here
+        can silently override or conflict with the fixes. Worth
+        checking their contents -- if they were written for the
+        separate About_page.html / Products_page.html files
+        specifically, they probably don't need to be loaded on
+        this combined single-page version at all.
     ====================================================== -->
 
     <link rel="stylesheet" href="Main_Page.css">
@@ -1172,7 +1186,7 @@
                 <div class="category-card excipients-card">
 
                     <img
-                        src="Images/BackGrond/Excipients.png"
+                        src="images/BackGrond/Excipients.png"
                         alt="Pharmaceutical Excipients">
 
                     <div class="excipients-content">
