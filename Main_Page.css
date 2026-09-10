@@ -1250,8 +1250,21 @@ header {
 ========================================================= */
 
 .why {
+    position: relative;
     padding: 70px 0;
-    background: #f5f8fc;
+    background-image: linear-gradient(
+        rgba(245, 248, 252, 0.90),
+        rgba(245, 248, 252, 0.90)
+    ),
+    url("images/BackGrond/ChooseUs.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.why .container {
+    position: relative;
+    z-index: 1;
 }
 
 .why .title {
@@ -1264,6 +1277,11 @@ header {
 .why ul {
     max-width: 700px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 10px 30px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .why ul li {
@@ -1272,6 +1290,10 @@ header {
     font-size: 18px;
     line-height: 1.6;
     border-bottom: 1px solid #e0e6ed;
+}
+
+.why ul li:last-child {
+    border-bottom: none;
 }
 
 
