@@ -317,7 +317,7 @@ header {
     width: 100%;
     min-height: 680px;
 
-    background-image: url("./images/BackGrond/NewImage.PNG");
+    background-image: url("/images/BackGrond/NewImage.PNG");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
