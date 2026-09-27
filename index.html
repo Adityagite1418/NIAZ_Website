@@ -1,2416 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+  <title>Niaz Net Tehran | Connecting Technologies, Brands &amp; Markets</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 
-    <meta name="description"
-        content="NIAZ Pharma - Trusted pharmaceutical solutions, healthcare products, and global pharmaceutical services.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <meta name="keywords"
-        content="NIAZ Pharma, pharmaceuticals, healthcare, pharmaceutical products, excipients, medical devices, supplements">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <meta name="author"
-        content="NIAZ Pharma">
-
-    <title>NIAZ Pharma | Pharmaceutical Solutions</title>
-
-
-    <!-- =====================================================
-                            CSS FILES
-
-        NOTE: Main_Page.css (the corrected version) now contains
-        the complete styling for every section on this page --
-        hero, mission, services, industry, regional, why-NIAZ,
-        partner, about-hero, company, vision, values, why-choose,
-        product-hero, categories, excipients, quality, cta,
-        footer. If About_page.css and/or Products_page.css also
-        define rules for these same classes (e.g. .about-hero,
-        .category-card), loading them after Main_Page.css here
-        can silently override or conflict with the fixes. Worth
-        checking their contents -- if they were written for the
-        separate About_page.html / Products_page.html files
-        specifically, they probably don't need to be loaded on
-        this combined single-page version at all.
-    ====================================================== -->
-
-    <link rel="stylesheet" href="Main_Page.css">
-
-    <link rel="stylesheet" href="About_page.css">
-
-    <link rel="stylesheet" href="Products_page.css">
-
-
-    <!-- =====================================================
-                          FONT AWESOME
-    ====================================================== -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
-    <!-- =====================================================
-                           GOOGLE FONTS
-    ====================================================== -->
-
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
+<!-- HEADER -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
 
-    <!-- =====================================================
-                              HEADER
-    ====================================================== -->
+    <a href="#top" class="brand">
+      <span class="brand-mark">N</span>
+
+      <span class="brand-text">
+        <strong>NIAZ NET TEHRAN</strong>
+        <!-- <small>Connecting Technologies, Brands &amp; Markets</small> -->
+      </span>
+    </a>
 
-    <header class="site-header">
+    <nav class="main-nav" id="mainNav">
+      <a href="#top" class="active">Home</a>
+      <a href="#about">About Us</a>
 
-        <!-- TOP LINE -->
-
-        <div class="top-line"></div>
-
-
-        <!-- =================================================
-                              NAVBAR
-        ================================================== -->
-
-        <div class="container navbar">
-
-
-            <!-- =================================================
-                              NIAZ LOGO
-            ================================================== -->
-
-            <a href="#home"
-                class="logo"
-                aria-label="NIAZ Pharma Home">
-
-                <img src="images/Logo/Niaz_Logo.jpeg"
-                    alt="NIAZ Pharma Logo">
-
-            </a>
-
-
-            <!-- =================================================
-                         ZOODICO PARTNER LOGO
-            ================================================== -->
-
-            <a href="https://zoodicopharma.com/index.html"
-                class="partner-logo-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Zoodico Pharma">
-
-                <img src="images/Logo/Zoodico_Logo.jpeg"
-                    alt="Zoodico Pharma Partner Logo"
-                    class="partner-img">
-
-                <div class="partner-text">
-
-                    <span class="badge-title">
-                        Zoodico Pharma
-                    </span>
-
-                    <span class="badge-subtitle">
-                        Partner in India
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <!-- =================================================
-                       DESKTOP NAVIGATION
-            ================================================== -->
-
-            <nav class="desktop-nav"
-                aria-label="Main Navigation">
-
-                <ul>
-
-                    <li>
-                        <a class="active"
-                            href="#home">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#products">
-                            Products
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#industry">
-                            Industry
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#regional">
-                            Global Presence
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#why">
-                            Why NIAZ?
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#partner">
-                            Partner
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-
-            <!-- =================================================
-                       MOBILE MENU BUTTON
-            ================================================== -->
-
-            <button
-                class="menu"
-                id="menuButton"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="mobileMenu">
-
-                <span class="menu-icon">
-                    ☰
-                </span>
-
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
-                        MOBILE NAVIGATION
-        ================================================== -->
-
-        <div
-            class="mobile-menu"
-            id="mobileMenu"
-            aria-hidden="true">
-
-            <nav aria-label="Mobile Navigation">
-
-                <ul>
-
-                    <li>
-                        <a href="#home">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#products">
-                            Products
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#industry">
-                            Industry
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#regional">
-                            Global Presence
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#why">
-                            Why NIAZ?
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#partner">
-                            Partner With NIAZ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =====================================================
-                          HERO SECTION
-    ====================================================== -->
-
-    <section class="hero"
-        id="home">
-
-        <div class="hero-content">
-
-            <div class="hero-text-box">
-
-                <span class="hero-tag">
-                    INNOVATION • QUALITY • TRUST
-                </span>
-
-                <h1>
-                    Innovating Healthcare
-
-                    <span>
-                        for a Better Tomorrow
-                    </span>
-                </h1>
-
-                <p>
-                    Delivering trusted pharmaceutical solutions with
-                    uncompromising quality, innovation, and global
-                    standards of care.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a href="#products"
-                        class="hero-btn primary-btn">
-                        Explore Products
-                    </a>
-
-                    <a href="#services"
-                        class="hero-btn secondary-btn">
-                        Our Services
-                    </a>
-
-                    <a href="#regional"
-                        class="hero-btn outline-btn">
-                        Global Presence
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                          MISSION SECTION
-    ====================================================== -->
-
-    <section id="mission"
-        class="mission">
-
-        <div class="section-title">
-
-            <h2>
-                Our Mission
-            </h2>
-
-        </div>
-
-
-        <div class="mission-box">
-
-
-            <div class="mission-card">
-
-                <div class="icon">
-                    🏥
-                </div>
-
-                <h3>
-                    Quality Medicines
-                </h3>
-
-                <p>
-                    Providing high-quality pharmaceutical products worldwide.
-                </p>
-
-            </div>
-
-
-            <div class="mission-card">
-
-                <div class="icon">
-                    🛡
-                </div>
-
-                <h3>
-                    Patient Safety
-                </h3>
-
-                <p>
-                    Maintaining the highest safety and quality standards.
-                </p>
-
-            </div>
-
-
-            <div class="mission-card">
-
-                <div class="icon">
-                    🌍
-                </div>
-
-                <h3>
-                    Global Reach
-                </h3>
-
-                <p>
-                    Expanding healthcare solutions across international markets.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         SERVICES SECTION
-    ====================================================== -->
-
-    <section id="services"
-        class="services-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Our Services
-            </h2>
-
-
-            <div class="service-cards">
-
-
-                <!-- SERVICE 1 -->
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Brand Acquisition.png"
-                        alt="Brand Acquisition">
-
-                    <h3>
-                        Brand Acquisition
-                        <br>
-                        &amp; Representation
-                    </h3>
-
-                    <p>
-                        Helping businesses acquire and represent leading brands
-                        with trusted partnerships.
-                    </p>
-
-                    <a href="#contact"
-                        class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <!-- SERVICE 2 -->
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Brand Governance.png"
-                        alt="Brand Governance">
-
-                    <h3>
-                        Brand Governance
-                        <br>
-                        &amp; Supervision
-                    </h3>
-
-                    <p>
-                        Protecting brand value through effective monitoring
-                        and supervision.
-                    </p>
-
-                    <a href="#contact"
-                        class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <!-- SERVICE 3 -->
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Market Entry.png"
-                        alt="Market Entry">
-
-                    <h3>
-                        Market Entry
-                        <br>
-                        &amp; Expansion
-                    </h3>
-
-                    <p>
-                        Helping companies enter new markets and expand
-                        their business successfully.
-                    </p>
-
-                    <a href="#contact"
-                        class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-
-                <!-- SERVICE 4 -->
-
-                <div class="service-card">
-
-                    <img src="images/BackGrond/Import & Export.png"
-                        alt="Import & Export">
-
-                    <h3>
-                        Import &amp; Export
-                        <br>
-                        Structuring
-                    </h3>
-
-                    <p>
-                        Professional import and export planning with global
-                        business support.
-                    </p>
-
-                    <a href="#contact"
-                        class="btn-service">
-                        Learn More &gt;
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         INDUSTRY SECTION
-    ====================================================== -->
-
-    <section id="industry"
-        class="industry-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Industry Focus
-            </h2>
-
-
-            <div class="industry-items">
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/pharmaceutical.png"
-                        alt="Pharmaceuticals">
-
-                    <h4>
-                        Pharmaceuticals
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Sports & Supplements.png"
-                        alt="Sports & Supplements">
-
-                    <h4>
-                        Sports &amp; Supplements
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Premium Food & Health.png"
-                        alt="Premium Food & Health">
-
-                    <h4>
-                        Premium Food &amp; Health
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Pet Nutrition.png"
-                        alt="Pet Nutrition">
-
-                    <h4>
-                        Pet Nutrition
-                    </h4>
-
-                </div>
-
-
-                <div class="industry-box">
-
-                    <img src="images/BackGrond/Strategic BrandsStrategic Brands.png"
-                        alt="Strategic Brands">
-
-                    <h4>
-                        Strategic Brands
-                    </h4>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                       REGIONAL PRESENCE
-    ====================================================== -->
-
-    <section id="regional"
-        class="regional-section">
-
-        <div class="container">
-
-            <div class="regional-content">
-
-
-                <div class="map-area">
-
-                    <img src="images/BackGrond/Map.png"
-                        alt="World Map">
-
-                </div>
-
-
-                <div class="presence-area">
-
-                    <h2>
-                        Regional Presence
-                    </h2>
-
-
-                    <div class="location">
-
-                        <div class="flag blue"></div>
-
-                        <div>
-
-                            <h4>
-                                Iran Headquarters
-                            </h4>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="location">
-
-                        <div class="flag red"></div>
-
-                        <div>
-
-                            <h4>
-                                Istanbul Office
-                            </h4>
-
-                            <span>
-                                Since 2008
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                            WHY NIAZ
-    ====================================================== -->
-
-    <section id="why"
-        class="why-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-
-                <span>
-                    Why NIAZ?
-                </span>
-
-            </h2>
-
-
-            <div class="why-content">
-
-
-                <div class="why-column">
-
-                    <p>
-                        25+ Years of International Expertise
-                    </p>
-
-                    <p>
-                        Governance-Driven Representation
-                    </p>
-
-                    <p>
-                        Structured Distribution Network
-                    </p>
-
-                </div>
-
-
-                <div class="why-column">
-
-                    <p>
-                        Governance-Driven Representation
-                    </p>
-
-                    <p>
-                        Structured Distribution Network
-                    </p>
-
-                    <p>
-                        Trusted by Global Brands
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         PARTNER SECTION
-    ====================================================== -->
-
-    <section id="partner"
-        class="partner-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Partner with NIAZ
-            </h2>
-
-
-            <div class="partner-buttons">
-
-
-                <a href="#contact"
-                    class="partner-btn">
-
-                    <span>
-                        For International Brands
-                    </span>
-
-                    <span>
-                        &#8250;
-                    </span>
-
-                </a>
-
-
-                <a href="#contact"
-                    class="partner-btn">
-
-                    <span>
-                        For Iranian Manufacturers
-                    </span>
-
-                    <span>
-                        &#8250;
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                          ABOUT SECTION
-    ====================================================== -->
-
-    <section id="about"
-        class="about-hero">
-
-        <div class="overlay">
-
-            <h1>
-                About NIAZ Pharma
-            </h1>
-
-            <p>
-                Committed to delivering innovative pharmaceutical solutions
-                that improve lives worldwide.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         COMPANY SECTION
-    ====================================================== -->
-
-    <section class="company">
-
-        <div class="container company-content">
-
-
-            <div class="company-image">
-
-                <img src="images/BackGrond/AboutHero.png"
-                    alt="NIAZ Pharma Company Facility">
-
-            </div>
-
-
-            <div class="company-text">
-
-                <h2>
-                    Who We Are
-                </h2>
-
-                <p>
-                    NIAZ Pharma is a trusted pharmaceutical company dedicated
-                    to manufacturing and supplying quality healthcare products
-                    across domestic and international markets.
-                </p>
-
-                <p>
-                    Our focus is innovation, quality assurance and patient
-                    well-being through advanced pharmaceutical research
-                    and development.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         VISION SECTION
-    ====================================================== -->
-
-    <section class="vision">
-
-        <div class="container cards">
-
-
-            <div class="card">
-
-                <h3>
-                    Our Vision
-                </h3>
-
-                <p>
-                    To become a globally recognized pharmaceutical company
-                    delivering innovative healthcare products.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Our Mission
-                </h3>
-
-                <p>
-                    Provide affordable, high-quality medicines while
-                    maintaining international quality standards.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                         VALUES SECTION
-    ====================================================== -->
-
-    <section class="values">
-
-        <div class="container">
-
-            <h2 class="title">
-                Our Core Values
-            </h2>
-
-
-            <div class="value-box">
-
-
-                <div class="value">
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        We never compromise on quality.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Integrity
-                    </h3>
-
-                    <p>
-                        Building trust through transparency.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Innovation
-                    </h3>
-
-                    <p>
-                        Continuous research for better healthcare.
-                    </p>
-
-                </div>
-
-
-                <div class="value">
-
-                    <h3>
-                        Customer Care
-                    </h3>
-
-                    <p>
-                        Ensuring complete customer satisfaction.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                       WHY CHOOSE US
-    ====================================================== -->
-
-    <section class="why">
-
-        <div class="container">
-
-            <h2 class="title">
-                Why Choose Us?
-            </h2>
-
-
-            <ul>
-
-                <li>
-                    ✔ WHO-GMP Quality Standards
-                </li>
-
-                <li>
-                    ✔ Experienced Research Team
-                </li>
-
-                <li>
-                    ✔ Global Distribution Network
-                </li>
-
-                <li>
-                    ✔ Customer Focused Approach
-                </li>
-
-                <li>
-                    ✔ Affordable Healthcare Solutions
-                </li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                       PRODUCTS HERO
-    ====================================================== -->
-
-    <section id="products"
-        class="product-hero">
-
-        <div class="overlay">
-
-            <h1>
-                Our Products
-            </h1>
-
-            <p>
-                Delivering innovative pharmaceutical solutions
-                for better healthcare worldwide.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                      PRODUCT CATEGORIES
-    ====================================================== -->
-
-    <section class="categories">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Product Categories
-            </h2>
-
-
-            <div class="category-box">
-
-
-                <!-- =================================================
-                       CATEGORY 1 - SPORTS NUTRITION
-                ================================================== -->
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/Whey_Protein.jpeg"
-                        alt="Sports Nutrition">
-
-                    <h3>
-                        Sports Nutrition &amp; Supplements
-                    </h3>
-
-                    <p>
-                        Musclelabs - Premium Nutrition Brand
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================================
-                       CATEGORY 2 - INFANT FORMULA
-                ================================================== -->
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/Infant.jpeg"
-                        alt="Infant Formula">
-
-                    <h3>
-                        Infant Formula Production Line
-                    </h3>
-
-                    <p>
-                        Nutrition for a healthy start
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================================
-                    CATEGORY 3 - MEDICAL DEVICES & COSMETICS
-                ================================================== -->
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/Medical_Device.jpeg"
-                        alt="Medical Devices and Cosmetics">
-
-                    <h3>
-                        Medical Devices &amp; Cosmetics
-                    </h3>
-
-                    <p>
-                        Beauty &amp; Health Solutions
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================================
-                         CATEGORY 4 - CBD BUSINESS
-                ================================================== -->
-
-                <div class="category-card">
-
-                    <img src="images/BackGrond/CBD.jpeg"
-                        alt="CBD Business">
-
-                    <h3>
-                        CBD Business
-                    </h3>
-
-                    <p>
-                        Import &amp; Local Production THC-Free CBD Products.
-                    </p>
-
-                </div>
-
-
-
-                <!-- =================================================
-                         CATEGORY 5 - EXCIPIENTS
-                ================================================== -->
-
-                <div class="category-card excipients-card">
-
-                    <img
-                        src="images/BackGrond/Excipients.png"
-                        alt="Pharmaceutical Excipients">
-
-                    <div class="excipients-content">
-
-                        <button
-                            type="button"
-                            class="excipients-button"
-                            id="excipientsButton"
-                            aria-label="Open Excipients products"
-                            aria-haspopup="dialog"
-                            aria-controls="excipientsOverlay">
-
-                            <span>
-                                Excipients
-                            </span>
-
-                            <span class="excipients-arrow"
-                                aria-hidden="true">
-                                ⌄
-                            </span>
-
-                        </button>
-
-                        <p>
-                            Pharmaceutical Excipients &amp; Ingredients
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-                        EXCIPIENTS POPUP
-    ====================================================== -->
-
-    <div
-        class="excipients-overlay"
-        id="excipientsOverlay"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="excipientsTitle"
-        aria-hidden="true">
-
-
-        <div class="excipients-popup">
-
-
-            <!-- =================================================
-                          POPUP HEADER
-            ================================================== -->
-
-            <div class="excipients-header">
-
-                <div class="excipients-header-content">
-
-                    <h2 id="excipientsTitle">
-                        Excipients
-                    </h2>
-
-                    <p>
-                        Pharmaceutical Excipients &amp; Ingredients
-                    </p>
-
-                </div>
-
-
-                <button
-                    type="button"
-                    class="close-excipients"
-                    id="closeExcipientsButton"
-                    aria-label="Close Excipients popup">
-
-                    &times;
-
-                </button>
-
-            </div>
-
-
-
-            <!-- =================================================
-                          SEARCH AREA
-            ================================================== -->
-
-            <div class="excipients-search">
-
-                <span
-                    class="search-icon"
-                    aria-hidden="true">
-
-                    &#128269;
-
-                </span>
-
-
-                <input
-                    type="text"
-                    id="excipientsSearch"
-                    placeholder="Search product..."
-                    autocomplete="off"
-                    aria-label="Search Excipients products">
-
-
-                <button
-                    type="button"
-                    class="clear-search"
-                    id="clearExcipientsSearch"
-                    aria-label="Clear search">
-
-                    &times;
-
-                </button>
-
-            </div>
-
-
-
-            <!-- =================================================
-                          PRODUCT COUNT
-            ================================================== -->
-
-            <div class="product-count">
-
-                <span id="productCount">
-                    32
-                </span>
-
-                <span>
-                    Products
-                </span>
-
-            </div>
-
-
-
-            <!-- =================================================
-                          PRODUCT LIST
-            ================================================== -->
-
-            <div
-                class="excipients-products"
-                id="excipientsProducts">
-
-
-                <div class="excipients-product">
-                    Croscarmellose Sodium
-                </div>
-
-                <div class="excipients-product">
-                    Dibasic Calcium Phosphate Dihydrate
-                </div>
-
-                <div class="excipients-product">
-                    HPMC
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 15
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 3
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 4000
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 4000M
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 50
-                </div>
-
-                <div class="excipients-product">
-                    HPMC 6
-                </div>
-
-                <div class="excipients-product">
-                    HPMC K100
-                </div>
-
-                <div class="excipients-product">
-                    HPMC K100M
-                </div>
-
-                <div class="excipients-product">
-                    Hypromellose Phthalate
-                </div>
-
-                <div class="excipients-product">
-                    Iron Oxide Brown
-                </div>
-
-                <div class="excipients-product">
-                    Iron Oxide Red
-                </div>
-
-                <div class="excipients-product">
-                    Iron Oxide Yellow
-                </div>
-
-                <div class="excipients-product">
-                    Magnesium Stearate
-                </div>
-
-                <div class="excipients-product">
-                    MCC 591
-                </div>
-
-                <div class="excipients-product">
-                    MCC 112
-                </div>
-
-                <div class="excipients-product">
-                    MCC Silicified
-                </div>
-
-                <div class="excipients-product">
-                    MCC 101
-                </div>
-
-                <div class="excipients-product">
-                    MCC 102
-                </div>
-
-                <div class="excipients-product">
-                    Omeprazole Pellet
-                </div>
-
-                <div class="excipients-product">
-                    Pregelatinized Starch
-                </div>
-
-                <div class="excipients-product">
-                    Simethicone
-                </div>
-
-                <div class="excipients-product">
-                    Simethicone 100%
-                </div>
-
-                <div class="excipients-product">
-                    Simethicone 30%
-                </div>
-
-                <div class="excipients-product">
-                    Simethicone Powder 50%
-                </div>
-
-                <div class="excipients-product">
-                    Sodium Starch Glycolate
-                </div>
-
-                <div class="excipients-product">
-                    Sodium Starch Glycolate Type A
-                </div>
-
-                <div class="excipients-product">
-                    Sodium Starch Glycolate Type B
-                </div>
-
-                <div class="excipients-product">
-                    Sodium Stearyl Fumarate
-                </div>
-
-                <div class="excipients-product">
-                    Talc
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                           NO RESULT MESSAGE
-            ================================================== -->
-
-            <div
-                class="no-result"
-                id="noResult"
-                aria-live="polite">
-
-                <div
-                    class="no-result-icon"
-                    aria-hidden="true">
-
-                    &#128269;
-
-                </div>
-
-                <h3>
-                    No product found
-                </h3>
-
-                <p>
-                    Try searching with a different product name.
-                </p>
-
-            </div>
-
-
-        </div>
+      <div class="nav-dropdown" id="servicesDropdown">
+        <button
+          type="button"
+          class="dropdown-trigger"
+          id="servicesTrigger"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Services <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="dropdown-panel" id="servicesPanel"></div>
+      </div>
+
+      <a href="#industries">Industries</a>
+      <a href="#partners">Partners</a>
+      <a href="#projects">Projects</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <button class="lang-switch" id="langBtn" type="button">
+        <i class="fa-solid fa-globe"></i>
+        <span id="langLabel">EN</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <a href="#contact" class="btn btn-gold">Get In Touch</a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="about">
+
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+
+      <p class="eyebrow">Global Business Development</p>
+
+      <h1>
+        Connecting technologies, manufacturers, brands and international markets.
+      </h1>
+
+      <p class="hero-tags">
+        Pharmaceutical &nbsp;•&nbsp;
+        Nutrition &nbsp;•&nbsp;
+        Biotechnology &nbsp;•&nbsp;
+        Global Trade
+      </p>
+
+      <div class="hero-btns">
+
+        <a href="#services" class="btn btn-gold">
+          Explore Services
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- GLOBE -->
+    <div class="hero-globe" aria-hidden="true">
+
+      <svg
+        viewBox="0 0 300 300"
+        class="globe-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <defs>
+
+          <radialGradient id="gGrad" cx="35%" cy="30%" r="75%">
+            <stop offset="0%" stop-color="#3a5aa8"/>
+            <stop offset="100%" stop-color="#0a1b3d"/>
+          </radialGradient>
+
+          <clipPath id="gClip">
+            <circle cx="150" cy="150" r="132"/>
+          </clipPath>
+
+          <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+
+        </defs>
+
+        <circle
+          cx="150"
+          cy="150"
+          r="145"
+          fill="none"
+          stroke="#c89b3c"
+          stroke-opacity=".25"
+        />
+
+        <circle
+          cx="150"
+          cy="150"
+          r="132"
+          fill="url(#gGrad)"
+        />
+
+        <g clip-path="url(#gClip)" opacity=".5">
+
+          <circle cx="95" cy="95" r="2" fill="#5678c2"/>
+          <circle cx="115" cy="80" r="1.5" fill="#5678c2"/>
+          <circle cx="180" cy="70" r="2" fill="#5678c2"/>
+          <circle cx="200" cy="95" r="1.5" fill="#5678c2"/>
+          <circle cx="70" cy="150" r="2" fill="#5678c2"/>
+          <circle cx="90" cy="180" r="1.5" fill="#5678c2"/>
+          <circle cx="160" cy="200" r="2" fill="#5678c2"/>
+          <circle cx="210" cy="180" r="1.5" fill="#5678c2"/>
+          <circle cx="130" cy="230" r="2" fill="#5678c2"/>
+          <circle cx="60" cy="110" r="1.5" fill="#5678c2"/>
+          <circle cx="220" cy="140" r="2" fill="#5678c2"/>
+          <circle cx="180" cy="240" r="1.5" fill="#5678c2"/>
+
+        </g>
+
+        <g fill="none" stroke="#e0b85c" stroke-width="1" opacity=".55">
+
+          <path d="M95,105 Q145,60 185,90"/>
+          <path d="M100,120 Q150,170 205,110"/>
+          <path d="M90,160 Q130,205 175,195"/>
+          <path d="M180,95 Q210,140 215,170"/>
+          <path d="M95,105 Q80,150 95,180"/>
+          <path d="M175,195 Q195,215 205,110"/>
+
+        </g>
+
+        <g filter="url(#glow)">
+
+          <circle cx="95" cy="105" r="4" fill="#e0b85c"/>
+          <circle cx="185" cy="90" r="3.2" fill="#e0b85c"/>
+          <circle cx="205" cy="110" r="4" fill="#e0b85c"/>
+          <circle cx="90" cy="160" r="3.2" fill="#e0b85c"/>
+          <circle cx="175" cy="195" r="4.5" fill="#e0b85c"/>
+          <circle cx="215" cy="170" r="3.2" fill="#e0b85c"/>
+
+        </g>
+
+      </svg>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="grid grid-9" id="servicesGrid"></div>
+  </div>
+</section>
+
+
+<!-- STATISTICS -->
+<section class="stats">
+  <div class="container stats-inner">
+
+    <div class="stat">
+      <i class="fa-solid fa-calendar-days"></i>
+      <div>
+        <strong>20+</strong>
+        <span>Years Experience</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-earth-americas"></i>
+      <div>
+        <strong>50+</strong>
+        <span>Countries Served</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-people-group"></i>
+      <div>
+        <strong>300+</strong>
+        <span>Global Partners</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-briefcase"></i>
+      <div>
+        <strong>1500+</strong>
+        <span>Projects Completed</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-certificate"></i>
+      <div>
+        <strong>GMP</strong>
+        <span>Certified Network</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="container">
+
+    <h2>Industries We Serve</h2>
+
+    <div class="industry-row" id="industryRow"></div>
+
+  </div>
+</section>
+
+
+<!-- GLOBAL PARTNERS -->
+<section class="partners" id="partners">
+  <div class="container">
+
+    <h2>Global Partners</h2>
+
+    <div class="carousel">
+
+      <button
+        class="car-btn prev"
+        data-target="partnerTrack"
+        aria-label="Previous partners"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel-track" id="partnerTrack"></div>
+
+      <button
+        class="car-btn next"
+        data-target="partnerTrack"
+        aria-label="Next partners"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+    </div>
+
+    <div class="dots" id="partnerDots"></div>
+
+  </div>
+</section>
+
+
+<!-- PROJECTS AND GLOBAL NETWORK -->
+<section class="projects" id="projects">
+  <div class="container two-col">
+
+    <div>
+
+      <h2>Featured Projects</h2>
+
+      <div class="carousel">
+
+        <button
+          class="car-btn prev"
+          data-target="projectTrack"
+          aria-label="Previous projects"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track project-track" id="projectTrack"></div>
+
+        <button
+          class="car-btn next"
+          data-target="projectTrack"
+          aria-label="Next projects"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+      <div class="dots" id="projectDots"></div>
 
     </div>
 
 
+    <!-- GLOBAL NETWORK -->
+    <div class="network-card" id="network">
 
-    <!-- =====================================================
-                    FEATURED PRODUCTS
-    ====================================================== -->
+      <h2>Our Global Network</h2>
 
-    <!--
-    <section class="featured">
+      <div class="map-box">
 
-        <div class="container">
+        <div class="map-pin" style="top:30%;left:20%"></div>
+        <div class="map-pin" style="top:55%;left:48%"></div>
+        <div class="map-pin gold" style="top:35%;left:70%"></div>
+        <div class="map-pin" style="top:70%;left:82%"></div>
 
-            <h2 class="section-title">
-                Featured Products
-            </h2>
+        <div class="info-card">
 
-            <div class="product-grid">
+          <strong>Spain</strong>
 
-                <div class="product-card">
+          <ul>
+            <li>Enoxaparin</li>
+            <li>Heparin</li>
+            <li>Biotechnology</li>
+            <li>Dairy Ingredients</li>
+            <li>Food Ingredients</li>
+            <li>Pharmaceutical Partners</li>
+          </ul>
 
-                    <img src="images/Products/product1.jpg"
-                        alt="Paracetamol 500mg">
-
-                    <h3>
-                        Paracetamol 500mg
-                    </h3>
-
-                    <p>
-                        Pain Relief &amp; Fever Reducer
-                    </p>
-
-                    <a href="#contact">
-                        View Details
-                    </a>
-
-                </div>
-
-                <div class="product-card">
-
-                    <img src="images/Products/product2.jpg"
-                        alt="Vitamin C Tablets">
-
-                    <h3>
-                        Vitamin C Tablets
-                    </h3>
-
-                    <p>
-                        Daily Immunity Booster
-                    </p>
-
-                    <a href="#contact">
-                        View Details
-                    </a>
-
-                </div>
-
-                <div class="product-card">
-
-                    <img src="images/Products/product3.jpg"
-                        alt="Antibiotic Capsules">
-
-                    <h3>
-                        Antibiotic Capsules
-                    </h3>
-
-                    <p>
-                        Broad Spectrum Antibiotics
-                    </p>
-
-                    <a href="#contact">
-                        View Details
-                    </a>
-
-                </div>
-
-            </div>
+          <a href="#contact" class="btn btn-gold btn-sm">
+            View Details
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
         </div>
+      </div>
 
-    </section>
-    -->
+      <div class="map-legend">
 
+        <span>
+          <i class="dot gold"></i>
+          Our Offices
+        </span>
 
+        <span>
+          <i class="dot navy"></i>
+          Partners
+        </span>
 
-    <!-- =====================================================
-                      QUALITY ASSURANCE
-    ====================================================== -->
+        <span>
+          <i class="dot grey"></i>
+          Projects
+        </span>
 
-    <section class="quality">
+      </div>
+    </div>
 
-        <div class="container">
-
-            <h2>
-                Quality Assurance
-            </h2>
-
-            <p>
-                Every product is manufactured under WHO-GMP guidelines,
-                ensuring safety, effectiveness, and superior quality.
-            </p>
-
-
-            <div class="quality-list">
-
-                <div>
-                    ✔ WHO-GMP Certified
-                </div>
-
-                <div>
-                    ✔ ISO Standards
-                </div>
-
-                <div>
-                    ✔ Advanced Manufacturing
-                </div>
-
-                <div>
-                    ✔ Global Distribution
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+  </div>
+</section>
 
 
+<!-- NEWS -->
+<section class="news" id="news">
+  <div class="container">
 
-    <!-- =====================================================
-                              CTA
-    ====================================================== -->
+    <h2>Latest News</h2>
 
-    <section class="cta">
+    <div class="news-grid" id="newsGrid"></div>
 
-        <h2>
-            Looking for Our Complete Product Catalogue?
-        </h2>
+  </div>
+</section>
 
-        <a href="#contact">
-            Contact Us
+
+<!-- CONTACT CTA -->
+<section class="cta-bar" id="contact">
+  <div class="container cta-inner">
+
+    <div class="cta-text">
+      <h3>Let's build success together</h3>
+      <p>We are ready to be your trusted partner in growth.</p>
+    </div>
+
+    <a href="mailto:info@niaznet.com" class="btn btn-gold">
+      Let's Talk
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+    <div class="cta-contacts">
+
+      <a href="mailto:info@niaznet.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@niaznet.com</span>
+      </a>
+
+      <a href="tel:+982188666070">
+        <i class="fa-solid fa-phone"></i>
+        <span>+98 21 88 66 60 70</span>
+      </a>
+
+      <a href="https://wa.me/989188866070" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>+98 918 88 66 070</span>
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Niaz Net Tehran</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <div class="brand">
+
+        <span class="brand-mark">N</span>
+
+        <span class="brand-text">
+          <strong>NIAZ NET TEHRAN</strong>
+          <small>Connecting Technologies, Brands &amp; Markets</small>
+        </span>
+
+      </div>
+
+      <p>
+        We connect manufacturers, brands and markets to create long-term
+        value and international partnerships.
+      </p>
+
+      <div class="social">
+
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
         </a>
 
-    </section>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
+        <a href="https://wa.me/989188866070" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
+        <a href="mailto:info@niaznet.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
 
-    <!-- =====================================================
-                         CONTACT SECTION
-    ====================================================== -->
+      </div>
+    </div>
 
-    <section id="contact"
-        class="contact-section">
 
-        <div class="container">
+    <div>
+      <h4>Quick Links</h4>
 
-            <!-- Contact content can be added here -->
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#partners">Partners</a>
+      <a href="#projects">Projects</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact Us</a>
+    </div>
 
-        </div>
 
-    </section>
+    <div>
+      <h4>Our Services</h4>
 
+      <a href="#" class="footer-svc-link" data-service="api-supply">API Supply</a>
+      <a href="#" class="footer-svc-link" data-service="essences-natural-oils">Essences &amp; Natural Oils</a>
+      <a href="#" class="footer-svc-link" data-service="extracts">Extracts</a>
+      <a href="#" class="footer-svc-link" data-service="finished-products">Finished Products</a>
+      <a href="#" class="footer-svc-link" data-service="technology-transfer">Technology Transfer</a>
+    </div>
 
 
-    <!-- =====================================================
-                             FOOTER
-    ====================================================== -->
+    <div>
+      <h4>Industries</h4>
 
-    <footer class="footer">
+      <a href="#industries">Pharmaceutical</a>
+      <a href="#industries">Biotechnology</a>
+      <a href="#industries">Food Ingredients</a>
+      <a href="#industries">Sports Nutrition</a>
+      <a href="#industries">Pet Food</a>
+    </div>
 
-        <div class="container">
 
-            <div class="footer-content">
+    <div class="footer-news">
 
+      <h4>Downloads</h4>
 
-                <!-- =================================================
-                            NIAZ CONTACT
-                ================================================== -->
+      <a href="#" id="dlProfile">
+        <i class="fa-solid fa-file-lines"></i>
+        Company Profile
+        <i class="fa-solid fa-download"></i>
+      </a>
 
-                <div class="footer-box">
+      <a href="#" id="dlPresentation">
+        <i class="fa-solid fa-file-lines"></i>
+        Presentation
+        <i class="fa-solid fa-download"></i>
+      </a>
 
-                    <h3>
-                        Contact Us NIAZ
-                    </h3>
+      <h4>Newsletter</h4>
 
-                    <p>
-                        📞 +90 5340143473
-                    </p>
+      <form id="newsForm" class="news-form">
 
-                    <p>
-                        📞 +98 9123216604
-                    </p>
+        <label for="newsEmail" class="sr-only">Email address</label>
 
-                    <p>
-                        ✉ bd@niaznet.in
-                    </p>
+        <input
+          type="email"
+          id="newsEmail"
+          placeholder="Your email address"
+          required
+        >
 
-                </div>
+        <button type="submit" class="btn btn-gold btn-sm">
+          Subscribe
+        </button>
 
+      </form>
 
+      <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
 
-                <!-- =================================================
-                          ZOODICO CONTACT
-                ================================================== -->
+    </div>
 
-                <div class="footer-box">
+  </div>
 
-                    <h3>
-                        Contact Us Zoodico India
-                    </h3>
 
-                    <p>
-                        📞 +91 8530867634
-                    </p>
+  <div class="container footer-bottom">
 
-                    <p>
-                        ✉ bd@zoodicopharma.com
-                    </p>
+    <p>© 2026 Niaz Net Tehran. All Rights Reserved.</p>
 
-                </div>
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
 
+  </div>
 
+</footer>
 
-                <!-- =================================================
-                              QUICK LINKS
-                ================================================== -->
 
-                <div class="footer-box">
+<!-- BACK TO TOP -->
+<button id="toTop" class="to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
-                    <h3>
-                        Quick Links
-                    </h3>
 
-                    <ul>
+<!-- SERVICE DETAIL PAGE -->
+<section class="service-page" id="servicePage" aria-hidden="true">
 
-                        <li>
-                            <a href="#about">
-                                About NIAZ
-                            </a>
-                        </li>
+  <div class="container service-page-inner">
 
-                        <li>
-                            <a href="#products">
-                                Products
-                            </a>
-                        </li>
+    <button class="back-btn" id="closeServiceBtn" type="button">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Home
+    </button>
 
-                        <li>
-                            <a href="#services">
-                                Services
-                            </a>
-                        </li>
+    <div class="service-page-head">
 
-                        <li>
-                            <a href="#industry">
-                                Industries
-                            </a>
-                        </li>
+      <div class="service-icon" id="spIconWrap">
+        <i id="spIcon" class="fa-solid"></i>
+      </div>
 
-                        <li>
-                            <a href="#regional">
-                                Global Presence
-                            </a>
-                        </li>
+      <div>
+        <p class="eyebrow" id="spEyebrow">Service</p>
+        <h2 id="spTitle"></h2>
+        <p id="spDesc" class="sp-desc"></p>
+      </div>
 
-                        <li>
-                            <a href="#contact">
-                                Contact
-                            </a>
-                        </li>
+    </div>
 
-                    </ul>
+    <h3 class="sp-subhead">Products &amp; Solutions</h3>
 
-                </div>
+    <ul class="product-list" id="spList"></ul>
 
+    <a href="#contact" class="btn btn-gold" id="spContact">
+      Enquire About This Service
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
+  </div>
+</section>
 
-                <!-- =================================================
-                              SOCIAL MEDIA
-                ================================================== -->
 
-                <div class="footer-box">
-
-                    <h3>
-                        Follow Us
-                    </h3>
-
-                    <div class="social-icons">
-
-                        <a href="#"
-                            aria-label="Facebook">
-
-                            <i class="fab fa-facebook-f"></i>
-
-                        </a>
-
-                        <a href="#"
-                            aria-label="Twitter">
-
-                            <i class="fab fa-twitter"></i>
-
-                        </a>
-
-                        <a href="#"
-                            aria-label="LinkedIn">
-
-                            <i class="fab fa-linkedin-in"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =================================================
-                                LEGAL
-                ================================================== -->
-
-                <div class="footer-box">
-
-                    <h3>
-                        Legal
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Privacy Policy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Terms &amp; Conditions
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-            </div>
-
-
-            <hr>
-
-
-            <div class="copyright">
-
-                © 2026 NIAZ Pharma. All Rights Reserved.
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- =====================================================
-                 ALL JAVASCRIPT
-    ====================================================== -->
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-            /* =================================================
-                       EXCIPIENTS ELEMENTS
-            ================================================== */
-
-            const excipientsButton =
-                document.getElementById("excipientsButton");
-
-            const excipientsOverlay =
-                document.getElementById("excipientsOverlay");
-
-            const closeExcipientsButton =
-                document.getElementById("closeExcipientsButton");
-
-            const excipientsSearch =
-                document.getElementById("excipientsSearch");
-
-            const clearExcipientsSearch =
-                document.getElementById("clearExcipientsSearch");
-
-            const productCount =
-                document.getElementById("productCount");
-
-            const noResult =
-                document.getElementById("noResult");
-
-            const excipientsProducts =
-                document.querySelectorAll(".excipients-product");
-
-
-
-            /* =================================================
-                         EXCIPIENTS SEARCH
-            ================================================== */
-
-            function searchExcipients() {
-
-                const searchValue =
-                    excipientsSearch.value
-                        .toLowerCase()
-                        .trim();
-
-                let visibleProducts = 0;
-
-
-                excipientsProducts.forEach(function (product) {
-
-                    const productName =
-                        product.textContent
-                            .toLowerCase()
-                            .trim();
-
-
-                    if (
-                        productName.includes(searchValue)
-                    ) {
-
-                        product.style.display = "flex";
-
-                        visibleProducts++;
-
-                    } else {
-
-                        product.style.display = "none";
-
-                    }
-
-                });
-
-
-                productCount.textContent =
-                    visibleProducts;
-
-
-                if (visibleProducts === 0) {
-
-                    noResult.style.display = "block";
-
-                } else {
-
-                    noResult.style.display = "none";
-
-                }
-
-            }
-
-
-
-            /* =================================================
-                        CLEAR SEARCH
-            ================================================== */
-
-            function clearSearch() {
-
-                excipientsSearch.value = "";
-
-                searchExcipients();
-
-                excipientsSearch.focus();
-
-            }
-
-
-
-            /* =================================================
-                        OPEN EXCIPIENTS
-            ================================================== */
-
-            function openExcipients() {
-
-                excipientsOverlay.classList.add("active");
-
-                excipientsOverlay.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
-
-                document.body.classList.add(
-                    "popup-open"
-                );
-
-
-                /*
-                    Reset search every time popup opens.
-                */
-
-                excipientsSearch.value = "";
-
-                searchExcipients();
-
-
-                /*
-                    Focus search input after popup opens.
-                */
-
-                setTimeout(function () {
-
-                    excipientsSearch.focus();
-
-                }, 100);
-
-            }
-
-
-
-            /* =================================================
-                        CLOSE EXCIPIENTS
-            ================================================== */
-
-            function closeExcipients() {
-
-                excipientsOverlay.classList.remove("active");
-
-                excipientsOverlay.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-                document.body.classList.remove(
-                    "popup-open"
-                );
-
-
-                /*
-                    Reset search.
-                */
-
-                excipientsSearch.value = "";
-
-                searchExcipients();
-
-
-                /*
-                    Return focus to Excipients button.
-                */
-
-                if (excipientsButton) {
-
-                    excipientsButton.focus();
-
-                }
-
-            }
-
-
-
-            /* =================================================
-                       OPEN BUTTON EVENT
-            ================================================== */
-
-            if (excipientsButton) {
-
-                excipientsButton.addEventListener(
-                    "click",
-                    openExcipients
-                );
-
-            }
-
-
-
-            /* =================================================
-                       CLOSE BUTTON EVENT
-            ================================================== */
-
-            if (closeExcipientsButton) {
-
-                closeExcipientsButton.addEventListener(
-                    "click",
-                    closeExcipients
-                );
-
-            }
-
-
-
-            /* =================================================
-                          SEARCH EVENT
-            ================================================== */
-
-            if (excipientsSearch) {
-
-                excipientsSearch.addEventListener(
-                    "input",
-                    searchExcipients
-                );
-
-            }
-
-
-
-            /* =================================================
-                         CLEAR BUTTON EVENT
-            ================================================== */
-
-            if (clearExcipientsSearch) {
-
-                clearExcipientsSearch.addEventListener(
-                    "click",
-                    clearSearch
-                );
-
-            }
-
-
-
-            /* =================================================
-                    CLICK OUTSIDE POPUP
-            ================================================== */
-
-            if (excipientsOverlay) {
-
-                excipientsOverlay.addEventListener(
-                    "click",
-                    function (event) {
-
-                        if (
-                            event.target ===
-                            excipientsOverlay
-                        ) {
-
-                            closeExcipients();
-
-                        }
-
-                    }
-                );
-
-            }
-
-
-
-            /* =================================================
-                           ESC KEY
-            ================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key === "Escape" &&
-                        excipientsOverlay.classList.contains("active")
-                    ) {
-
-                        closeExcipients();
-
-                    }
-
-                }
-            );
-
-
-
-            /* =================================================
-                         MOBILE MENU
-            ================================================== */
-
-            const menuButton =
-                document.getElementById("menuButton");
-
-            const mobileMenu =
-                document.getElementById("mobileMenu");
-
-            const mobileLinks =
-                document.querySelectorAll(
-                    "#mobileMenu a"
-                );
-
-
-            /*
-                Safety check.
-            */
-
-            if (
-                !menuButton ||
-                !mobileMenu
-            ) {
-
-                return;
-
-            }
-
-
-
-            /* =================================================
-                         OPEN MOBILE MENU
-            ================================================== */
-
-            function openMenu() {
-
-                mobileMenu.classList.add("show");
-
-                menuButton.classList.add("active");
-
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-
-
-                menuButton.setAttribute(
-                    "aria-label",
-                    "Close navigation menu"
-                );
-
-
-                mobileMenu.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
-
-            }
-
-
-
-            /* =================================================
-                         CLOSE MOBILE MENU
-            ================================================== */
-
-            function closeMenu() {
-
-                mobileMenu.classList.remove("show");
-
-                menuButton.classList.remove("active");
-
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-
-                menuButton.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-
-                mobileMenu.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-            }
-
-
-
-            /* =================================================
-                         TOGGLE MOBILE MENU
-            ================================================== */
-
-            function toggleMenu() {
-
-                const isOpen =
-                    mobileMenu.classList.contains(
-                        "show"
-                    );
-
-
-                if (isOpen) {
-
-                    closeMenu();
-
-                } else {
-
-                    openMenu();
-
-                }
-
-            }
-
-
-
-            /* =================================================
-                       MENU BUTTON CLICK
-            ================================================== */
-
-            menuButton.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    event.stopPropagation();
-
-                    toggleMenu();
-
-                }
-            );
-
-
-
-            /* =================================================
-                     MOBILE LINK CLICK
-            ================================================== */
-
-            mobileLinks.forEach(
-                function (link) {
-
-                    link.addEventListener(
-                        "click",
-                        function () {
-
-                            closeMenu();
-
-                        }
-                    );
-
-                }
-            );
-
-
-
-            /* =================================================
-                      CLICK OUTSIDE MENU
-            ================================================== */
-
-            document.addEventListener(
-                "click",
-                function (event) {
-
-                    if (
-                        !mobileMenu.classList.contains(
-                            "show"
-                        )
-                    ) {
-
-                        return;
-
-                    }
-
-
-                    if (
-                        !mobileMenu.contains(
-                            event.target
-                        ) &&
-                        !menuButton.contains(
-                            event.target
-                        )
-                    ) {
-
-                        closeMenu();
-
-                    }
-
-                }
-            );
-
-
-
-            /* =================================================
-                       ESC KEY - MOBILE MENU
-            ================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key === "Escape"
-                    ) {
-
-                        closeMenu();
-
-                    }
-
-                }
-            );
-
-
-
-            /* =================================================
-                         WINDOW RESIZE
-            ================================================== */
-
-            window.addEventListener(
-                "resize",
-                function () {
-
-                    if (
-                        window.innerWidth > 768
-                    ) {
-
-                        closeMenu();
-
-                    }
-
-                }
-            );
-
-
-        });
-
-    </script>
-
+<script src="script.js"></script>
 
 </body>
-
 </html>
