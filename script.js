@@ -64,7 +64,7 @@ const industries = [
   ["cannabis","CBD"],["kit-medical","Medical Devices"],["paw","Veterinary"]
 ];
 
-const partners = ["DSM","KERRY","Glanbia","LONZA","BASF","IFF","Arla","Fonterra","Kendamil","SILVERSON","OLIMP"];
+const partners = ["INDIA","DSM","KERRY","Glanbia","LONZA","BASF","IFF","Arla","Fonterra","Kendamil","SILVERSON","OLIMP"];
 
 const projects = [
   { title:"Enoxaparin Technology Transfer", desc:"Complete technology transfer for Enoxaparin production.", icon:"vial", grad:"linear-gradient(135deg,#1f4e9c,#0a1b3d)" },
