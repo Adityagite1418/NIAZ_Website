@@ -1,3 +1,5 @@
+'use strict';
+
 // ---------- DATA ----------
 const services = [
   { id:"api-supply", icon:"diagram-project", color:"#2f6fed", title:"API Supply", desc:"High quality Active Pharmaceutical Ingredients, essential medicines, intermediates & more, sourced from GMP-certified manufacturers.", products:["Essential medicine APIs","Oncology & specialty APIs","Generic APIs","Custom sourcing on request","Regulatory documentation (DMF/CEP)"] },
@@ -40,8 +42,10 @@ const news = [
   { date:"Jun 2026", title:"Attending CPHI 2026", excerpt:"Meet our team at this year's CPHI exhibition to discuss API supply and technology transfer." }
 ];
 
-// ---------- ELEMENTS ----------
+// ---------- HELPERS / ELEMENTS ----------
 const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const NAV_BREAKPOINT = 1080;
 const servicePage = $('servicePage');
 const spIcon = $('spIcon'), spIconWrap = $('spIconWrap'), spEyebrow = $('spEyebrow');
 const spTitle = $('spTitle'), spDesc = $('spDesc'), spList = $('spList');
@@ -49,6 +53,15 @@ const closeServiceBtn = $('closeServiceBtn');
 const menuToggle = $('menuToggle'), mainNav = $('mainNav');
 const servicesDropdown = $('servicesDropdown'), servicesTrigger = $('servicesTrigger'), servicesPanel = $('servicesPanel');
 let lastFocused = null;
+let toastTimer;
+
+function showToast(text) {
+  const t = $('toast');
+  t.textContent = text;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+}
 
 // ---------- RENDER ----------
 const svcGrid = $('servicesGrid');
@@ -58,30 +71,30 @@ services.forEach(svc => {
   card.className = 'svc-card';
   card.dataset.service = svc.id;
   card.style.setProperty('--svc-color', svc.color);
-  card.innerHTML = `<i class="fa-solid fa-${svc.icon}" aria-hidden="true"></i><span class="svc-title">${svc.title}</span><span class="svc-desc">${svc.desc}</span><span class="svc-more">View products <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
+  card.innerHTML = `<i class="fa-solid fa-${svc.icon}" aria-hidden="true"></i><span class="svc-title">${esc(svc.title)}</span><span class="svc-desc">${esc(svc.desc)}</span><span class="svc-more">View products <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
   card.addEventListener('click', () => openServicePage(svc.id));
   svcGrid.appendChild(card);
 });
 
 industries.forEach(([icon, name]) => {
-  $('industryRow').insertAdjacentHTML('beforeend', `<div class="ind-item"><i class="fa-solid fa-${icon}" aria-hidden="true"></i><span>${name}</span></div>`);
+  $('industryRow').insertAdjacentHTML('beforeend', `<div class="ind-item"><i class="fa-solid fa-${icon}" aria-hidden="true"></i><span>${esc(name)}</span></div>`);
 });
 
 const pTrack = $('partnerTrack');
-partners.forEach(name => pTrack.insertAdjacentHTML('beforeend', `<div class="partner-logo">${name}</div>`));
+partners.forEach(name => pTrack.insertAdjacentHTML('beforeend', `<div class="partner-logo">${esc(name)}</div>`));
 
 const projTrack = $('projectTrack');
 projects.forEach(p => projTrack.insertAdjacentHTML('beforeend',
-  `<div class="proj-card"><div class="proj-thumb" style="--proj-grad:${p.grad}"><i class="fa-solid fa-${p.icon}" aria-hidden="true"></i></div><h4>${p.title}</h4><p>${p.desc}</p></div>`));
+  `<div class="proj-card"><div class="proj-thumb" style="--proj-grad:${p.grad}"><i class="fa-solid fa-${p.icon}" aria-hidden="true"></i></div><h4>${esc(p.title)}</h4><p>${esc(p.desc)}</p></div>`));
 
 news.forEach(n => $('newsGrid').insertAdjacentHTML('beforeend',
-  `<div class="news-card"><span class="news-date">${n.date}</span><h4>${n.title}</h4><p>${n.excerpt}</p></div>`));
+  `<div class="news-card"><span class="news-date">${esc(n.date)}</span><h4>${esc(n.title)}</h4><p>${esc(n.excerpt)}</p></div>`));
 
 // ---------- SERVICES DROPDOWN ----------
 services.forEach(svc => {
   const a = document.createElement('a');
   a.href = '#service/' + svc.id;
-  a.innerHTML = `<i class="fa-solid fa-${svc.icon}" style="color:${svc.color}" aria-hidden="true"></i> <span>${svc.title}</span>`;
+  a.innerHTML = `<i class="fa-solid fa-${svc.icon}" style="color:${svc.color}" aria-hidden="true"></i> <span>${esc(svc.title)}</span>`;
   a.addEventListener('click', e => {
     e.preventDefault();
     closeServicesDropdown();
@@ -103,40 +116,42 @@ document.addEventListener('click', e => {
 });
 
 // ---------- CAROUSELS ----------
-function buildDots(container, count, track) {
-  container.innerHTML = '';
-  for (let i = 0; i < count; i++) {
-    const d = document.createElement('span');
-    d.setAttribute('role', 'button');
-    d.setAttribute('tabindex', '0');
-    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-    if (i === 0) d.classList.add('active');
-    const go = () => {
-      const max = track.scrollWidth - track.clientWidth;
-      track.scrollTo({ left: count > 1 ? max * (i / (count - 1)) : 0, behavior: 'smooth' });
-    };
-    d.addEventListener('click', go);
-    d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
-    container.appendChild(d);
-  }
+function setupDots(track, dotsEl) {
+  const sync = () => {
+    const n = dotsEl.children.length;
+    if (!n) return;
+    const atEnd = track.scrollWidth - track.clientWidth - track.scrollLeft < 4;
+    const idx = atEnd ? n - 1 : Math.min(n - 1, Math.round(track.scrollLeft / track.clientWidth));
+    [...dotsEl.children].forEach((d, i) => d.classList.toggle('active', i === idx));
+  };
+  const build = () => {
+    const pages = Math.max(1, Math.ceil((track.scrollWidth - 4) / Math.max(1, track.clientWidth)));
+    dotsEl.innerHTML = '';
+    dotsEl.style.display = pages < 2 ? 'none' : '';
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('span');
+      d.setAttribute('role', 'button');
+      d.tabIndex = 0;
+      d.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      const go = () => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      d.addEventListener('click', go);
+      d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+      dotsEl.appendChild(d);
+    }
+    sync();
+  };
+  track.addEventListener('scroll', sync, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(build).observe(track);
+  else window.addEventListener('resize', build);
+  build();
 }
-function syncDots(track, dotsId) {
-  const dots = $(dotsId).children;
-  if (!dots.length) return;
-  const max = track.scrollWidth - track.clientWidth;
-  const ratio = max > 0 ? track.scrollLeft / max : 0;
-  const idx = Math.min(dots.length - 1, Math.round(ratio * (dots.length - 1)));
-  [...dots].forEach((d, i) => d.classList.toggle('active', i === idx));
-}
-buildDots($('partnerDots'), Math.max(1, Math.ceil(partners.length / 3)), pTrack);
-buildDots($('projectDots'), projects.length, projTrack);
-pTrack.addEventListener('scroll', () => syncDots(pTrack, 'partnerDots'), { passive: true });
-projTrack.addEventListener('scroll', () => syncDots(projTrack, 'projectDots'), { passive: true });
+setupDots(pTrack, $('partnerDots'));
+setupDots(projTrack, $('projectDots'));
 
 document.querySelectorAll('.car-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const track = $(btn.dataset.target);
-    if (!track.firstElementChild) return;
+    if (!track || !track.firstElementChild) return;
     const step = track.firstElementChild.offsetWidth + 16;
     track.scrollBy({ left: btn.classList.contains('next') ? step : -step, behavior: 'smooth' });
   });
@@ -146,15 +161,15 @@ document.querySelectorAll('.car-btn').forEach(btn => {
 function closeMobileNav() {
   mainNav.classList.remove('open');
   menuToggle.setAttribute('aria-expanded', 'false');
-  menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 }
 menuToggle.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>' : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 });
 mainNav.querySelectorAll(':scope > a').forEach(a => a.addEventListener('click', closeMobileNav));
-window.addEventListener('resize', () => { if (window.innerWidth > 1080) closeMobileNav(); });
+window.addEventListener('resize', () => { if (window.innerWidth > NAV_BREAKPOINT) closeMobileNav(); });
 
 // ---------- ACTIVE NAV LINK + BACK TO TOP ----------
 const sectionIds = ['about', 'services', 'industries', 'partners', 'projects', 'news', 'contact'];
@@ -170,17 +185,15 @@ function onScroll() {
       if (el && window.scrollY >= el.offsetTop - 110) current = id;
     });
   }
+  // "services" has no direct nav link (it is a dropdown), so keep the last visible link highlighted
   mainNav.querySelectorAll(':scope > a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 }
 window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
 $('toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// ---------- LANGUAGE (demo toggle) ----------
-$('langBtn').addEventListener('click', () => {
-  const l = $('langLabel');
-  l.textContent = l.textContent === 'EN' ? 'FA' : 'EN';
-});
+// ---------- LANGUAGE (placeholder until translations exist) ----------
+$('langBtn').addEventListener('click', () => showToast('Persian (FA) version coming soon.'));
 
 // ---------- NEWSLETTER ----------
 $('newsForm').addEventListener('submit', e => {
@@ -191,31 +204,44 @@ $('newsForm').addEventListener('submit', e => {
   msg.textContent = valid ? "Thanks — you're subscribed!" : 'Please enter a valid email address.';
   msg.style.color = valid ? '#7cc98a' : '#e06c6c';
   if (valid) e.target.reset();
+  // TODO: send `email` to your backend / newsletter provider here.
 });
 
-// ---------- DOWNLOAD PLACEHOLDERS ----------
+// ---------- DOWNLOADS ----------
 ['dlProfile', 'dlPresentation'].forEach(id => {
-  $(id).addEventListener('click', e => {
+  const link = $(id);
+  link.addEventListener('click', e => {
+    const file = link.dataset.file;
     e.preventDefault();
-    alert('Add the real file link to this button (id="' + id + '") in index.html once the PDF is ready — e.g. <a id="' + id + '" href="company-profile.pdf" download>.');
+    if (file) { window.open(file, '_blank', 'noopener'); }
+    else { showToast('This download will be available soon.'); }
   });
 });
 
 // ---------- SERVICE DETAIL PAGE ----------
+function setBackgroundInert(state) {
+  document.querySelectorAll('main, .site-footer, .to-top').forEach(el => { el.inert = state; });
+}
+
 function openServicePage(id) {
   const svc = services.find(s => s.id === id);
   if (!svc) return;
-  if (!servicePage.classList.contains('active')) lastFocused = document.activeElement;
+  const wasOpen = servicePage.classList.contains('active');
+  if (!wasOpen) lastFocused = document.activeElement;
   spIcon.className = 'fa-solid fa-' + svc.icon;
   spIconWrap.style.setProperty('--svc-color', svc.color);
   spEyebrow.textContent = 'Service';
   spTitle.textContent = svc.title;
   spDesc.textContent = svc.desc;
-  spList.innerHTML = svc.products.map(p => `<li>${p}</li>`).join('');
+  spList.innerHTML = svc.products.map(p => `<li>${esc(p)}</li>`).join('');
   servicePage.classList.add('active');
   servicePage.setAttribute('aria-hidden', 'false');
+  setBackgroundInert(true);
   document.body.style.overflow = 'hidden';
-  if (location.hash !== '#service/' + id) history.pushState({ service: id }, '', '#service/' + id);
+  if (location.hash !== '#service/' + id) {
+    // replace when switching between services so "Back" always returns to the page behind the overlay
+    history[wasOpen ? 'replaceState' : 'pushState']({ service: id }, '', '#service/' + id);
+  }
   servicePage.scrollTop = 0;
   closeServiceBtn.focus({ preventScroll: true });
 }
@@ -224,9 +250,11 @@ function closeServicePage(keepHash) {
   if (!servicePage.classList.contains('active')) return;
   servicePage.classList.remove('active');
   servicePage.setAttribute('aria-hidden', 'true');
+  setBackgroundInert(false);
   document.body.style.overflow = '';
   if (!keepHash && location.hash.startsWith('#service/')) {
-    history.pushState({}, '', location.pathname + location.search);
+    if (history.state && history.state.service) history.back();
+    else history.replaceState(null, '', location.pathname + location.search);
   }
   if (lastFocused && lastFocused.focus) lastFocused.focus({ preventScroll: true });
 }
@@ -242,7 +270,9 @@ document.addEventListener('keydown', e => {
 // any in-page anchor (header, footer, enquiry button) closes the overlay first
 document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="#"]');
-  if (!a || a.getAttribute('href') === '#' || a.getAttribute('href').startsWith('#service/')) return;
+  if (!a) return;
+  const href = a.getAttribute('href');
+  if (href === '#' || href.startsWith('#service/')) return;
   if (servicePage.classList.contains('active')) closeServicePage(true);
 });
 
