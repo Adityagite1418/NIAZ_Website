@@ -42,13 +42,19 @@ const news = [
 
 // ---------- ELEMENTS ----------
 const $ = id => document.getElementById(id);
+const siteHeader = document.querySelector('.site-header');
 const servicePage = $('servicePage');
 const spIcon = $('spIcon'), spIconWrap = $('spIconWrap'), spEyebrow = $('spEyebrow');
 const spTitle = $('spTitle'), spDesc = $('spDesc'), spList = $('spList');
 const closeServiceBtn = $('closeServiceBtn');
 const menuToggle = $('menuToggle'), mainNav = $('mainNav');
 const servicesDropdown = $('servicesDropdown'), servicesTrigger = $('servicesTrigger'), servicesPanel = $('servicesPanel');
+const langDropdown = $('langDropdown'), langBtn = $('langBtn'), langLabel = $('langLabel'), langMenu = $('langMenu');
 let lastFocused = null;
+
+// Breakpoint where the header switches to the hamburger menu (keep in sync with styles.css)
+const mqMobileNav = window.matchMedia('(max-width: 1200px)');
+const mqHoverDesktop = window.matchMedia('(hover: hover) and (min-width: 1201px)');
 
 // ---------- RENDER ----------
 const svcGrid = $('servicesGrid');
@@ -77,6 +83,39 @@ projects.forEach(p => projTrack.insertAdjacentHTML('beforeend',
 news.forEach(n => $('newsGrid').insertAdjacentHTML('beforeend',
   `<div class="news-card"><span class="news-date">${n.date}</span><h4>${n.title}</h4><p>${n.excerpt}</p></div>`));
 
+// ---------- HEADER: DROPDOWN / MENU HELPERS ----------
+function openServicesDropdown() {
+  closeLangMenu();
+  servicesDropdown.classList.add('open');
+  servicesTrigger.setAttribute('aria-expanded', 'true');
+}
+function closeServicesDropdown() {
+  servicesDropdown.classList.remove('open');
+  servicesTrigger.setAttribute('aria-expanded', 'false');
+}
+function openLangMenu() {
+  closeServicesDropdown();
+  langDropdown.classList.add('open');
+  langBtn.setAttribute('aria-expanded', 'true');
+}
+function closeLangMenu() {
+  langDropdown.classList.remove('open');
+  langBtn.setAttribute('aria-expanded', 'false');
+}
+function openMobileNav() {
+  closeLangMenu();
+  mainNav.classList.add('open');
+  menuToggle.setAttribute('aria-expanded', 'true');
+  menuToggle.setAttribute('aria-label', 'Close menu');
+  menuToggle.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
+}
+function closeMobileNav() {
+  mainNav.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Open menu');
+  menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+}
+
 // ---------- SERVICES DROPDOWN ----------
 services.forEach(svc => {
   const a = document.createElement('a');
@@ -91,14 +130,58 @@ services.forEach(svc => {
   servicesPanel.appendChild(a);
 });
 
-function openServicesDropdown() { servicesDropdown.classList.add('open'); servicesTrigger.setAttribute('aria-expanded', 'true'); }
-function closeServicesDropdown() { servicesDropdown.classList.remove('open'); servicesTrigger.setAttribute('aria-expanded', 'false'); }
 servicesTrigger.addEventListener('click', e => {
   e.stopPropagation();
   servicesDropdown.classList.contains('open') ? closeServicesDropdown() : openServicesDropdown();
 });
+
+// Hover to open on desktop mouse devices
+let hoverTimer = null;
+servicesDropdown.addEventListener('mouseenter', () => {
+  if (!mqHoverDesktop.matches) return;
+  clearTimeout(hoverTimer);
+  openServicesDropdown();
+});
+servicesDropdown.addEventListener('mouseleave', () => {
+  if (!mqHoverDesktop.matches) return;
+  hoverTimer = setTimeout(closeServicesDropdown, 180);
+});
+
+// Keyboard support: arrow keys move through the services list
+servicesDropdown.addEventListener('keydown', e => {
+  if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+  e.preventDefault();
+  const links = Array.from(servicesPanel.querySelectorAll('a'));
+  const i = links.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown') {
+    openServicesDropdown();
+    links[Math.min(i + 1, links.length - 1)].focus();
+  } else if (i <= 0) {
+    servicesTrigger.focus();
+  } else {
+    links[i - 1].focus();
+  }
+});
+
+// ---------- LANGUAGE MENU ----------
+// Demo only: this changes the label. Hook real translations in here (e.g. load FA text, set dir="rtl").
+langBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  langDropdown.classList.contains('open') ? closeLangMenu() : openLangMenu();
+});
+langMenu.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    langMenu.querySelectorAll('button').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
+    langLabel.textContent = btn.dataset.code;
+    closeLangMenu();
+    langBtn.focus();
+  });
+});
+
+// ---------- CLOSE MENUS ON OUTSIDE CLICK ----------
 document.addEventListener('click', e => {
   if (!servicesDropdown.contains(e.target)) closeServicesDropdown();
+  if (!langDropdown.contains(e.target)) closeLangMenu();
   if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) closeMobileNav();
 });
 
@@ -126,7 +209,7 @@ function syncDots(track, dotsId) {
   const max = track.scrollWidth - track.clientWidth;
   const ratio = max > 0 ? track.scrollLeft / max : 0;
   const idx = Math.min(dots.length - 1, Math.round(ratio * (dots.length - 1)));
-  [...dots].forEach((d, i) => d.classList.toggle('active', i === idx));
+  Array.from(dots).forEach((d, i) => d.classList.toggle('active', i === idx));
 }
 buildDots($('partnerDots'), Math.max(1, Math.ceil(partners.length / 3)), pTrack);
 buildDots($('projectDots'), projects.length, projTrack);
@@ -143,44 +226,54 @@ document.querySelectorAll('.car-btn').forEach(btn => {
 });
 
 // ---------- MOBILE MENU ----------
-function closeMobileNav() {
-  mainNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-  menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-}
 menuToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  mainNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
 });
 mainNav.querySelectorAll(':scope > a').forEach(a => a.addEventListener('click', closeMobileNav));
-window.addEventListener('resize', () => { if (window.innerWidth > 1080) closeMobileNav(); });
+mqMobileNav.addEventListener('change', () => {
+  closeMobileNav();
+  closeServicesDropdown();
+});
 
-// ---------- ACTIVE NAV LINK + BACK TO TOP ----------
-const sectionIds = ['about', 'services', 'industries', 'partners', 'projects', 'news', 'contact'];
+// ---------- ACTIVE NAV LINK + HEADER SHADOW + BACK TO TOP ----------
+const sectionIds = ['services', 'about', 'industries', 'partners', 'projects', 'news', 'contact']; // same order as the page
+const navLinks = Array.from(mainNav.querySelectorAll(':scope > a:not(.nav-cta)'));
+
+function getCurrentSection() {
+  if (window.scrollY < 60) return 'top';
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+  if (atBottom) return 'contact';
+  const headerH = siteHeader ? siteHeader.offsetHeight : 80;
+  const line = headerH + 100;
+  let current = 'top';
+  sectionIds.forEach(id => {
+    const el = $(id);
+    if (el && el.getBoundingClientRect().top <= line) current = id;
+  });
+  return current;
+}
+
+function setActiveNav(current) {
+  navLinks.forEach(a => {
+    const on = a.getAttribute('href') === '#' + current;
+    a.classList.toggle('active', on);
+    if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+  });
+  servicesTrigger.classList.toggle('active', current === 'services');
+}
+
 let ticking = false;
 function onScroll() {
   ticking = false;
   $('toTop').classList.toggle('show', window.scrollY > 500);
+  if (siteHeader) siteHeader.classList.toggle('scrolled', window.scrollY > 8);
   if (servicePage.classList.contains('active')) return;
-  let current = 'top';
-  if (window.scrollY > 60) {
-    sectionIds.forEach(id => {
-      const el = $(id);
-      if (el && window.scrollY >= el.offsetTop - 110) current = id;
-    });
-  }
-  mainNav.querySelectorAll(':scope > a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  setActiveNav(getCurrentSection());
 }
 window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+window.addEventListener('resize', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
 $('toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-// ---------- LANGUAGE (demo toggle) ----------
-$('langBtn').addEventListener('click', () => {
-  const l = $('langLabel');
-  l.textContent = l.textContent === 'EN' ? 'FA' : 'EN';
-});
 
 // ---------- NEWSLETTER ----------
 $('newsForm').addEventListener('submit', e => {
@@ -193,9 +286,12 @@ $('newsForm').addEventListener('submit', e => {
   if (valid) e.target.reset();
 });
 
-// ---------- DOWNLOAD PLACEHOLDERS ----------
+// ---------- DOWNLOADS ----------
+// While the link is "#", show a reminder. Once you set a real href (e.g. company-profile.pdf), the link just works.
 ['dlProfile', 'dlPresentation'].forEach(id => {
-  $(id).addEventListener('click', e => {
+  const link = $(id);
+  link.addEventListener('click', e => {
+    if (link.getAttribute('href') !== '#') return;
     e.preventDefault();
     alert('Add the real file link to this button (id="' + id + '") in index.html once the PDF is ready — e.g. <a id="' + id + '" href="company-profile.pdf" download>.');
   });
@@ -229,13 +325,17 @@ function closeServicePage(keepHash) {
     history.pushState({}, '', location.pathname + location.search);
   }
   if (lastFocused && lastFocused.focus) lastFocused.focus({ preventScroll: true });
+  onScroll();
 }
 
 closeServiceBtn.addEventListener('click', () => closeServicePage(false));
+
+// Escape closes the top-most open layer first
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  closeServicesDropdown();
-  closeMobileNav();
+  if (langDropdown.classList.contains('open')) { closeLangMenu(); langBtn.focus(); return; }
+  if (servicesDropdown.classList.contains('open')) { closeServicesDropdown(); servicesTrigger.focus(); return; }
+  if (mainNav.classList.contains('open')) { closeMobileNav(); menuToggle.focus(); return; }
   closeServicePage(false);
 });
 
