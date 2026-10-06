@@ -46,6 +46,10 @@ button{font-family:inherit}
 .brand-divider{width:1px;height:30px;background:var(--line);flex:0 0 auto}
 .brand-secondary .brand-mark{background:var(--gold);color:var(--navy)}
 
+/* Brand logo images (replace the N / Z letter marks) */
+.brand-logo{height:42px;width:auto;max-width:140px;flex:0 0 auto;object-fit:contain;border-radius:8px;display:block}
+.footer-brand .brand-logo{background:#fff;padding:4px}
+
 /* Navigation */
 .main-nav{display:flex;align-items:center;gap:22px;flex:1;justify-content:center;min-width:0}
 .main-nav>a{font-weight:500;font-size:.92rem;color:var(--ink);padding:8px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap}
@@ -234,7 +238,7 @@ button{font-family:inherit}
   html,.carousel-track{scroll-behavior:auto}
 }
 
-/* LARGE LAPTOP: keep the header on one line (Zoodico shows mark only) */
+/* LARGE LAPTOP: keep the header on one line (Zoodico shows logo only) */
 @media (max-width:1399px){
   .brand-secondary .brand-text{display:none}
   .main-nav{gap:16px}
@@ -280,6 +284,7 @@ button{font-family:inherit}
   :root{--header-h:68px}
   .container{padding:0 18px}
   .brand-mark{width:38px;height:38px;font-size:1.1rem}
+  .brand-logo{height:38px;max-width:110px}
   .brand-group{gap:10px}
   .hero{padding:50px 0 70px}
   .hero-tags{margin-bottom:24px}
@@ -326,6 +331,7 @@ button{font-family:inherit}
 /* VERY SMALL MOBILE: brand name wraps to two lines so everything fits */
 @media (max-width:420px){
   .brand-mark{width:34px;height:34px;font-size:1rem}
+  .brand-logo{height:34px;max-width:80px}
   .brand{gap:8px}
   .brand-group{gap:8px}
   .site-header .brand-text strong{font-size:.74rem;white-space:normal;max-width:72px;letter-spacing:.2px}
