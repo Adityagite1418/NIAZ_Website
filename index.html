@@ -1,43 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0a1b3d">
-  <meta name="description" content="Niaz Net Tehran connects manufacturers, brands and international markets across pharmaceutical, nutrition, biotechnology and global trade.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Niaz Net Tehran | Connecting Technologies, Brands &amp; Markets</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a1b3d'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23c89b3c'%3EN%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="fixes.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <div class="brands">
-      <a href="#top" class="brand brand-1" aria-label="Niaz Net Tehran – home">
-        <span class="brand-mark">N</span>
-        <span class="brand-text"><strong>NIAZ NET TEHRAN</strong></span>
-      </a>
-      <a href="#top" class="brand brand-2" title="Zoodico" aria-label="Zoodico">
-        <span class="brand-mark">z</span>
-        <span class="brand-text"><strong>Zoodico</strong></span>
-      </a>
-    </div>
 
-    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+    <a href="#top" class="brand">
+      <span class="brand-mark">N</span>
+
+      <span class="brand-text">
+        <strong>NIAZ NET TEHRAN</strong>
+        <!-- <small>Connecting Technologies, Brands &amp; Markets</small> -->
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
       <a href="#top" class="active">Home</a>
       <a href="#about">About Us</a>
+
       <div class="nav-dropdown" id="servicesDropdown">
-        <button type="button" class="dropdown-trigger" id="servicesTrigger" aria-haspopup="true" aria-expanded="false">
-          Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        <button
+          type="button"
+          class="dropdown-trigger"
+          id="servicesTrigger"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Services <i class="fa-solid fa-chevron-down"></i>
         </button>
+
         <div class="dropdown-panel" id="servicesPanel"></div>
       </div>
+
       <a href="#industries">Industries</a>
       <a href="#partners">Partners</a>
       <a href="#projects">Projects</a>
@@ -46,184 +55,454 @@
     </nav>
 
     <div class="header-actions">
-      <button class="lang-switch" id="langBtn" type="button" aria-label="Change language">
-        <i class="fa-solid fa-globe" aria-hidden="true"></i> <span id="langLabel">EN</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+
+      <button class="lang-switch" id="langBtn" type="button">
+        <i class="fa-solid fa-globe"></i>
+        <span id="langLabel">EN</span>
+        <i class="fa-solid fa-chevron-down"></i>
       </button>
+
       <a href="#contact" class="btn btn-gold">Get In Touch</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav" type="button">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
       </button>
+
     </div>
   </div>
 </header>
 
-<main>
+
+<!-- HERO SECTION -->
 <section class="hero" id="about">
+
   <div class="hero-bg" aria-hidden="true"></div>
+
   <div class="container hero-inner">
+
     <div class="hero-copy">
+
       <p class="eyebrow">Global Business Development</p>
-      <h1>Connecting technologies, manufacturers, brands and international markets.</h1>
-      <p class="hero-tags">Pharmaceutical &nbsp;•&nbsp; Nutrition &nbsp;•&nbsp; Biotechnology &nbsp;•&nbsp; Global Trade</p>
+
+      <h1>
+        Connecting technologies, manufacturers, brands and international markets.
+      </h1>
+
+      <p class="hero-tags">
+        Pharmaceutical &nbsp;•&nbsp;
+        Nutrition &nbsp;•&nbsp;
+        Biotechnology &nbsp;•&nbsp;
+        Global Trade
+      </p>
+
       <div class="hero-btns">
-        <a href="#services" class="btn btn-gold">Explore Services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        <a href="#contact" class="btn btn-outline">Contact Us</a>
+
+        <a href="#services" class="btn btn-gold">
+          Explore Services
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Us
+        </a>
+
       </div>
     </div>
 
+
+    <!-- GLOBE -->
     <div class="hero-globe" aria-hidden="true">
-      <svg viewBox="0 0 300 300" class="globe-svg" xmlns="http://www.w3.org/2000/svg">
+
+      <svg
+        viewBox="0 0 300 300"
+        class="globe-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
         <defs>
+
           <radialGradient id="gGrad" cx="35%" cy="30%" r="75%">
-            <stop offset="0%" stop-color="#3a5aa8"/><stop offset="100%" stop-color="#0a1b3d"/>
+            <stop offset="0%" stop-color="#3a5aa8"/>
+            <stop offset="100%" stop-color="#0a1b3d"/>
           </radialGradient>
-          <clipPath id="gClip"><circle cx="150" cy="150" r="132"/></clipPath>
+
+          <clipPath id="gClip">
+            <circle cx="150" cy="150" r="132"/>
+          </clipPath>
+
           <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
             <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
           </filter>
+
         </defs>
-        <circle cx="150" cy="150" r="145" fill="none" stroke="#c89b3c" stroke-opacity=".25"/>
-        <circle cx="150" cy="150" r="132" fill="url(#gGrad)"/>
+
+        <circle
+          cx="150"
+          cy="150"
+          r="145"
+          fill="none"
+          stroke="#c89b3c"
+          stroke-opacity=".25"
+        />
+
+        <circle
+          cx="150"
+          cy="150"
+          r="132"
+          fill="url(#gGrad)"
+        />
+
         <g clip-path="url(#gClip)" opacity=".5">
-          <circle cx="95" cy="95" r="2" fill="#5678c2"/><circle cx="115" cy="80" r="1.5" fill="#5678c2"/>
-          <circle cx="180" cy="70" r="2" fill="#5678c2"/><circle cx="200" cy="95" r="1.5" fill="#5678c2"/>
-          <circle cx="70" cy="150" r="2" fill="#5678c2"/><circle cx="90" cy="180" r="1.5" fill="#5678c2"/>
-          <circle cx="160" cy="200" r="2" fill="#5678c2"/><circle cx="210" cy="180" r="1.5" fill="#5678c2"/>
-          <circle cx="130" cy="230" r="2" fill="#5678c2"/><circle cx="60" cy="110" r="1.5" fill="#5678c2"/>
-          <circle cx="220" cy="140" r="2" fill="#5678c2"/><circle cx="180" cy="240" r="1.5" fill="#5678c2"/>
+
+          <circle cx="95" cy="95" r="2" fill="#5678c2"/>
+          <circle cx="115" cy="80" r="1.5" fill="#5678c2"/>
+          <circle cx="180" cy="70" r="2" fill="#5678c2"/>
+          <circle cx="200" cy="95" r="1.5" fill="#5678c2"/>
+          <circle cx="70" cy="150" r="2" fill="#5678c2"/>
+          <circle cx="90" cy="180" r="1.5" fill="#5678c2"/>
+          <circle cx="160" cy="200" r="2" fill="#5678c2"/>
+          <circle cx="210" cy="180" r="1.5" fill="#5678c2"/>
+          <circle cx="130" cy="230" r="2" fill="#5678c2"/>
+          <circle cx="60" cy="110" r="1.5" fill="#5678c2"/>
+          <circle cx="220" cy="140" r="2" fill="#5678c2"/>
+          <circle cx="180" cy="240" r="1.5" fill="#5678c2"/>
+
         </g>
+
         <g fill="none" stroke="#e0b85c" stroke-width="1" opacity=".55">
-          <path d="M95,105 Q145,60 185,90"/><path d="M100,120 Q150,170 205,110"/>
-          <path d="M90,160 Q130,205 175,195"/><path d="M180,95 Q210,140 215,170"/>
-          <path d="M95,105 Q80,150 95,180"/><path d="M175,195 Q195,215 205,110"/>
+
+          <path d="M95,105 Q145,60 185,90"/>
+          <path d="M100,120 Q150,170 205,110"/>
+          <path d="M90,160 Q130,205 175,195"/>
+          <path d="M180,95 Q210,140 215,170"/>
+          <path d="M95,105 Q80,150 95,180"/>
+          <path d="M175,195 Q195,215 205,110"/>
+
         </g>
+
         <g filter="url(#glow)">
-          <circle cx="95" cy="105" r="4" fill="#e0b85c"/><circle cx="185" cy="90" r="3.2" fill="#e0b85c"/>
-          <circle cx="205" cy="110" r="4" fill="#e0b85c"/><circle cx="90" cy="160" r="3.2" fill="#e0b85c"/>
-          <circle cx="175" cy="195" r="4.5" fill="#e0b85c"/><circle cx="215" cy="170" r="3.2" fill="#e0b85c"/>
+
+          <circle cx="95" cy="105" r="4" fill="#e0b85c"/>
+          <circle cx="185" cy="90" r="3.2" fill="#e0b85c"/>
+          <circle cx="205" cy="110" r="4" fill="#e0b85c"/>
+          <circle cx="90" cy="160" r="3.2" fill="#e0b85c"/>
+          <circle cx="175" cy="195" r="4.5" fill="#e0b85c"/>
+          <circle cx="215" cy="170" r="3.2" fill="#e0b85c"/>
+
         </g>
+
       </svg>
+
     </div>
   </div>
 </section>
 
-<section class="services" id="services" aria-labelledby="servicesHeading">
-  <h2 class="sr-only" id="servicesHeading">Our Services</h2>
-  <div class="container"><div class="grid grid-9" id="servicesGrid"></div></div>
-</section>
 
-<section class="stats" aria-label="Company statistics">
-  <div class="container stats-inner">
-    <div class="stat"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><div><strong>20+</strong><span>Years Experience</span></div></div>
-    <div class="stat"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i><div><strong>50+</strong><span>Countries Served</span></div></div>
-    <div class="stat"><i class="fa-solid fa-people-group" aria-hidden="true"></i><div><strong>300+</strong><span>Global Partners</span></div></div>
-    <div class="stat"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><div><strong>1500+</strong><span>Projects Completed</span></div></div>
-    <div class="stat"><i class="fa-solid fa-certificate" aria-hidden="true"></i><div><strong>GMP</strong><span>Certified Network</span></div></div>
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="grid grid-9" id="servicesGrid"></div>
   </div>
 </section>
 
+
+<!-- STATISTICS -->
+<section class="stats">
+  <div class="container stats-inner">
+
+    <div class="stat">
+      <i class="fa-solid fa-calendar-days"></i>
+      <div>
+        <strong>20+</strong>
+        <span>Years Experience</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-earth-americas"></i>
+      <div>
+        <strong>50+</strong>
+        <span>Countries Served</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-people-group"></i>
+      <div>
+        <strong>300+</strong>
+        <span>Global Partners</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-briefcase"></i>
+      <div>
+        <strong>1500+</strong>
+        <span>Projects Completed</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <i class="fa-solid fa-certificate"></i>
+      <div>
+        <strong>GMP</strong>
+        <span>Certified Network</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INDUSTRIES -->
 <section class="industries" id="industries">
   <div class="container">
+
     <h2>Industries We Serve</h2>
+
     <div class="industry-row" id="industryRow"></div>
+
   </div>
 </section>
 
+
+<!-- GLOBAL PARTNERS -->
 <section class="partners" id="partners">
   <div class="container">
+
     <h2>Global Partners</h2>
+
     <div class="carousel">
-      <button class="car-btn prev" type="button" data-target="partnerTrack" aria-label="Previous partners"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+
+      <button
+        class="car-btn prev"
+        data-target="partnerTrack"
+        aria-label="Previous partners"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
       <div class="carousel-track" id="partnerTrack"></div>
-      <button class="car-btn next" type="button" data-target="partnerTrack" aria-label="Next partners"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+
+      <button
+        class="car-btn next"
+        data-target="partnerTrack"
+        aria-label="Next partners"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
     </div>
+
     <div class="dots" id="partnerDots"></div>
+
   </div>
 </section>
 
+
+<!-- PROJECTS AND GLOBAL NETWORK -->
 <section class="projects" id="projects">
   <div class="container two-col">
+
     <div>
+
       <h2>Featured Projects</h2>
+
       <div class="carousel">
-        <button class="car-btn prev" type="button" data-target="projectTrack" aria-label="Previous projects"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+
+        <button
+          class="car-btn prev"
+          data-target="projectTrack"
+          aria-label="Previous projects"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
         <div class="carousel-track project-track" id="projectTrack"></div>
-        <button class="car-btn next" type="button" data-target="projectTrack" aria-label="Next projects"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+
+        <button
+          class="car-btn next"
+          data-target="projectTrack"
+          aria-label="Next projects"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
       </div>
+
       <div class="dots" id="projectDots"></div>
+
     </div>
 
+
+    <!-- GLOBAL NETWORK -->
     <div class="network-card" id="network">
+
       <h2>Our Global Network</h2>
-      <div class="map-box" aria-hidden="true">
+
+      <div class="map-box">
+
         <div class="map-pin" style="top:30%;left:20%"></div>
-        <div class="map-pin" style="top:60%;left:48%"></div>
-        <div class="map-pin gold" style="top:40%;left:78%"></div>
-        <div class="map-pin" style="top:78%;left:84%"></div>
+        <div class="map-pin" style="top:55%;left:48%"></div>
+        <div class="map-pin gold" style="top:35%;left:70%"></div>
+        <div class="map-pin" style="top:70%;left:82%"></div>
+
+        <div class="info-card">
+
+          <strong>Spain</strong>
+
+          <ul>
+            <li>Enoxaparin</li>
+            <li>Heparin</li>
+            <li>Biotechnology</li>
+            <li>Dairy Ingredients</li>
+            <li>Food Ingredients</li>
+            <li>Pharmaceutical Partners</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-gold btn-sm">
+            View Details
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
       </div>
-      <div class="info-card-static">
-        <strong>Spain</strong>
-        <ul>
-          <li>Enoxaparin</li><li>Heparin</li><li>Biotechnology</li>
-          <li>Dairy Ingredients</li><li>Food Ingredients</li><li>Pharmaceutical Partners</li>
-        </ul>
-        <a href="#contact" class="btn btn-gold btn-sm">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-      </div>
+
       <div class="map-legend">
-        <span><i class="dot gold"></i> Our Offices</span>
-        <span><i class="dot navy"></i> Partners</span>
-        <span><i class="dot grey"></i> Projects</span>
+
+        <span>
+          <i class="dot gold"></i>
+          Our Offices
+        </span>
+
+        <span>
+          <i class="dot navy"></i>
+          Partners
+        </span>
+
+        <span>
+          <i class="dot grey"></i>
+          Projects
+        </span>
+
       </div>
     </div>
+
   </div>
 </section>
 
+
+<!-- NEWS -->
 <section class="news" id="news">
   <div class="container">
+
     <h2>Latest News</h2>
+
     <div class="news-grid" id="newsGrid"></div>
+
   </div>
 </section>
 
+
+<!-- CONTACT CTA -->
 <section class="cta-bar" id="contact">
   <div class="container cta-inner">
+
     <div class="cta-text">
       <h3>Let's build success together</h3>
       <p>We are ready to be your trusted partner in growth.</p>
     </div>
-    <a href="mailto:info@niaznet.com" class="btn btn-gold">Let's Talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+    <a href="mailto:info@niaznet.com" class="btn btn-gold">
+      Let's Talk
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
     <div class="cta-contacts">
-      <a href="mailto:info@niaznet.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>info@niaznet.com</span></a>
-      <a href="tel:+982188666070"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+98 21 88 66 60 70</span></a>
-      <a href="https://wa.me/989188866070" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>+98 918 88 66 070</span></a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>Niaz Net Tehran</span></a>
+
+      <a href="mailto:info@niaznet.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@niaznet.com</span>
+      </a>
+
+      <a href="tel:+982188666070">
+        <i class="fa-solid fa-phone"></i>
+        <span>+98 21 88 66 60 70</span>
+      </a>
+
+      <a href="https://wa.me/989188866070" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>+98 918 88 66 070</span>
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Niaz Net Tehran</span>
+      </a>
+
     </div>
   </div>
 </section>
-</main>
 
+
+<!-- FOOTER -->
 <footer class="site-footer">
+
   <div class="container footer-grid">
+
     <div class="footer-brand">
+
       <div class="brand">
+
         <span class="brand-mark">N</span>
+
         <span class="brand-text">
           <strong>NIAZ NET TEHRAN</strong>
           <small>Connecting Technologies, Brands &amp; Markets</small>
         </span>
+
       </div>
-      <p>We connect manufacturers, brands and markets to create long-term value and international partnerships.</p>
+
+      <p>
+        We connect manufacturers, brands and markets to create long-term
+        value and international partnerships.
+      </p>
+
       <div class="social">
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-        <a href="https://wa.me/989188866070" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-        <a href="mailto:info@niaznet.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/989188866070" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:info@niaznet.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
       </div>
     </div>
 
-    <div class="footer-col">
+
+    <div>
       <h4>Quick Links</h4>
+
       <a href="#about">About Us</a>
       <a href="#services">Services</a>
       <a href="#industries">Industries</a>
@@ -233,17 +512,21 @@
       <a href="#contact">Contact Us</a>
     </div>
 
-    <div class="footer-col">
+
+    <div>
       <h4>Our Services</h4>
-      <a href="#service/api-supply" class="footer-svc-link" data-service="api-supply">API Supply</a>
-      <a href="#service/essences-natural-oils" class="footer-svc-link" data-service="essences-natural-oils">Essences &amp; Natural Oils</a>
-      <a href="#service/extracts" class="footer-svc-link" data-service="extracts">Extracts</a>
-      <a href="#service/finished-products" class="footer-svc-link" data-service="finished-products">Finished Products</a>
-      <a href="#service/technology-transfer" class="footer-svc-link" data-service="technology-transfer">Technology Transfer</a>
+
+      <a href="#" class="footer-svc-link" data-service="api-supply">API Supply</a>
+      <a href="#" class="footer-svc-link" data-service="essences-natural-oils">Essences &amp; Natural Oils</a>
+      <a href="#" class="footer-svc-link" data-service="extracts">Extracts</a>
+      <a href="#" class="footer-svc-link" data-service="finished-products">Finished Products</a>
+      <a href="#" class="footer-svc-link" data-service="technology-transfer">Technology Transfer</a>
     </div>
 
-    <div class="footer-col">
+
+    <div>
       <h4>Industries</h4>
+
       <a href="#industries">Pharmaceutical</a>
       <a href="#industries">Biotechnology</a>
       <a href="#industries">Food Ingredients</a>
@@ -251,48 +534,107 @@
       <a href="#industries">Pet Food</a>
     </div>
 
-    <div class="footer-col footer-news">
-      <h4>Downloads</h4>
-      <!-- Set data-file to the real PDF path (e.g. data-file="files/company-profile.pdf") when ready -->
-      <a href="#" id="dlProfile" data-file=""><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Company Profile <i class="fa-solid fa-download" aria-hidden="true"></i></a>
-      <a href="#" id="dlPresentation" data-file=""><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Presentation <i class="fa-solid fa-download" aria-hidden="true"></i></a>
 
-      <h4 class="mt">Newsletter</h4>
-      <form id="newsForm" class="news-form" novalidate>
+    <div class="footer-news">
+
+      <h4>Downloads</h4>
+
+      <a href="#" id="dlProfile">
+        <i class="fa-solid fa-file-lines"></i>
+        Company Profile
+        <i class="fa-solid fa-download"></i>
+      </a>
+
+      <a href="#" id="dlPresentation">
+        <i class="fa-solid fa-file-lines"></i>
+        Presentation
+        <i class="fa-solid fa-download"></i>
+      </a>
+
+      <h4>Newsletter</h4>
+
+      <form id="newsForm" class="news-form">
+
         <label for="newsEmail" class="sr-only">Email address</label>
-        <input type="email" id="newsEmail" placeholder="Your email address" required autocomplete="email">
-        <button type="submit" class="btn btn-gold btn-sm">Subscribe</button>
+
+        <input
+          type="email"
+          id="newsEmail"
+          placeholder="Your email address"
+          required
+        >
+
+        <button type="submit" class="btn btn-gold btn-sm">
+          Subscribe
+        </button>
+
       </form>
+
       <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
+
     </div>
+
   </div>
+
 
   <div class="container footer-bottom">
+
     <p>© 2026 Niaz Net Tehran. All Rights Reserved.</p>
-    <div class="legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+
   </div>
+
 </footer>
 
-<button id="toTop" class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<section class="service-page" id="servicePage" role="dialog" aria-modal="true" aria-labelledby="spTitle" aria-hidden="true">
+<!-- BACK TO TOP -->
+<button id="toTop" class="to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- SERVICE DETAIL PAGE -->
+<section class="service-page" id="servicePage" aria-hidden="true">
+
   <div class="container service-page-inner">
-    <button class="back-btn" id="closeServiceBtn" type="button"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home</button>
+
+    <button class="back-btn" id="closeServiceBtn" type="button">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Home
+    </button>
+
     <div class="service-page-head">
-      <div class="service-icon" id="spIconWrap"><i id="spIcon" class="fa-solid" aria-hidden="true"></i></div>
+
+      <div class="service-icon" id="spIconWrap">
+        <i id="spIcon" class="fa-solid"></i>
+      </div>
+
       <div>
         <p class="eyebrow" id="spEyebrow">Service</p>
         <h2 id="spTitle"></h2>
         <p id="spDesc" class="sp-desc"></p>
       </div>
+
     </div>
+
     <h3 class="sp-subhead">Products &amp; Solutions</h3>
+
     <ul class="product-list" id="spList"></ul>
-    <a href="#contact" class="btn btn-gold" id="spContact">Enquire About This Service <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+    <a href="#contact" class="btn btn-gold" id="spContact">
+      Enquire About This Service
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
   </div>
 </section>
 
-<script src="script.js" defer></script>
+
+<script src="script.js"></script>
+
 </body>
-</html>
+</html> 
